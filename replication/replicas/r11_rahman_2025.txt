@@ -1,0 +1,59 @@
+Medias (publicado VG 3.52, MU 3.64, IR 3.69, CS 3.58, PE 3.48, QEU 3.56, LE 3.47):
+  VG   MU   IR   CS   PE  QEU   LE 
+3.52 3.62 3.69 3.58 3.48 3.56 3.48 
+N = 318 | casos en 0,5 exacto:
+ VG  MU  IR  CS  PE QEU  LE 
+ 26  29  22  23  33  23  27 
+    inclN   RoN
+VG  0.897 0.723
+MU  0.916 0.655
+IR  0.948 0.606
+CS  0.917 0.698
+PE  0.904 0.785
+QEU 0.924 0.741
+
+===== R11 Rahman 2025 (alta LE) | N = 318 | outcome LE 
+Términos publicados: VG*MU*IR + VG*IR*CS*PE + VG*IR*CS*QEU + MU*IR*CS*QEU + MU*IR*PE*QEU + VG*MU*CS*PE*QEU 
+
+                inclS  covS  covU
+VG*MU*IR        0.915 0.823 0.027
+VG*IR*CS*PE     0.951 0.778 0.003
+VG*IR*CS*QEU    0.950 0.784 0.005
+MU*IR*CS*QEU    0.943 0.797 0.009
+MU*IR*PE*QEU    0.955 0.793 0.004
+VG*MU*CS*PE*QEU 0.964 0.736 0.010
+expression      0.897 0.920    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+    MU*IR*CS*QEU 0.9428396 0.7974305    0.937   0.795    0.006   0.002
+    MU*IR*PE*QEU 0.9545276 0.7929425    0.951   0.790    0.004   0.003
+     VG*IR*CS*PE 0.9508104 0.7780720    0.949   0.774    0.002   0.004
+    VG*IR*CS*QEU 0.9504291 0.7839354    0.947   0.779    0.003   0.005
+ VG*MU*CS*PE*QEU 0.9642500 0.7360505    0.964   0.738    0.000  -0.002
+        VG*MU*IR 0.9154453 0.8225407    0.910   0.822    0.005   0.001
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        VG*MU*IR  200   118      0.885 0.797 0.512  0.453        0.084
+     VG*IR*CS*PE  178   140      0.910 0.830 0.482  0.439        0.087
+    VG*IR*CS*QEU  181   137      0.928 0.872 0.528  0.490        0.105
+    MU*IR*CS*QEU  179   139      0.927 0.869 0.519  0.481        0.102
+    MU*IR*PE*QEU  175   143      0.931 0.874 0.512  0.477        0.102
+ VG*MU*CS*PE*QEU  157   161      0.949 0.900 0.483  0.458        0.102
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.226        0.700         0.877         0.646
+         0.219        0.726         0.908         0.679
+         0.245        0.798         0.934         0.748
+         0.241        0.793         0.932         0.741
+         0.238        0.790         0.938         0.746
+         0.229        0.819         0.963         0.772
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        VG*MU*IR        0.1412354       0.08447266       0.02770996
+     VG*IR*CS*PE        0.1400757       0.08721924       0.03436279
+    VG*IR*CS*QEU        0.1608276       0.10461426       0.04840088
+    MU*IR*CS*QEU        0.1575928       0.10223389       0.04681396
+    MU*IR*PE*QEU        0.1566772       0.10211182       0.04754639
+ VG*MU*CS*PE*QEU        0.1528320       0.10186768       0.05096436

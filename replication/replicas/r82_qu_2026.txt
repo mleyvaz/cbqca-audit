@@ -1,0 +1,107 @@
+Percentiles 5/50/95 (tipo 7) para comparar con las anclas:
+           5%     50%     95%
+MIEC    0.000   2.391   4.633
+P      13.958  30.364  52.050
+U     158.912 210.930 349.312
+E     131.583 202.218 355.362
+IE     58.550  66.860  78.895
+InstE   4.040   7.940  10.315
+DE     35.928  59.818 241.396
+IEI    37.210  43.370  57.580
+Casos en 0,5:
+ MIEC     P     U     E    IE InstE    DE   IEI 
+    2     1     1     2     1     1     1     2 
+
+===== R82 Qu 2026 (alta) | N = 31 | outcome MIEC 
+Términos publicados: P*~U*E*IE*InstE*~DE + P*~U*E*IE*InstE*IEI + P*U*E*InstE*DE*IEI + P*E*IE*InstE*DE*IEI + ~P*U*E*IE*DE*IEI + P*U*~E*~IE*~InstE*~DE*~IEI 
+
+                           inclS  covS  covU
+P*~U*E*IE*InstE*~DE        0.981 0.274 0.017
+P*~U*E*IE*InstE*IEI        0.980 0.290 0.028
+P*U*E*InstE*DE*IEI         0.986 0.283 0.022
+P*E*IE*InstE*DE*IEI        0.987 0.298 0.000
+~P*U*E*IE*DE*IEI           0.954 0.245 0.083
+P*U*~E*~IE*~InstE*~DE*~IEI 0.908 0.214 0.100
+expression                 0.948 0.633    NA
+
+Comparación con lo publicado:
+                       term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+           ~P*U*E*IE*DE*IEI 0.9540816 0.2454390    0.954   0.245        0
+        P*~U*E*IE*InstE*~DE 0.9811765 0.2736580    0.981   0.273        0
+        P*~U*E*IE*InstE*IEI 0.9800443 0.2900643    0.980   0.290        0
+        P*E*IE*InstE*DE*IEI 0.9867391 0.2978737    0.987   0.300        0
+ P*U*~E*~IE*~InstE*~DE*~IEI 0.9080780 0.2139388    0.908   0.214        0
+         P*U*E*InstE*DE*IEI 0.9858124 0.2827143    0.986   0.283        0
+ dif_cov
+   0.000
+   0.001
+   0.000
+  -0.002
+   0.000
+   0.000
+
+CB-QCA (tau = 0,5):
+                       term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+        P*~U*E*IE*InstE*~DE    2    29       1.00 1.000 0.586  0.586
+        P*~U*E*IE*InstE*IEI    2    29       1.00 1.000 0.586  0.586
+         P*U*E*InstE*DE*IEI    4    27       0.50 0.100 0.111  0.056
+        P*E*IE*InstE*DE*IEI    4    27       0.75 0.578 0.457  0.343
+           ~P*U*E*IE*DE*IEI    2    29       1.00 1.000 0.586  0.586
+ P*U*~E*~IE*~InstE*~DE*~IEI    1    30       1.00 1.000 0.567  0.567
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.147         0.293            1             1             0
+        0.147         0.293            1             1             0
+        0.000         0.028            0             1             0
+        0.023         0.171            0             1             0
+        0.147         0.293            1             1             0
+        0.142         0.283            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                       term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        P*~U*E*IE*InstE*~DE        0.2052002       0.14660645       0.08795166
+        P*~U*E*IE*InstE*IEI        0.2052002       0.14660645       0.08795166
+         P*U*E*InstE*DE*IEI        0.0000000       0.00000000       0.00000000
+        P*E*IE*InstE*DE*IEI        0.0824585       0.02319336       0.00000000
+           ~P*U*E*IE*DE*IEI        0.2052002       0.14660645       0.08795166
+ P*U*~E*~IE*~InstE*~DE*~IEI        0.1983643       0.14172363       0.08502197
+
+===== R82 Qu 2026 (baja) | N = 31 | outcome nMIEC 
+Términos publicados: P*~U*~IE*~InstE*DE*~IEI + ~P*~U*~E*~InstE*DE*~IEI + ~P*U*~E*~IE*~InstE*~IEI + ~P*~U*E*IE*InstE*~DE*~IEI 
+
+                          inclS  covS  covU
+P*~U*~IE*~InstE*DE*~IEI   0.961 0.202 0.091
+~P*~U*~E*~InstE*DE*~IEI   0.974 0.215 0.047
+~P*U*~E*~IE*~InstE*~IEI   0.916 0.230 0.069
+~P*~U*E*IE*InstE*~DE*~IEI 0.940 0.148 0.051
+expression                0.907 0.434    NA
+
+Comparación con lo publicado:
+                      term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+   ~P*~U*~E*~InstE*DE*~IEI 0.9740709 0.2145032    0.974   0.215        0
+ ~P*~U*E*IE*InstE*~DE*~IEI 0.9397590 0.1484583    0.940   0.149        0
+   ~P*U*~E*~IE*~InstE*~IEI 0.9164980 0.2297932    0.916   0.230        0
+   P*~U*~IE*~InstE*DE*~IEI 0.9608434 0.2023855    0.961   0.203        0
+ dif_cov
+   0.000
+  -0.001
+   0.000
+  -0.001
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+   P*~U*~IE*~InstE*DE*~IEI    2    29      1.000 1.000 0.483  0.483
+   ~P*~U*~E*~InstE*DE*~IEI    3    28      0.667 0.282 0.196  0.131
+   ~P*U*~E*~IE*~InstE*~IEI    2    29      1.000 1.000 0.483  0.483
+ ~P*~U*E*IE*InstE*~DE*~IEI    1    30      1.000 1.000 0.467  0.467
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.121         0.241            1             1             0
+        0.000         0.065            0             1             0
+        0.121         0.241            1             1             0
+        0.117         0.233            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   P*~U*~IE*~InstE*DE*~IEI        0.1690063        0.1207275       0.07244873
+   ~P*~U*~E*~InstE*DE*~IEI        0.0000000        0.0000000       0.00000000
+   ~P*U*~E*~IE*~InstE*~IEI        0.1690063        0.1207275       0.07244873
+ ~P*~U*E*IE*InstE*~DE*~IEI        0.1633911        0.1166992       0.07000732

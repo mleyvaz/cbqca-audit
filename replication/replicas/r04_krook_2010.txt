@@ -1,0 +1,92 @@
+Tabla 2 coincide con el conjunto de datos (multiconjunto de filas): TRUE 
+
+===== Krook 2010 | WNP | compleja | N = 22 | outcome WNP 
+Términos publicados: ES*WS*~WM*~LP + ES*WS*WM*LP + ES*QU*~WS*WM + ES*QU*~WS*LP + ~ES*~WS*WM*LP 
+
+              inclS  covS  covU
+ES*WS*~WM*~LP     1 0.182 0.182
+ES*WS*WM*LP       1 0.273 0.273
+ES*QU*~WS*WM      1 0.273 0.091
+ES*QU*~WS*LP      1 0.273 0.091
+~ES*~WS*WM*LP     1 0.182 0.182
+expression        1 1.000    NA
+
+CB-QCA (tau = 0,5):
+          term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ES*WS*~WM*~LP    2    20          1     1 0.550  0.550        0.138
+   ES*WS*WM*LP    3    19          1     1 0.579  0.579        0.145
+  ES*QU*~WS*WM    3    19          1     1 0.579  0.579        0.145
+  ES*QU*~WS*LP    3    19          1     1 0.579  0.579        0.145
+ ~ES*~WS*WM*LP    2    20          1     1 0.550  0.550        0.138
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.275            1             1             0
+         0.289            1             1             0
+         0.289            1             1             0
+         0.289            1             1             0
+         0.275            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+          term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ES*WS*~WM*~LP        0.1925049        0.1375122       0.08251953
+   ES*WS*WM*LP        0.2026367        0.1447754       0.08685303
+  ES*QU*~WS*WM        0.2026367        0.1447754       0.08685303
+  ES*QU*~WS*LP        0.2026367        0.1447754       0.08685303
+ ~ES*~WS*WM*LP        0.1925049        0.1375122       0.08251953
+
+===== Krook 2010 | WNP | con remanentes (dos modelos) | N = 22 | outcome WNP 
+Términos publicados: WS + ES*WM + QU*LP + ~ES*LP + WM*LP 
+
+           inclS  covS  covU
+WS             1 0.455 0.182
+ES*WM          1 0.545 0.091
+QU*LP          1 0.545 0.091
+~ES*LP         1 0.182 0.000
+WM*LP          1 0.636 0.000
+expression     1 1.000    NA
+
+CB-QCA (tau = 0,5):
+   term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+     WS    5    17          1     1 0.647  0.647        0.162         0.324
+  ES*WM    6    16          1     1 0.687  0.688        0.172         0.344
+  QU*LP    6    16          1     1 0.687  0.688        0.172         0.344
+ ~ES*LP    2    20          1     1 0.550  0.550        0.138         0.275
+  WM*LP    7    15          1     1 0.733  0.733        0.183         0.367
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+            1             1         0.000
+            1             1         0.000
+            1             1         0.000
+            1             1         0.000
+            1             1         0.088
+
+Sensibilidad del quiebre de PS a tau:
+   term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     WS        0.2265015        0.1618042       0.09710693
+  ES*WM        0.2406616        0.1719360       0.10314941
+  QU*LP        0.2406616        0.1719360       0.10314941
+ ~ES*LP        0.1925049        0.1375122       0.08251953
+  WM*LP        0.2567139        0.1833496       0.11004639
+
+===== Krook 2010 | ~WNP | compleja | N = 22 | outcome NWNP 
+Términos publicados: QU*~WS*~WM*~LP + ~ES*~WS*WM*~LP + ES*~QU*~WS*~WM*LP 
+
+                  inclS  covS  covU
+QU*~WS*~WM*~LP        1 0.364 0.364
+~ES*~WS*WM*~LP        1 0.545 0.545
+ES*~QU*~WS*~WM*LP     1 0.091 0.091
+expression            1 1.000    NA
+
+CB-QCA (tau = 0,5):
+              term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+    QU*~WS*~WM*~LP    4    18          1     1 0.611  0.611        0.153
+    ~ES*~WS*WM*~LP    6    16          1     1 0.687  0.688        0.172
+ ES*~QU*~WS*~WM*LP    1    21          1     1 0.524  0.524        0.131
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.306            1             1             0
+         0.344            1             1             0
+         0.262            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+              term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    QU*~WS*~WM*~LP        0.2139282        0.1528320       0.09167480
+    ~ES*~WS*WM*~LP        0.2406616        0.1719360       0.10314941
+ ES*~QU*~WS*~WM*LP        0.1833496        0.1309814       0.07861328

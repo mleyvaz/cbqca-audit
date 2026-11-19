@@ -1,0 +1,52 @@
+N = 20 | exitosos: 10 
+
+===== R43 Sutcliffe 2022 (mandatos blandos) | N = 20 | outcome SUCC 
+Términos publicados: LEADSUP*DGC*EDUC + LEADSUP*DGC*TWOWAY*~LETTER + ~LEADSUP*EDUC*LETTER 
+
+                           inclS covS covU
+LEADSUP*DGC*EDUC               1  0.7  0.3
+LEADSUP*DGC*TWOWAY*~LETTER     1  0.5  0.1
+~LEADSUP*EDUC*LETTER           1  0.2  0.2
+expression                     1  1.0   NA
+
+Comparación con lo publicado:
+                       term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+       ~LEADSUP*EDUC*LETTER        1     0.2        1     0.2        0       0
+           LEADSUP*DGC*EDUC        1     0.7        1     0.7        0       0
+ LEADSUP*DGC*TWOWAY*~LETTER        1     0.5        1     0.5        0       0
+
+CB-QCA (tau = 0,5):
+                       term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+           LEADSUP*DGC*EDUC    7    13          1     1 0.769  0.769
+ LEADSUP*DGC*TWOWAY*~LETTER    5    15          1     1 0.667  0.667
+       ~LEADSUP*EDUC*LETTER    2    18          1     1 0.556  0.556
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.192         0.385            1             1         0.113
+        0.167         0.333            1             1         0.000
+        0.139         0.278            1             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                       term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+           LEADSUP*DGC*EDUC        0.2692871        0.1923218       0.11541748
+ LEADSUP*DGC*TWOWAY*~LETTER        0.2333374        0.1666870       0.10003662
+       ~LEADSUP*EDUC*LETTER        0.1944580        0.1389160       0.08337402
+
+===== R43 Sutcliffe 2022 (mandatos duros crisp) | N = 11 | outcome SUCC 
+Términos publicados: TWOWAY*LEADSUP*DGC 
+
+                   inclS covS covU
+TWOWAY*LEADSUP*DGC     1    1   NA
+
+Comparación con lo publicado:
+               term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+ TWOWAY*LEADSUP*DGC        1       1        1       1        0       0
+
+CB-QCA (tau = 0,5):
+               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ TWOWAY*LEADSUP*DGC    4     7          1     1     1      1         0.25
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+           0.5            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+               term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ TWOWAY*LEADSUP*DGC        0.3500366             0.25        0.1500244

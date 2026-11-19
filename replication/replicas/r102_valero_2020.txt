@@ -1,0 +1,88 @@
+N = 48 
+  sexofs enfermedad ETAPA
+0     26         36    23
+1     22         12    25
+Percentiles 10/50/90 (tipo 7):
+             10%    50%       90%
+auto_fs   1779.2  62208  648806.4
+biene_fs 12960.0 314928 1222314.3
+ans_fs       3.4     28     513.0
+dep_fs       1.0      4      32.0
+Necesidad (publicado Girl .44/.40, Boy .56/.43, PCD .27/.45, Teen .55/.45, High SE .35/.76, High anx .55/.56, High dep .50/.46):
+     inclN  covN
+GIRL 0.441 0.405
+      inclN  covN
+~GIRL 0.559 0.435
+    inclN  covN
+PCD 0.268 0.452
+     inclN  covN
+TEEN 0.554 0.449
+   inclN  covN
+SE 0.731 0.701
+    inclN  covN
+ANX 0.551 0.564
+    inclN  covN
+DEP 0.505 0.466
+Casos en 0,5: 14 
+
+===== R102 Valero-Moreno 2020 (alto) | N = 48 | outcome WB 
+Términos publicados: ~PCD*SE*~ANX*~DEP + GIRL*~PCD*TEEN*~ANX*~DEP + ~GIRL*~PCD*TEEN*ANX 
+
+                         inclS  covS  covU
+~PCD*SE*~ANX*~DEP        0.802 0.441 0.270
+GIRL*~PCD*TEEN*~ANX*~DEP 0.843 0.165 0.028
+~GIRL*~PCD*TEEN*ANX      0.794 0.122 0.088
+expression               0.769 0.556    NA
+
+Comparación con lo publicado:
+                     term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+      ~GIRL*~PCD*TEEN*ANX 0.7935484 0.1215415     0.79    0.12    0.004   0.002
+        ~PCD*SE*~ANX*~DEP 0.8021583 0.4407115     0.90    0.26   -0.098   0.181
+ GIRL*~PCD*TEEN*~ANX*~DEP 0.8434343 0.1650198     0.84    0.16    0.003   0.005
+
+CB-QCA (tau = 0,5):
+                     term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        ~PCD*SE*~ANX*~DEP    5    43        0.8 0.681 0.535  0.428        0.057
+ GIRL*~PCD*TEEN*~ANX*~DEP    1    47        1.0 1.000 0.596  0.596        0.149
+      ~GIRL*~PCD*TEEN*ANX    3    45        1.0 1.000 0.622  0.622        0.156
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.214            0             1             0
+         0.298            1             1             0
+         0.311            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                     term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        ~PCD*SE*~ANX*~DEP        0.1198120       0.05700684       0.00000000
+ GIRL*~PCD*TEEN*~ANX*~DEP        0.2085571       0.14898682       0.08941650
+      ~GIRL*~PCD*TEEN*ANX        0.2178345       0.15557861       0.09338379
+
+===== R102 Valero-Moreno 2020 (bajo) | N = 48 | outcome nWB 
+Términos publicados: GIRL*~SE*DEP + ~PCD*~TEEN*~SE*DEP + ~GIRL*~TEEN*~SE*~ANX 
+
+                     inclS  covS  covU
+GIRL*~SE*DEP         0.972 0.271 0.143
+~PCD*~TEEN*~SE*DEP   0.943 0.250 0.021
+~GIRL*~TEEN*~SE*~ANX 0.795 0.141 0.040
+expression           0.905 0.433    NA
+
+Comparación con lo publicado:
+                 term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~GIRL*~TEEN*~SE*~ANX 0.7951318 0.1412104     0.79    0.16    0.005  -0.019
+   ~PCD*~TEEN*~SE*DEP 0.9429348 0.2500000     0.88    0.27    0.063  -0.020
+         GIRL*~SE*DEP 0.9715762 0.2708934     0.93    0.30    0.042  -0.029
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+         GIRL*~SE*DEP    6    42          1     1 0.619  0.619        0.155
+   ~PCD*~TEEN*~SE*DEP    5    43          1     1 0.605  0.605        0.151
+ ~GIRL*~TEEN*~SE*~ANX    2    46          1     1 0.565  0.565        0.141
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.310            1             1             0
+         0.302            1             1             0
+         0.283            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+         GIRL*~SE*DEP        0.2166748        0.1547852       0.09289551
+   ~PCD*~TEEN*~SE*DEP        0.2116699        0.1511841       0.09069824
+ ~GIRL*~TEEN*~SE*~ANX        0.1978760        0.1413574       0.08483887

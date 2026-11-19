@@ -1,0 +1,46 @@
+
+===== R23 Li 2024 (efectividad del equipo) | N = 23 | outcome PTE 
+Términos publicados: PA*TS*~CMR + ~PA*~TC*~CMR*~CIS + PA*TS*~TC*~CC*~CIS + PA*~TC*~CC*~CMR*CIS + ~TS*~TC*CC*CMR*CIS + ~PA*TS*TC*CC*CMR*CIS 
+
+                     inclS  covS  covU
+PA*TS*~CMR               1 0.455 0.364
+~PA*~TC*~CMR*~CIS        1 0.318 0.318
+PA*TS*~TC*~CC*~CIS       1 0.091 0.045
+PA*~TC*~CC*~CMR*CIS      1 0.091 0.045
+~TS*~TC*CC*CMR*CIS       1 0.091 0.091
+~PA*TS*TC*CC*CMR*CIS     1 0.045 0.045
+expression               1 1.000    NA
+
+Comparación con lo publicado:
+                 term incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+    ~PA*~TC*~CMR*~CIS        1 0.31818182        1  0.3182        0       0
+ ~PA*TS*TC*CC*CMR*CIS        1 0.04545455        1  0.0455        0       0
+   ~TS*~TC*CC*CMR*CIS        1 0.09090909        1  0.0909        0       0
+  PA*~TC*~CC*~CMR*CIS        1 0.09090909        1  0.0909        0       0
+           PA*TS*~CMR        1 0.45454545        1  0.4545        0       0
+   PA*TS*~TC*~CC*~CIS        1 0.09090909        1  0.0909        0       0
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+           PA*TS*~CMR   10    13          1     1 0.077  0.077        0.019
+    ~PA*~TC*~CMR*~CIS    7    16          1     1 0.062  0.063        0.016
+   PA*TS*~TC*~CC*~CIS    2    21          1     1 0.048  0.048        0.012
+  PA*~TC*~CC*~CMR*CIS    2    21          1     1 0.048  0.048        0.012
+   ~TS*~TC*CC*CMR*CIS    2    21          1     1 0.048  0.048        0.012
+ ~PA*TS*TC*CC*CMR*CIS    1    22          1     1 0.045  0.045        0.011
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.039            1             1             0
+         0.031            1             1             0
+         0.024            1             1             0
+         0.024            1             1             0
+         0.024            1             1             0
+         0.023            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+           PA*TS*~CMR       0.02697754       0.01928711      0.011596680
+    ~PA*~TC*~CMR*~CIS       0.02191162       0.01562500      0.009399414
+   PA*TS*~TC*~CC*~CIS       0.01672363       0.01196289      0.007202148
+  PA*~TC*~CC*~CMR*CIS       0.01672363       0.01196289      0.007202148
+   ~TS*~TC*CC*CMR*CIS       0.01672363       0.01196289      0.007202148
+ ~PA*TS*TC*CC*CMR*CIS       0.01593018       0.01141357      0.006835938

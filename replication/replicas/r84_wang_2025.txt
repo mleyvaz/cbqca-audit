@@ -1,0 +1,66 @@
+Percentiles 5/50/95 (tipo 7):
+             5%         50%         95%
+UTT 1.00100e+03 5.94420e+04 5.13825e+05
+FTS 5.10000e+01 9.42000e+02 3.44650e+03
+EXP 2.83290e+04 3.88555e+05 2.68004e+06
+PAT 7.90000e+01 2.37200e+03 1.28605e+04
+INS 4.35000e+01 3.84000e+02 8.88000e+02
+ORI 1.17228e-01 2.10966e-01 3.25181e-01
+IUR 6.64463e-02 2.11980e-01 3.25281e-01
+TMT 1.28374e+05 3.79779e+06 2.67753e+07
+Control estilo fsQCA:
+                                inclS  covS
+FTS*EXP*PAT*INS*TMT             0.976 0.672
+~FTS*~EXP*INS*ORI*~IUR*TMT      0.956 0.255
+FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT 0.965 0.269
+FTS*EXP*PAT*~INS*ORI*IUR*~TMT   0.992 0.254
+expression                      0.959 0.798
+Casos en 0,5:
+UTT FTS EXP PAT INS ORI IUR TMT 
+  1   1   1   1   1   1   0   1 
+
+===== R84 Wang 2025 (alta) | N = 31 | outcome UTT 
+Términos publicados: FTS*EXP*PAT*INS*TMT + ~FTS*~EXP*INS*ORI*~IUR*TMT + FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT + FTS*EXP*PAT*~INS*ORI*IUR*~TMT 
+
+                                inclS  covS  covU
+FTS*EXP*PAT*INS*TMT             0.976 0.672 0.438
+~FTS*~EXP*INS*ORI*~IUR*TMT      0.956 0.255 0.035
+FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT 0.965 0.269 0.020
+FTS*EXP*PAT*~INS*ORI*IUR*~TMT   0.992 0.254 0.013
+expression                      0.959 0.798    NA
+
+Comparación con lo publicado:
+                            term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+      ~FTS*~EXP*INS*ORI*~IUR*TMT 0.9558442 0.2550243    0.953   0.256    0.003
+ FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT 0.9651741 0.2688843    0.965   0.268    0.000
+   FTS*EXP*PAT*~INS*ORI*IUR*~TMT 0.9918699 0.2536383    0.992   0.254    0.000
+             FTS*EXP*PAT*INS*TMT 0.9758551 0.6722107    0.976   0.672    0.000
+ dif_cov
+  -0.001
+   0.001
+   0.000
+   0.000
+
+CB-QCA (tau = 0,5):
+                            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+             FTS*EXP*PAT*INS*TMT    9    22        1.0 1.000 0.727  0.727
+      ~FTS*~EXP*INS*ORI*~IUR*TMT    2    29        0.5 0.033 0.034  0.017
+ FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT    1    30        1.0 1.000 0.533  0.533
+   FTS*EXP*PAT*~INS*ORI*IUR*~TMT    1    30        1.0 1.000 0.533  0.533
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.182         0.364            1             1         0.324
+        0.000         0.009            0             1         0.000
+        0.133         0.267            1             1         0.000
+        0.133         0.267            1             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                            term breakdown_PS.0.3 breakdown_PS.0.5
+             FTS*EXP*PAT*INS*TMT        0.2545776        0.1818237
+      ~FTS*~EXP*INS*ORI*~IUR*TMT        0.0000000        0.0000000
+ FTS*~EXP*~PAT*~INS*ORI*IUR*~TMT        0.1867065        0.1333618
+   FTS*EXP*PAT*~INS*ORI*IUR*~TMT        0.1867065        0.1333618
+ breakdown_PS.0.7
+       0.10913086
+       0.00000000
+       0.08001709
+       0.08001709

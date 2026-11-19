@@ -1,0 +1,46 @@
+
+===== R17 Ziemann 2022 (éxito) | N = 15 | outcome OUT 
+Términos publicados: TIMELY*PHARMA 
+
+              inclS covS covU
+TIMELY*PHARMA     1    1   NA
+
+Comparación con lo publicado:
+          term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+ TIMELY*PHARMA        1       1        1       1        0       0
+
+CB-QCA (tau = 0,5):
+          term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ TIMELY*PHARMA    7     8          1     1     1      1         0.25
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+           0.5            1             1          0.35
+
+Sensibilidad del quiebre de PS a tau:
+          term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ TIMELY*PHARMA        0.3500366         0.250061        0.1500244
+
+===== R17 Ziemann 2022 (fracaso) | N = 15 | outcome nOUT 
+Términos publicados: ~TIMELY + ~PHARMA 
+
+           inclS  covS  covU
+~TIMELY        1 0.500 0.375
+~PHARMA        1 0.625 0.500
+expression     1 1.000    NA
+
+Comparación con lo publicado:
+    term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~PHARMA        1   0.625        1   0.625        0       0
+ ~TIMELY        1   0.500        1   0.500        0       0
+
+CB-QCA (tau = 0,5):
+    term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+ ~TIMELY    4    11          1     1 0.636  0.636        0.159         0.318
+ ~PHARMA    5    10          1     1 0.700  0.700        0.175         0.350
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+            1             1             0
+            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+    term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~TIMELY        0.2227783        0.1591187       0.09545898
+ ~PHARMA        0.2450562        0.1750488       0.10504150

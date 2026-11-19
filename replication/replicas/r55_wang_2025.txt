@@ -1,0 +1,44 @@
+Necesidad (publicado .7279 .6521 .6931 .7435 .8521):
+  PCON     IO  PCOST    SCB    CYN 
+0.7292 0.6549 0.6967 0.7447 0.8528 
+
+===== R55 Wang 2025 (fatiga de privacidad) | N = 1134 | outcome PF 
+Términos publicados: PCON*PCOST*SCB + PCON*SCB*CYN + ~IO*~PCOST*SCB*CYN + PCON*~IO*PCOST*CYN + IO*PCOST*SCB*CYN 
+
+                   inclS  covS  covU
+PCON*PCOST*SCB     0.912 0.477 0.027
+PCON*SCB*CYN       0.898 0.548 0.047
+~IO*~PCOST*SCB*CYN 0.906 0.400 0.038
+PCON*~IO*PCOST*CYN 0.903 0.409 0.053
+IO*PCOST*SCB*CYN   0.920 0.439 0.026
+expression         0.853 0.717    NA
+
+Comparación con lo publicado:
+               term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~IO*~PCOST*SCB*CYN 0.9059117 0.4004689 0.902723 0.396912    0.003   0.004
+   IO*PCOST*SCB*CYN 0.9198707 0.4388439 0.917560 0.433953    0.002   0.005
+ PCON*~IO*PCOST*CYN 0.9034687 0.4090621 0.901293 0.404260    0.002   0.005
+     PCON*PCOST*SCB 0.9117774 0.4765447 0.909809 0.472265    0.002   0.004
+       PCON*SCB*CYN 0.8979063 0.5479283 0.895503 0.545123    0.002   0.003
+
+CB-QCA (tau = 0,5):
+               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     PCON*PCOST*SCB   87  1047      0.747 0.544 0.404  0.302        0.012
+       PCON*SCB*CYN  187   947      0.743 0.562 0.443  0.329        0.018
+ ~IO*~PCOST*SCB*CYN   30  1104      0.567 0.189 0.178  0.101        0.000
+ PCON*~IO*PCOST*CYN   34  1100      0.824 0.675 0.445  0.366        0.047
+   IO*PCOST*SCB*CYN   43  1091      0.698 0.441 0.342  0.238        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.151        0.369         0.706         0.318
+         0.165        0.452         0.659         0.412
+         0.051        0.000         0.550         0.000
+         0.183        0.422         0.901         0.327
+         0.119        0.174         0.676         0.097
+
+Sensibilidad del quiebre de PS a tau:
+               term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     PCON*PCOST*SCB       0.06781006       0.01232910                0
+       PCON*SCB*CYN       0.07678223       0.01818848                0
+ ~IO*~PCOST*SCB*CYN       0.00000000       0.00000000                0
+ PCON*~IO*PCOST*CYN       0.10174561       0.04748535                0
+   IO*PCOST*SCB*CYN       0.03814697       0.00000000                0

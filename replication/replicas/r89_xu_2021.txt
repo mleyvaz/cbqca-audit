@@ -1,0 +1,175 @@
+Medias (Tabla 2: 0,7536 0,4208 0,4798 0,7812 0,6134 0,5134 0,3264 0,4794):
+   Hospital        Cost     Disease Perpetrator      Weapon      Injury 
+     0.7536      0.4208      0.4798      0.7812      0.6134      0.5134 
+      Media    Judgment 
+     0.3264      0.4794 
+
+===== R89 Xu 2021 (alta) | N = 50 | outcome Judgment 
+Términos publicados: Hospital*~Cost*~Disease*Perpetrator*Weapon + Hospital*~Disease*Perpetrator*Weapon*Injury + Hospital*Cost*Disease*Weapon*Injury*~Media + Cost*Disease*Perpetrator*Weapon*Injury*~Media + Hospital*Cost*Disease*Perpetrator*Weapon*~Injury + ~Cost*Disease*Perpetrator*~Weapon*~Injury*Media + ~Hospital*~Cost*~Disease*~Perpetrator*~Weapon*~Injury*~Media 
+
+                                                             inclS  covS  covU
+Hospital*~Cost*~Disease*Perpetrator*Weapon                   0.757 0.305 0.028
+Hospital*~Disease*Perpetrator*Weapon*Injury                  0.873 0.291 0.028
+Hospital*Cost*Disease*Weapon*Injury*~Media                   1.000 0.250 0.042
+Cost*Disease*Perpetrator*Weapon*Injury*~Media                0.946 0.250 0.042
+Hospital*Cost*Disease*Perpetrator*Weapon*~Injury             0.829 0.138 0.014
+~Cost*Disease*Perpetrator*~Weapon*~Injury*Media              1.000 0.097 0.083
+~Hospital*~Cost*~Disease*~Perpetrator*~Weapon*~Injury*~Media 1.000 0.055 0.055
+expression                                                   0.824 0.723    NA
+
+Comparación con lo publicado:
+                                                         term  incl_rep
+              ~Cost*Disease*Perpetrator*~Weapon*~Injury*Media 1.0000000
+ ~Hospital*~Cost*~Disease*~Perpetrator*~Weapon*~Injury*~Media 1.0000000
+                Cost*Disease*Perpetrator*Weapon*Injury*~Media 0.9462875
+                   Hospital*~Cost*~Disease*Perpetrator*Weapon 0.7569804
+                  Hospital*~Disease*Perpetrator*Weapon*Injury 0.8725000
+             Hospital*Cost*Disease*Perpetrator*Weapon*~Injury 0.8291457
+                   Hospital*Cost*Disease*Weapon*Injury*~Media 1.0000000
+    cov_rep incl_pub cov_pub dif_incl dif_cov
+ 0.09720484    1.000   0.097        0       0
+ 0.05548602    1.000   0.055        0       0
+ 0.24989570    0.946   0.250        0       0
+ 0.30538173    0.757   0.305        0       0
+ 0.29119733    0.873   0.291        0       0
+ 0.13767209    0.829   0.138        0       0
+ 0.24989570    1.000   0.250        0       0
+
+CB-QCA (tau = 0,5):
+                                                         term n_in n_out
+                   Hospital*~Cost*~Disease*Perpetrator*Weapon   10    40
+                  Hospital*~Disease*Perpetrator*Weapon*Injury    8    42
+                   Hospital*Cost*Disease*Weapon*Injury*~Media    5    45
+                Cost*Disease*Perpetrator*Weapon*Injury*~Media    6    44
+             Hospital*Cost*Disease*Perpetrator*Weapon*~Injury    2    48
+              ~Cost*Disease*Perpetrator*~Weapon*~Injury*Media    2    48
+ ~Hospital*~Cost*~Disease*~Perpetrator*~Weapon*~Injury*~Media    1    49
+ incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS PS_lo_ci_low
+      0.600 0.360 0.375  0.225        0.000         0.113        0.000
+      0.625 0.394 0.390  0.244        0.000         0.122        0.000
+      1.000 1.000 0.644  0.644        0.161         0.322        1.000
+      0.833 0.738 0.564  0.470        0.076         0.235        0.145
+      0.000 0.000    NA  0.000        0.000         0.000        0.000
+      1.000 1.000 0.604  0.604        0.151         0.302        1.000
+      1.000 1.000 0.592  0.592        0.148         0.296        1.000
+ PS_lo_ci_high PS_lo_exact95
+         0.831             0
+         1.000             0
+         1.000             0
+         1.000             0
+         0.000             0
+         1.000             0
+         1.000             0
+
+Sensibilidad del quiebre de PS a tau:
+                                                         term breakdown_PS.0.3
+                   Hospital*~Cost*~Disease*Perpetrator*Weapon       0.01879883
+                  Hospital*~Disease*Perpetrator*Weapon*Injury       0.02917480
+                   Hospital*Cost*Disease*Weapon*Injury*~Media       0.22558594
+                Cost*Disease*Perpetrator*Weapon*Injury*~Media       0.13940430
+             Hospital*Cost*Disease*Perpetrator*Weapon*~Injury       0.00000000
+              ~Cost*Disease*Perpetrator*~Weapon*~Injury*Media       0.21148682
+ ~Hospital*~Cost*~Disease*~Perpetrator*~Weapon*~Injury*~Media       0.20715332
+ breakdown_PS.0.5 breakdown_PS.0.7
+       0.00000000       0.00000000
+       0.00000000       0.00000000
+       0.16113281       0.09667969
+       0.07580566       0.01214600
+       0.00000000       0.00000000
+       0.15106201       0.09063721
+       0.14801025       0.08880615
+
+===== R89 Xu 2021 (baja) | N = 50 | outcome nJudgment 
+Términos publicados: Hospital*~Injury*~Media + Cost*~Injury + ~Perpetrator*Injury + Cost*~Disease*~Media + ~Cost*Weapon*Media + ~Perpetrator*Weapon + ~Hospital*~Cost*Injury + ~Hospital*~Disease*Weapon + ~Hospital*~Cost*Weapon + ~Hospital*~Disease*Injury + ~Hospital*Weapon*Media + ~Hospital*Injury*Media + ~Hospital*Cost*Media 
+
+                          inclS  covS  covU
+Hospital*~Injury*~Media   0.888 0.511 0.142
+Cost*~Injury              0.940 0.397 0.065
+~Perpetrator*Injury       0.869 0.254 0.013
+Cost*~Disease*~Media      0.900 0.229 0.013
+~Cost*Weapon*Media        0.760 0.204 0.051
+~Perpetrator*Weapon       0.812 0.166 0.000
+~Hospital*~Cost*Injury    0.787 0.140 0.000
+~Hospital*~Disease*Weapon 0.901 0.115 0.000
+~Hospital*~Cost*Weapon    0.751 0.115 0.000
+~Hospital*~Disease*Injury 0.819 0.115 0.000
+~Hospital*Weapon*Media    1.000 0.076 0.000
+~Hospital*Injury*Media    1.000 0.076 0.000
+~Hospital*Cost*Media      0.834 0.064 0.000
+expression                0.791 0.871    NA
+
+Comparación con lo publicado:
+                      term  incl_rep    cov_rep incl_pub cov_pub dif_incl
+        ~Cost*Weapon*Media 0.7604017 0.20361122    0.760   0.204        0
+    ~Hospital*~Cost*Injury 0.7866379 0.14022282    0.787   0.140        0
+    ~Hospital*~Cost*Weapon 0.7512563 0.11486746    0.751   0.115        0
+ ~Hospital*~Disease*Injury 0.8191781 0.11486746    0.819   0.115        0
+ ~Hospital*~Disease*Weapon 0.9009009 0.11525163    0.901   0.115        0
+      ~Hospital*Cost*Media 0.8341709 0.06377257    0.834   0.064        0
+    ~Hospital*Injury*Media 1.0000000 0.07645025    1.000   0.076        0
+    ~Hospital*Weapon*Media 1.0000000 0.07645025    1.000   0.076        0
+       ~Perpetrator*Injury 0.8687664 0.25432194    0.869   0.254        0
+       ~Perpetrator*Weapon 0.8116761 0.16557818    0.812   0.166        0
+      Cost*~Disease*~Media 0.9004525 0.22935075    0.900   0.229        0
+              Cost*~Injury 0.9399454 0.39684979    0.940   0.397        0
+   Hospital*~Injury*~Media 0.8879253 0.51133308    0.888   0.511        0
+ dif_cov
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+   Hospital*~Injury*~Media   14    36      0.786 0.571 0.364  0.286
+              Cost*~Injury   10    40      1.000 1.000 0.525  0.525
+       ~Perpetrator*Injury    3    47      0.667 0.217 0.138  0.092
+      Cost*~Disease*~Media    3    47      1.000 1.000 0.447  0.447
+        ~Cost*Weapon*Media    4    46      0.500 0.000 0.000  0.000
+       ~Perpetrator*Weapon    3    47      0.667 0.217 0.138  0.092
+    ~Hospital*~Cost*Injury    2    48      1.000 1.000 0.438  0.437
+ ~Hospital*~Disease*Weapon    3    47      1.000 1.000 0.447  0.447
+    ~Hospital*~Cost*Weapon    2    48      1.000 1.000 0.438  0.437
+ ~Hospital*~Disease*Injury    2    48      1.000 1.000 0.438  0.437
+    ~Hospital*Weapon*Media    1    49      1.000 1.000 0.429  0.429
+    ~Hospital*Injury*Media    1    49      1.000 1.000 0.429  0.429
+      ~Hospital*Cost*Media    1    49      1.000 1.000 0.429  0.429
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.018         0.143            0             1         0.000
+        0.131         0.263            1             1         0.146
+        0.000         0.046            0             1         0.000
+        0.112         0.223            1             1         0.000
+        0.000         0.000            0             1         0.000
+        0.000         0.046            0             1         0.000
+        0.109         0.219            1             1         0.000
+        0.112         0.223            1             1         0.000
+        0.109         0.219            1             1         0.000
+        0.109         0.219            1             1         0.000
+        0.107         0.214            1             1         0.000
+        0.107         0.214            1             1         0.000
+        0.107         0.214            1             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   Hospital*~Injury*~Media       0.06787109        0.0178833       0.00000000
+              Cost*~Injury       0.18377686        0.1312866       0.07879639
+       ~Perpetrator*Injury       0.00000000        0.0000000       0.00000000
+      Cost*~Disease*~Media       0.15643311        0.1117554       0.06707764
+        ~Cost*Weapon*Media       0.00000000        0.0000000       0.00000000
+       ~Perpetrator*Weapon       0.00000000        0.0000000       0.00000000
+    ~Hospital*~Cost*Injury       0.15313721        0.1093750       0.06567383
+ ~Hospital*~Disease*Weapon       0.15643311        0.1117554       0.06707764
+    ~Hospital*~Cost*Weapon       0.15313721        0.1093750       0.06567383
+ ~Hospital*~Disease*Injury       0.15313721        0.1093750       0.06567383
+    ~Hospital*Weapon*Media       0.15002441        0.1071777       0.06433105
+    ~Hospital*Injury*Media       0.15002441        0.1071777       0.06433105
+      ~Hospital*Cost*Media       0.15002441        0.1071777       0.06433105

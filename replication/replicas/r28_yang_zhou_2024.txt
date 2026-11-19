@@ -1,0 +1,53 @@
+
+===== R28 Yang Zhou 2024 (eficiencia hidrica) | N = 10 | outcome Y 
+Términos publicados: ~WAT*~STR*~TEC*TO*TR*TF*~TC*WTR2*SE*~TS + WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS + ~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS + WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS 
+
+                                        inclS  covS  covU
+~WAT*~STR*~TEC*TO*TR*TF*~TC*WTR2*SE*~TS 0.922 0.246 0.165
+WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS   0.667 0.079 0.010
+~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS  0.889 0.100 0.015
+WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS   0.745 0.085 0.042
+expression                              0.848 0.338    NA
+
+Comparación con lo publicado:
+                                    term  incl_rep    cov_rep incl_pub cov_pub
+ ~WAT*~STR*~TEC*TO*TR*TF*~TC*WTR2*SE*~TS 0.9218750 0.24583333     0.92    0.25
+  ~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS 0.8888889 0.10000000     1.00    0.14
+   WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS 0.6666667 0.07916667     1.00    0.22
+   WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS 0.7454545 0.08541667     0.83    0.14
+ dif_incl dif_cov
+    0.002  -0.004
+   -0.111  -0.040
+   -0.333  -0.141
+   -0.085  -0.055
+
+CB-QCA (tau = 0,5):
+                                    term n_in n_out incl_crisp PS_lo PN_lo
+ ~WAT*~STR*~TEC*TO*TR*TF*~TC*WTR2*SE*~TS    1     9          1     1 0.556
+ PNS_lo breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+  0.556        0.139         0.278            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                                    term breakdown_PS.0.3 breakdown_PS.0.5
+ ~WAT*~STR*~TEC*TO*TR*TF*~TC*WTR2*SE*~TS         0.194458         0.138916
+ breakdown_PS.0.7
+       0.08337402
+Avisos:
+1: In FUN(X[[i]], ...) :
+  term 'WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped
+2: In FUN(X[[i]], ...) :
+  term '~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS': all cases on one side of the threshold; skipped
+3: In FUN(X[[i]], ...) :
+  term 'WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped
+4: In FUN(X[[i]], ...) :
+  term 'WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped
+5: In FUN(X[[i]], ...) :
+  term '~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS': all cases on one side of the threshold; skipped
+6: In FUN(X[[i]], ...) :
+  term 'WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped
+7: In FUN(X[[i]], ...) :
+  term 'WAT*~STR*TEC*TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped
+8: In FUN(X[[i]], ...) :
+  term '~WAT*~STR*~TEC*TO*TR*TF*TC*WTR2*SE*~TS': all cases on one side of the threshold; skipped
+9: In FUN(X[[i]], ...) :
+  term 'WAT*STR*TEC*~TO*TR*TF*TC*~WTR2*~SE*TS': all cases on one side of the threshold; skipped

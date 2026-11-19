@@ -1,0 +1,61 @@
+
+===== R25 Lu Gao 2025 (formalismo) | N = 20 | outcome Y 
+Términos publicados: ENV*DIG*~ATT*~ECO*IND + ENV*DIG*ACC*~ATT*~ECO + ENV*ATT*~ECO*~IND + DIG*ATT*~ECO*~IND + ~ENV*~DIG*ACC*ECO*~IND + ENV*~DIG*ACC*~ECO*IND + ~ENV*DIG*ACC*~ECO*IND + ENV*DIG*ACC*ATT*~IND + ~DIG*ACC*ATT*~ECO*IND 
+
+                       inclS  covS  covU
+ENV*DIG*~ATT*~ECO*IND      1 0.077 0.077
+ENV*DIG*ACC*~ATT*~ECO      1 0.077 0.077
+ENV*ATT*~ECO*~IND          1 0.154 0.077
+DIG*ATT*~ECO*~IND          1 0.154 0.077
+~ENV*~DIG*ACC*ECO*~IND     1 0.077 0.077
+ENV*~DIG*ACC*~ECO*IND      1 0.231 0.154
+~ENV*DIG*ACC*~ECO*IND      1 0.154 0.154
+ENV*DIG*ACC*ATT*~IND       1 0.077 0.077
+~DIG*ACC*ATT*~ECO*IND      1 0.154 0.077
+expression                 1 1.000    NA
+
+Comparación con lo publicado:
+                   term incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+  ~DIG*ACC*ATT*~ECO*IND        1 0.15384615        1    0.15        0   0.004
+ ~ENV*~DIG*ACC*ECO*~IND        1 0.07692308        1    0.08        0  -0.003
+  ~ENV*DIG*ACC*~ECO*IND        1 0.15384615        1    0.15        0   0.004
+      DIG*ATT*~ECO*~IND        1 0.15384615        1    0.15        0   0.004
+  ENV*~DIG*ACC*~ECO*IND        1 0.23076923        1    0.23        0   0.001
+      ENV*ATT*~ECO*~IND        1 0.15384615        1    0.15        0   0.004
+  ENV*DIG*~ATT*~ECO*IND        1 0.07692308        1    0.08        0  -0.003
+  ENV*DIG*ACC*~ATT*~ECO        1 0.07692308        1    0.08        0  -0.003
+   ENV*DIG*ACC*ATT*~IND        1 0.07692308        1    0.08        0  -0.003
+
+CB-QCA (tau = 0,5):
+                   term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+  ENV*DIG*~ATT*~ECO*IND    1    19          1     1 0.368  0.368        0.092
+  ENV*DIG*ACC*~ATT*~ECO    1    19          1     1 0.368  0.368        0.092
+      ENV*ATT*~ECO*~IND    2    18          1     1 0.389  0.389        0.097
+      DIG*ATT*~ECO*~IND    2    18          1     1 0.389  0.389        0.097
+ ~ENV*~DIG*ACC*ECO*~IND    1    19          1     1 0.368  0.368        0.092
+  ENV*~DIG*ACC*~ECO*IND    3    17          1     1 0.412  0.412        0.103
+  ~ENV*DIG*ACC*~ECO*IND    2    18          1     1 0.389  0.389        0.097
+   ENV*DIG*ACC*ATT*~IND    1    19          1     1 0.368  0.368        0.092
+  ~DIG*ACC*ATT*~ECO*IND    2    18          1     1 0.389  0.389        0.097
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.184            1             1             0
+         0.184            1             1             0
+         0.194            1             1             0
+         0.194            1             1             0
+         0.184            1             1             0
+         0.206            1             1             0
+         0.194            1             1             0
+         0.184            1             1             0
+         0.194            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                   term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+  ENV*DIG*~ATT*~ECO*IND        0.1289673       0.09216309       0.05529785
+  ENV*DIG*ACC*~ATT*~ECO        0.1289673       0.09216309       0.05529785
+      ENV*ATT*~ECO*~IND        0.1361694       0.09722900       0.05834961
+      DIG*ATT*~ECO*~IND        0.1361694       0.09722900       0.05834961
+ ~ENV*~DIG*ACC*ECO*~IND        0.1289673       0.09216309       0.05529785
+  ENV*~DIG*ACC*~ECO*IND        0.1441650       0.10296631       0.06176758
+  ~ENV*DIG*ACC*~ECO*IND        0.1361694       0.09722900       0.05834961
+   ENV*DIG*ACC*ATT*~IND        0.1289673       0.09216309       0.05529785
+  ~DIG*ACC*ATT*~ECO*IND        0.1361694       0.09722900       0.05834961

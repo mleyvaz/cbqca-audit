@@ -1,0 +1,51 @@
+Casos en 0,5 exacto por variable:
+  DT   RD  RDP SIZE  MRP  DFI  GST 
+   2    1    1    1    0    0    0 
+     inclN   RoN
+RD   0.550 0.766
+RDP  0.584 0.738
+SIZE 0.710 0.807
+MRP  0.559 0.778
+DFI  0.638 0.674
+GST  0.616 0.774
+
+===== R09 Shi 2025 (alta DT) | N = 217 | outcome DT 
+Términos publicados: SIZE*MRP*~DFI*~GST + ~RD*SIZE*MRP*~DFI + ~RD*~RDP*SIZE*GST + ~RDP*SIZE*~MRP*DFI*GST + ~RD*RDP*SIZE*MRP*~GST 
+
+                       inclS  covS  covU
+SIZE*MRP*~DFI*~GST     0.914 0.305 0.032
+~RD*SIZE*MRP*~DFI      0.917 0.300 0.005
+~RD*~RDP*SIZE*GST      0.878 0.393 0.036
+~RDP*SIZE*~MRP*DFI*GST 0.881 0.330 0.015
+~RD*RDP*SIZE*MRP*~GST  0.891 0.252 0.008
+expression             0.866 0.536    NA
+
+Comparación con lo publicado:
+                   term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+      ~RD*~RDP*SIZE*GST 0.8782082 0.3929100   0.8745  0.3895    0.004   0.003
+  ~RD*RDP*SIZE*MRP*~GST 0.8905920 0.2521214   0.8873  0.2479    0.003   0.004
+      ~RD*SIZE*MRP*~DFI 0.9170577 0.3000653   0.9144  0.2961    0.003   0.004
+ ~RDP*SIZE*~MRP*DFI*GST 0.8813672 0.3302382   0.8871  0.3260   -0.006   0.004
+     SIZE*MRP*~DFI*~GST 0.9141204 0.3050205   0.9118  0.3018    0.002   0.003
+
+CB-QCA (tau = 0,5):
+                   term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     SIZE*MRP*~DFI*~GST   20   197      0.900 0.816 0.492  0.443        0.086
+      ~RD*SIZE*MRP*~DFI   12   205      0.833 0.681 0.426  0.355        0.047
+      ~RD*~RDP*SIZE*GST   21   196      0.810 0.644 0.426  0.345        0.039
+ ~RDP*SIZE*~MRP*DFI*GST   11   206      0.727 0.470 0.333  0.242        0.000
+  ~RD*RDP*SIZE*MRP*~GST    4   213      0.250 0.000 0.000  0.000        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.222        0.548         1.000         0.327
+         0.178        0.216         1.000         0.000
+         0.173        0.296         0.914         0.095
+         0.121        0.000         1.000         0.000
+         0.000        0.000         1.000         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                   term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     SIZE*MRP*~DFI*~GST       0.14013672       0.08581543       0.03149414
+      ~RD*SIZE*MRP*~DFI       0.09936523       0.04718018       0.00000000
+      ~RD*~RDP*SIZE*GST       0.09228516       0.03869629       0.00000000
+ ~RDP*SIZE*~MRP*DFI*GST       0.04376221       0.00000000       0.00000000
+  ~RD*RDP*SIZE*MRP*~GST       0.00000000       0.00000000       0.00000000

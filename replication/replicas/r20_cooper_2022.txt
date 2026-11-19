@@ -1,0 +1,37 @@
+N = 32 | con resultado: 17 
+
+===== R20 Cooper 2022 (sostenimiento) | N = 32 | outcome ROUT 
+Términos publicados: SUP*ORG*FUND + SUP*ORG*COMM*EVAL*~PLAN + SUP*ORG*EVAL*PART*~PLAN + SUP*COMM*PART*FUND*~EVAL 
+
+                         inclS  covS  covU
+SUP*ORG*FUND             0.900 0.529 0.412
+SUP*ORG*COMM*EVAL*~PLAN  1.000 0.118 0.059
+SUP*ORG*EVAL*PART*~PLAN  1.000 0.059 0.059
+SUP*COMM*PART*FUND*~EVAL 1.000 0.176 0.118
+expression               0.929 0.765    NA
+
+Comparación con lo publicado:
+                     term incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+ SUP*COMM*PART*FUND*~EVAL      1.0 0.17647059      1.0    0.18        0  -0.004
+  SUP*ORG*COMM*EVAL*~PLAN      1.0 0.11764706      1.0    0.12        0  -0.002
+  SUP*ORG*EVAL*PART*~PLAN      1.0 0.05882353      1.0    0.06        0  -0.001
+             SUP*ORG*FUND      0.9 0.52941176      0.9    0.53        0  -0.001
+
+CB-QCA (tau = 0,5):
+                     term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+             SUP*ORG*FUND   10    22        0.9 0.843 0.596  0.536        0.109
+  SUP*ORG*COMM*EVAL*~PLAN    2    30        1.0 1.000 0.500  0.500        0.125
+  SUP*ORG*EVAL*PART*~PLAN    1    31        1.0 1.000 0.484  0.484        0.121
+ SUP*COMM*PART*FUND*~EVAL    3    29        1.0 1.000 0.517  0.517        0.129
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.268        0.451             1             0
+         0.250        1.000             1             0
+         0.242        1.000             1             0
+         0.259        1.000             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                     term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+             SUP*ORG*FUND        0.1727295        0.1091309       0.04547119
+  SUP*ORG*COMM*EVAL*~PLAN        0.1750488        0.1250000       0.07501221
+  SUP*ORG*EVAL*PART*~PLAN        0.1693726        0.1209717       0.07263184
+ SUP*COMM*PART*FUND*~EVAL        0.1810913        0.1293335       0.07763672

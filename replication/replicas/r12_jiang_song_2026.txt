@@ -1,0 +1,84 @@
+Anclas recalculadas (percentiles 5/50/95, tipo 7):
+        5%   50%  95%
+IC   2.000 4.000 5.75
+VA   2.250 4.250 6.00
+PE   2.000 4.000 5.75
+PA   2.112 4.250 6.00
+PCV  2.250 4.125 6.00
+CI   2.000 4.000 6.00
+CCEI 2.250 4.250 6.25
+Casos en 0,500 (publicado: 24, 28, 26, 39, 0, 23, 22):
+  IC   VA   PE   PA  PCV   CI CCEI 
+  24   28   26   39    0   23   22 
+
+===== R12 Jiang y Song 2026 (alta) | N = 350 | outcome CCEI 
+Términos publicados: IC*VA*PE*PA + IC*PA*PCV*CI + PE*PA*PCV*CI + IC*VA*PE*PCV*CI 
+
+                inclS  covS  covU
+IC*VA*PE*PA     0.930 0.587 0.050
+IC*PA*PCV*CI    0.929 0.610 0.033
+PE*PA*PCV*CI    0.923 0.622 0.046
+IC*VA*PE*PCV*CI 0.942 0.564 0.028
+expression      0.895 0.734    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+    IC*PA*PCV*CI 0.9288415 0.6099003    0.929   0.610        0   0.000
+     IC*VA*PE*PA 0.9295596 0.5865756    0.930   0.586        0   0.001
+ IC*VA*PE*PCV*CI 0.9421214 0.5637705    0.942   0.564        0   0.000
+    PE*PA*PCV*CI 0.9232225 0.6223132    0.923   0.622        0   0.000
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     IC*VA*PE*PA   97   253      0.887 0.815 0.563  0.499        0.096
+    IC*PA*PCV*CI  100   250      0.910 0.857 0.591  0.538        0.112
+    PE*PA*PCV*CI  102   248      0.892 0.827 0.580  0.517        0.102
+ IC*VA*PE*PCV*CI   83   267      0.928 0.879 0.568  0.527        0.114
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.250        0.709         0.909         0.647
+         0.269        0.756         0.941         0.710
+         0.259        0.729         0.921         0.671
+         0.263        0.774         0.966         0.720
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     IC*VA*PE*PA        0.1577759       0.09649658       0.03521729
+    IC*PA*PCV*CI        0.1748047       0.11206055       0.04925537
+    PE*PA*PCV*CI        0.1648560       0.10235596       0.03985596
+ IC*VA*PE*PCV*CI        0.1736450       0.11370850       0.05377197
+
+===== R12 Jiang y Song 2026 (baja) | N = 350 | outcome nCCEI 
+Términos publicados: ~PE*~PA*~PCV*~CI + ~IC*~PE*~PA*~PCV + ~IC*~VA*~PA*~CI + ~IC*~VA*~PE*~PCV*~CI 
+
+                     inclS  covS  covU
+~PE*~PA*~PCV*~CI     0.944 0.615 0.033
+~IC*~PE*~PA*~PCV     0.939 0.622 0.039
+~IC*~VA*~PA*~CI      0.938 0.606 0.055
+~IC*~VA*~PE*~PCV*~CI 0.952 0.577 0.026
+expression           0.907 0.736    NA
+
+Comparación con lo publicado:
+                 term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+     ~IC*~PE*~PA*~PCV 0.9391216 0.6217837    0.939   0.622        0       0
+      ~IC*~VA*~PA*~CI 0.9377959 0.6060534    0.938   0.606        0       0
+ ~IC*~VA*~PE*~PCV*~CI 0.9520873 0.5772796    0.952   0.577        0       0
+     ~PE*~PA*~PCV*~CI 0.9443610 0.6154882    0.944   0.615        0       0
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     ~PE*~PA*~PCV*~CI   88   262      0.875 0.811 0.612  0.535        0.103
+     ~IC*~PE*~PA*~PCV   91   259      0.868 0.801 0.613  0.532        0.100
+      ~IC*~VA*~PA*~CI   85   265      0.882 0.821 0.611  0.539        0.105
+ ~IC*~VA*~PE*~PCV*~CI   80   270      0.887 0.826 0.604  0.536        0.106
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.268        0.703         0.906         0.645
+         0.266        0.692         0.903         0.637
+         0.270        0.703         0.915         0.655
+         0.268        0.714         0.929         0.655
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     ~PE*~PA*~PCV*~CI        0.1686401        0.1026001       0.03656006
+     ~IC*~PE*~PA*~PCV        0.1665039        0.1000977       0.03369141
+      ~IC*~VA*~PA*~CI        0.1710205        0.1053467       0.03967285
+ ~IC*~VA*~PE*~PCV*~CI        0.1706543        0.1058350       0.04101562

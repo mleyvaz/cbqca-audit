@@ -1,0 +1,19 @@
+Package: cbqca
+Type: Package
+Title: Causal-Bounds Qualitative Comparative Analysis
+Version: 0.1.0
+Authors@R: person("Maikel Yelandi", "Leyva-Vazquez", email = "maikel.leyvav@ug.edu.ec",
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7911-5879"))
+Description: Reads the solution terms of a qualitative comparative analysis
+    (QCA) as causal claims. For each term it reports the classic sufficiency
+    consistency, exact bounds on Pearl's probabilities of necessity (PN),
+    sufficiency (PS) and necessity-and-sufficiency (PNS) computed by linear
+    programming over response types (Tian and Pearl, 2000), and a
+    configurational breakdown point: the smallest level of confounding at
+    which the causal reading is no longer guaranteed.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: lpSolve, stats
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

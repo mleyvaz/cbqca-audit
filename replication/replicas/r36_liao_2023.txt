@@ -1,0 +1,44 @@
+Casos en 0,5:
+TI IP ME BE RE CD BI 
+ 0  2  1  0  0  0  0 
+
+===== R36 Liao 2023 (alta) | N = 61 | outcome BI 
+Términos publicados: ~TI*~IP*ME*~BE*RE*CD + TI*IP*ME*~BE*RE*CD + ~TI*IP*~ME*BE*RE*CD + ~TI*IP*ME*~BE*~RE*~CD + TI*~IP*~ME*~BE*RE*~CD 
+
+                      inclS  covS  covU
+~TI*~IP*ME*~BE*RE*CD  0.942 0.195 0.035
+TI*IP*ME*~BE*RE*CD    0.989 0.162 0.029
+~TI*IP*~ME*BE*RE*CD   0.909 0.225 0.085
+~TI*IP*ME*~BE*~RE*~CD 0.921 0.216 0.082
+TI*~IP*~ME*~BE*RE*~CD 0.963 0.159 0.039
+expression            0.894 0.448    NA
+
+Comparación con lo publicado:
+                  term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+  ~TI*~IP*ME*~BE*RE*CD 0.9423687 0.1945907   0.9422  0.1886    0.000   0.006
+   ~TI*IP*~ME*BE*RE*CD 0.9085688 0.2251957   0.9078  0.2197    0.001   0.005
+ ~TI*IP*ME*~BE*~RE*~CD 0.9214806 0.2161708   0.9776  0.2095   -0.056   0.007
+ TI*~IP*~ME*~BE*RE*~CD 0.9631606 0.1592883   0.9647  0.1542   -0.002   0.005
+    TI*IP*ME*~BE*RE*CD 0.9888812 0.1620498   0.9893  0.1568    0.000   0.005
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+  ~TI*~IP*ME*~BE*RE*CD    2    59      1.000 1.000 0.373  0.373        0.093
+    TI*IP*ME*~BE*RE*CD    2    59      1.000 1.000 0.373  0.373        0.093
+   ~TI*IP*~ME*BE*RE*CD    4    57      0.750 0.321 0.158  0.118        0.000
+ ~TI*IP*ME*~BE*~RE*~CD    3    58      0.667 0.079 0.043  0.029        0.000
+ TI*~IP*~ME*~BE*RE*~CD    2    59      1.000 1.000 0.373  0.373        0.093
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.186            1             1             0
+         0.186            1             1             0
+         0.059            0             1             0
+         0.014            0             1             0
+         0.186            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+  ~TI*~IP*ME*~BE*RE*CD      0.130554199       0.09326172       0.05596924
+    TI*IP*ME*~BE*RE*CD      0.130554199       0.09326172       0.05596924
+   ~TI*IP*~ME*BE*RE*CD      0.003967285       0.00000000       0.00000000
+ ~TI*IP*ME*~BE*~RE*~CD      0.000000000       0.00000000       0.00000000
+ TI*~IP*~ME*~BE*RE*~CD      0.130554199       0.09326172       0.05596924

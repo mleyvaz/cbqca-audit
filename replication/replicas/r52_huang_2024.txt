@@ -1,0 +1,79 @@
+Cuartiles de R (tipo 7), solo como referencia:
+         EL      HX      XT      ZL      TJ      SS      HJ
+25% 0.00936 0.00202 0.01615 0.00639 0.01148 0.00481 0.02933
+50% 0.02258 0.01571 0.02671 0.00877 0.02216 0.00832 0.04109
+75% 0.03752 0.06813 0.03438 0.01406 0.03509 0.01193 0.06817
+Necesidad para EL (publicado HX .8145 XT .7560 ZL .8474 TJ .7796 SS .8737 HJ .8622):
+    HX     XT     ZL     TJ     SS     HJ 
+0.8142 0.8203 0.8457 0.7827 0.8719 0.8612 
+
+===== R52 Huang 2024 (alta) | N = 30 | outcome EL 
+Términos publicados: HX*ZL*~TJ*SS*HJ + HX*XT*ZL*TJ*SS + HX*XT*TJ*SS*HJ 
+
+                inclS  covS  covU
+HX*ZL*~TJ*SS*HJ 0.992 0.176 0.070
+HX*XT*ZL*TJ*SS  0.967 0.604 0.036
+HX*XT*TJ*SS*HJ  0.972 0.644 0.075
+expression      0.971 0.750    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+  HX*XT*TJ*SS*HJ 0.9716599 0.6438632 0.969893 0.606183    0.002   0.038
+  HX*XT*ZL*TJ*SS 0.9667382 0.6042924 0.968146 0.571909   -0.001   0.032
+ HX*ZL*~TJ*SS*HJ 0.9924242 0.1757210 0.992366 0.174731    0.000   0.001
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ HX*ZL*~TJ*SS*HJ    2    28        1.0 1.000 0.536  0.536        0.134
+  HX*XT*ZL*TJ*SS   10    20        0.9 0.857 0.667  0.600        0.125
+  HX*XT*TJ*SS*HJ   10    20        0.9 0.857 0.667  0.600        0.125
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.268          1.0             1         0.000
+         0.300          0.5             1         0.027
+         0.300          0.5             1         0.027
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ HX*ZL*~TJ*SS*HJ        0.1875000        0.1339722       0.08038330
+  HX*XT*ZL*TJ*SS        0.1950073        0.1250000       0.05505371
+  HX*XT*TJ*SS*HJ        0.1950073        0.1250000       0.05505371
+
+===== R52 Huang 2024 (baja) | N = 30 | outcome nEL 
+Términos publicados: ~HX*~ZL*~TJ*~SS*~HJ + HX*~XT*~ZL*TJ*~SS*~HJ + ~HX*~XT*~ZL*TJ*~SS*HJ + ~HX*~XT*ZL*TJ*SS*~HJ 
+
+                      inclS  covS  covU
+~HX*~ZL*~TJ*~SS*~HJ   0.948 0.635 0.537
+HX*~XT*~ZL*TJ*~SS*~HJ 0.917 0.124 0.021
+~HX*~XT*~ZL*TJ*~SS*HJ 0.995 0.129 0.025
+~HX*~XT*ZL*TJ*SS*~HJ  0.996 0.152 0.056
+expression            0.943 0.762    NA
+
+Comparación con lo publicado:
+                  term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~HX*~XT*~ZL*TJ*~SS*HJ 0.9948718 0.1285620 1.000000 0.132275   -0.005  -0.004
+  ~HX*~XT*ZL*TJ*SS*~HJ 0.9956522 0.1517561 1.000000 0.149471   -0.004   0.002
+   ~HX*~ZL*~TJ*~SS*~HJ 0.9475767 0.6348575 0.947732 0.635582    0.000  -0.001
+ HX*~XT*~ZL*TJ*~SS*~HJ 0.9166667 0.1239231 0.923077 0.119048   -0.006   0.005
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+   ~HX*~ZL*~TJ*~SS*~HJ   11    19      0.909 0.877 0.711  0.646        0.139
+ HX*~XT*~ZL*TJ*~SS*~HJ    1    29      1.000 1.000 0.517  0.517        0.129
+  ~HX*~XT*ZL*TJ*SS*~HJ    1    29      1.000 1.000 0.517  0.517        0.129
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.323        0.571             1         0.154
+         0.259        1.000             1         0.000
+         0.259        1.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   ~HX*~ZL*~TJ*~SS*~HJ        0.2124634        0.1387939       0.06512451
+ HX*~XT*~ZL*TJ*~SS*~HJ        0.1810913        0.1293335       0.07763672
+  ~HX*~XT*ZL*TJ*SS*~HJ        0.1810913        0.1293335       0.07763672
+Avisos:
+1: In FUN(X[[i]], ...) :
+  term '~HX*~XT*~ZL*TJ*~SS*HJ': all cases on one side of the threshold; skipped
+2: In FUN(X[[i]], ...) :
+  term '~HX*~XT*~ZL*TJ*~SS*HJ': all cases on one side of the threshold; skipped
+3: In FUN(X[[i]], ...) :
+  term '~HX*~XT*~ZL*TJ*~SS*HJ': all cases on one side of the threshold; skipped

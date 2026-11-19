@@ -1,0 +1,41 @@
+
+===== R26 Zhang Xing 2025 (TRBPD) | N = 17 | outcome Y 
+Términos publicados: CAS*~RR*~CD*~DP + CAS*FE*~CD*~DP + CAS*~RR*FE*~DP + ~RR*~FE*CD*DP + CAS*~FE*CD*DP 
+
+                inclS  covS  covU
+CAS*~RR*~CD*~DP 0.829 0.229 0.019
+CAS*FE*~CD*~DP  0.865 0.246 0.156
+CAS*~RR*FE*~DP  0.653 0.169 0.079
+~RR*~FE*CD*DP   0.900 0.324 0.123
+CAS*~FE*CD*DP   0.916 0.309 0.108
+expression      0.840 0.777    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+   ~RR*~FE*CD*DP 0.8996865 0.3238181 0.899687 0.323818        0       0
+   CAS*~FE*CD*DP 0.9161657 0.3094889 0.916166 0.309489        0       0
+ CAS*~RR*~CD*~DP 0.8290494 0.2292677 0.829049 0.229268        0       0
+  CAS*~RR*FE*~DP 0.6526087 0.1693557 0.652609 0.169356        0       0
+  CAS*FE*~CD*~DP 0.8654762 0.2460792 0.865476 0.246079        0       0
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ CAS*~RR*~CD*~DP    2    15       1.00 1.000 0.467  0.467        0.117
+  CAS*FE*~CD*~DP    2    15       1.00 1.000 0.467  0.467        0.117
+  CAS*~RR*FE*~DP    2    15       1.00 1.000 0.467  0.467        0.117
+   ~RR*~FE*CD*DP    3    14       1.00 1.000 0.500  0.500        0.125
+   CAS*~FE*CD*DP    4    13       0.75 0.458 0.282  0.212        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.233            1             1             0
+         0.233            1             1             0
+         0.233            1             1             0
+         0.250            1             1             0
+         0.106            0             1             0
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ CAS*~RR*~CD*~DP       0.16339111        0.1166992       0.07000732
+  CAS*FE*~CD*~DP       0.16339111        0.1166992       0.07000732
+  CAS*~RR*FE*~DP       0.16339111        0.1166992       0.07000732
+   ~RR*~FE*CD*DP       0.17504883        0.1250000       0.07501221
+   CAS*~FE*CD*DP       0.03656006        0.0000000       0.00000000

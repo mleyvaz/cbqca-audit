@@ -1,0 +1,62 @@
+N = 382 | casos en 0,5 exacto:
+ BP  RE  CO  ST  EN  AF  AT PSE 
+ 15  28  26  20  56  34  19  43 
+   inclN   RoN
+BP 0.893 0.668
+RE 0.913 0.708
+CO 0.943 0.613
+ST 0.946 0.567
+EN 0.779 0.886
+AF 0.930 0.700
+AT 0.960 0.514
+
+===== R13 Zhao 2026 (alta PSE) | N = 382 | outcome PSE 
+Términos publicados: BP*ST*EN*AT + BP*RE*CO*ST*AT + BP*RE*CO*AF*AT + BP*RE*ST*AF*AT + BP*CO*ST*AF*AT + RE*CO*ST*AF*AT + BP*RE*CO*ST*~EN*AF 
+
+                   inclS  covS  covU
+BP*ST*EN*AT        0.949 0.716 0.007
+BP*RE*CO*ST*AT     0.933 0.790 0.011
+BP*RE*CO*AF*AT     0.942 0.784 0.011
+BP*RE*ST*AF*AT     0.939 0.790 0.007
+BP*CO*ST*AF*AT     0.936 0.802 0.013
+RE*CO*ST*AF*AT     0.941 0.814 0.042
+BP*RE*CO*ST*~EN*AF 0.968 0.455 0.002
+expression         0.896 0.899    NA
+
+Comparación con lo publicado:
+               term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+     BP*CO*ST*AF*AT 0.9359483 0.8022921    0.935   0.801    0.001   0.001
+     BP*RE*CO*AF*AT 0.9423398 0.7836441    0.942   0.783    0.000   0.001
+ BP*RE*CO*ST*~EN*AF 0.9679244 0.4550737    0.967   0.451    0.001   0.004
+     BP*RE*CO*ST*AT 0.9327689 0.7902240    0.932   0.789    0.001   0.001
+     BP*RE*ST*AF*AT 0.9387360 0.7897363    0.938   0.789    0.001   0.001
+        BP*ST*EN*AT 0.9485795 0.7161834    0.948   0.714    0.001   0.002
+     RE*CO*ST*AF*AT 0.9413165 0.8141539    0.941   0.813    0.000   0.001
+
+CB-QCA (tau = 0,5):
+               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        BP*ST*EN*AT  182   200      0.896 0.725 0.308  0.276        0.043
+     BP*RE*CO*ST*AT  237   145      0.848 0.627 0.301  0.255        0.026
+     BP*RE*CO*AF*AT  226   156      0.876 0.712 0.349  0.306        0.045
+     BP*RE*ST*AF*AT  232   150      0.888 0.756 0.392  0.348        0.059
+     BP*CO*ST*AF*AT  238   144      0.870 0.707 0.361  0.314        0.046
+     RE*CO*ST*AF*AT  243   139      0.868 0.709 0.370  0.322        0.047
+ BP*RE*CO*ST*~EN*AF   41   341      0.780 0.130 0.042  0.033        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.138        0.588         0.835         0.494
+         0.128        0.480         0.739         0.374
+         0.153        0.581         0.814         0.504
+         0.174        0.641         0.840         0.577
+         0.157        0.586         0.802         0.503
+         0.161        0.577         0.805         0.510
+         0.016        0.000         0.618         0.000
+
+Sensibilidad del quiebre de PS a tau:
+               term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        BP*ST*EN*AT       0.08081055       0.04284668      0.004821777
+     BP*RE*CO*ST*AT       0.06646729       0.02581787      0.000000000
+     BP*RE*CO*AF*AT       0.08837891       0.04547119      0.002502441
+     BP*RE*ST*AF*AT       0.10498047       0.05902100      0.013000488
+     BP*CO*ST*AF*AT       0.09045410       0.04602051      0.001586914
+     RE*CO*ST*AF*AT       0.09283447       0.04748535      0.002197266
+ BP*RE*CO*ST*~EN*AF       0.00000000       0.00000000      0.000000000

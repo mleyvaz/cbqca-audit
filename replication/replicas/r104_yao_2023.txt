@@ -1,0 +1,105 @@
+N = 72 
+Necesidad (publicado OC 0,6565/0,6979; HHI 0,8990/0,8988; ~EI 0,6909/0,6735):
+    inclN   covN
+OC 0.6565 0.6985
+     inclN  covN
+HHI 0.8985 0.899
+     inclN   covN
+~EI 0.6906 0.6738
+
+===== R104 Yao 2023 (alta) | N = 72 | outcome GC 
+Términos publicados: OC*~EI*HHI*~LQ + OC*~IB*~EI*~ASB*~LQ + OC*IB*ASB*HHI*~LQ + OC*~EI*~ASB*HHI + OC*~IB*~ASB*HHI 
+
+                    inclS  covS  covU
+OC*~EI*HHI*~LQ      0.992 0.413 0.054
+OC*~IB*~EI*~ASB*~LQ 0.914 0.217 0.003
+OC*IB*ASB*HHI*~LQ   0.947 0.162 0.032
+OC*~EI*~ASB*HHI     0.985 0.364 0.030
+OC*~IB*~ASB*HHI     0.975 0.298 0.043
+expression          0.946 0.562    NA
+
+Comparación con lo publicado:
+                term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+     OC*~EI*~ASB*HHI 0.9850075 0.3642917   0.9843  0.3643    0.001       0
+      OC*~EI*HHI*~LQ 0.9920160 0.4133629   0.9914  0.4134    0.001       0
+     OC*~IB*~ASB*HHI 0.9754991 0.2980316   0.9746  0.2980    0.001       0
+ OC*~IB*~EI*~ASB*~LQ 0.9137529 0.2173551   0.9126  0.2173    0.001       0
+   OC*IB*ASB*HHI*~LQ 0.9466882 0.1624619   0.9467  0.1626    0.000       0
+
+CB-QCA (tau = 0,5):
+                term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+      OC*~EI*HHI*~LQ   13    59          1     1 0.610  0.610        0.153
+ OC*~IB*~EI*~ASB*~LQ    7    65          1     1 0.554  0.554        0.138
+   OC*IB*ASB*HHI*~LQ    2    70          1     1 0.514  0.514        0.129
+     OC*~EI*~ASB*HHI   12    60          1     1 0.600  0.600        0.150
+     OC*~IB*~ASB*HHI   11    61          1     1 0.590  0.590        0.148
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.305            1             1         0.479
+         0.277            1             1         0.037
+         0.257            1             1         0.000
+         0.300            1             1         0.431
+         0.295            1             1         0.376
+
+Sensibilidad del quiebre de PS a tau:
+                term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+      OC*~EI*HHI*~LQ        0.2135620        0.1525879       0.09155273
+ OC*~IB*~EI*~ASB*~LQ        0.1938477        0.1384888       0.08312988
+   OC*IB*ASB*HHI*~LQ        0.1800537        0.1286011       0.07714844
+     OC*~EI*~ASB*HHI        0.2100220        0.1500244       0.09002686
+     OC*~IB*~ASB*HHI        0.2066040        0.1475830       0.08856201
+
+===== R104 Yao 2023 (no alta) | N = 72 | outcome nGC 
+Términos publicados: OC*EI*~HHI*LQ + IB*EI*~HHI*LQ + EI*ASB*~HHI*LQ + ~OC*~EI*~ASB*~HHI*LQ + ~OC*IB*~HHI*LQ + ~OC*IB*EI*~ASB*~HHI + ~OC*~IB*EI*ASB*~HHI + ~OC*IB*~EI*ASB*~HHI 
+
+                     inclS  covS  covU
+OC*EI*~HHI*LQ        0.983 0.211 0.018
+IB*EI*~HHI*LQ        0.987 0.307 0.005
+EI*ASB*~HHI*LQ       0.966 0.278 0.000
+~OC*~EI*~ASB*~HHI*LQ 0.979 0.141 0.037
+~OC*IB*~HHI*LQ       0.957 0.306 0.015
+~OC*IB*EI*~ASB*~HHI  0.996 0.140 0.038
+~OC*~IB*EI*ASB*~HHI  0.930 0.185 0.060
+~OC*IB*~EI*ASB*~HHI  0.920 0.135 0.007
+expression           0.951 0.664    NA
+
+Comparación con lo publicado:
+                 term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~OC*~EI*~ASB*~HHI*LQ 0.9787645 0.1411077   0.9788  0.1410    0.000       0
+  ~OC*~IB*EI*ASB*~HHI 0.9300699 0.1850821   0.9301  0.1849    0.000       0
+  ~OC*IB*~EI*ASB*~HHI 0.9204545 0.1352630   0.9205  0.1352    0.000       0
+       ~OC*IB*~HHI*LQ 0.9572799 0.3055942   0.9582  0.3056   -0.001       0
+  ~OC*IB*EI*~ASB*~HHI 0.9960317 0.1397161   0.9960  0.1396    0.000       0
+       EI*ASB*~HHI*LQ 0.9661181 0.2777623   0.9671  0.2778   -0.001       0
+        IB*EI*~HHI*LQ 0.9865952 0.3072641   0.9875  0.3073   -0.001       0
+        OC*EI*~HHI*LQ 0.9831388 0.2109658   0.9831  0.2108    0.000       0
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        OC*EI*~HHI*LQ    9    63      1.000 1.000 0.571  0.571        0.143
+        IB*EI*~HHI*LQ   10    62      0.900 0.823 0.516  0.465        0.091
+       EI*ASB*~HHI*LQ   10    62      0.800 0.635 0.435  0.348        0.037
+ ~OC*~EI*~ASB*~HHI*LQ    4    68      1.000 1.000 0.529  0.529        0.132
+       ~OC*IB*~HHI*LQ    9    63      0.778 0.588 0.408  0.317        0.024
+  ~OC*IB*EI*~ASB*~HHI    2    70      1.000 1.000 0.514  0.514        0.129
+  ~OC*~IB*EI*ASB*~HHI    2    70      0.500 0.000 0.000  0.000        0.000
+  ~OC*IB*~EI*ASB*~HHI    3    69      0.333 0.000 0.000  0.000        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.286        1.000             1         0.237
+         0.232        0.364             1         0.000
+         0.174        0.059             1         0.000
+         0.265        1.000             1         0.000
+         0.159        0.000             1         0.000
+         0.257        1.000             1         0.000
+         0.000        0.000             1         0.000
+         0.000        0.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        OC*EI*~HHI*LQ       0.20001221       0.14288330       0.08575439
+        IB*EI*~HHI*LQ       0.14758301       0.09118652       0.03472900
+       EI*ASB*~HHI*LQ       0.09197998       0.03710938       0.00000000
+ ~OC*~EI*~ASB*~HHI*LQ       0.18530273       0.13238525       0.07946777
+       ~OC*IB*~HHI*LQ       0.07781982       0.02386475       0.00000000
+  ~OC*IB*EI*~ASB*~HHI       0.18005371       0.12860107       0.07714844
+  ~OC*~IB*EI*ASB*~HHI       0.00000000       0.00000000       0.00000000
+  ~OC*IB*~EI*ASB*~HHI       0.00000000       0.00000000       0.00000000

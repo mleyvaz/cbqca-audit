@@ -1,0 +1,98 @@
+
+===== R18 Ziemann 2016 (gripe, éxito) | N = 9 | outcome OUT 
+Términos publicados: NONCLIN + ACUTE*SUBNAT 
+
+             inclS  covS  covU
+NONCLIN          1 0.571 0.571
+ACUTE*SUBNAT     1 0.429 0.429
+expression       1 1.000    NA
+
+Comparación con lo publicado:
+         term incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ACUTE*SUBNAT        1 0.4285714        1    0.43        0  -0.001
+      NONCLIN        1 0.5714286        1    0.57        0   0.001
+
+CB-QCA (tau = 0,5):
+         term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+      NONCLIN    4     5          1     1 0.400  0.400        0.100
+ ACUTE*SUBNAT    3     6          1     1 0.333  0.333        0.083
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.200            1             1             0
+         0.167            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+         term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+      NONCLIN        0.1400146       0.10003662       0.06005859
+ ACUTE*SUBNAT        0.1166992       0.08337402       0.05004883
+
+===== R18 Ziemann 2016 (gripe, fracaso) | N = 9 | outcome nOUT 
+Términos publicados: ~NONCLIN*~ACUTE + ~NONCLIN*~SUBNAT 
+
+                 inclS covS covU
+~NONCLIN*~ACUTE      1  0.5  0.5
+~NONCLIN*~SUBNAT     1  0.5  0.5
+expression           1  1.0   NA
+
+Comparación con lo publicado:
+             term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+  ~NONCLIN*~ACUTE        1     0.5        1     0.5        0       0
+ ~NONCLIN*~SUBNAT        1     0.5        1     0.5        0       0
+
+CB-QCA (tau = 0,5):
+             term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+  ~NONCLIN*~ACUTE    1     8          1     1 0.875  0.875        0.219
+ ~NONCLIN*~SUBNAT    1     8          1     1 0.875  0.875        0.219
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.438            1             1             0
+         0.438            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+             term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+  ~NONCLIN*~ACUTE        0.3062744          0.21875        0.1312866
+ ~NONCLIN*~SUBNAT        0.3062744          0.21875        0.1312866
+
+===== R18 Ziemann 2016 (situacional, éxito) | N = 8 | outcome OUT 
+Términos publicados: MULTSYND*AUTOM 
+
+               inclS covS covU
+MULTSYND*AUTOM     1    1   NA
+
+Comparación con lo publicado:
+           term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+ MULTSYND*AUTOM        1       1        1       1        0       0
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ MULTSYND*AUTOM    4     4          1     1     1      1         0.25
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+           0.5            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ MULTSYND*AUTOM        0.3500366         0.250061        0.1500244
+
+===== R18 Ziemann 2016 (situacional, fracaso) | N = 8 | outcome nOUT 
+Términos publicados: ~MULTSYND + ~AUTOM 
+
+           inclS covS covU
+~MULTSYND      1 0.50 0.25
+~AUTOM         1 0.75 0.50
+expression     1 1.00   NA
+
+Comparación con lo publicado:
+      term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+    ~AUTOM        1    0.75        1    0.75        0       0
+ ~MULTSYND        1    0.50        1    0.50        0       0
+
+CB-QCA (tau = 0,5):
+      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+ ~MULTSYND    2     6          1     1 0.667  0.667        0.167         0.333
+    ~AUTOM    3     5          1     1 0.800  0.800        0.200         0.400
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+            1             1             0
+            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~MULTSYND        0.2333374        0.1666870        0.1000366
+    ~AUTOM        0.2800293        0.2000122        0.1200562

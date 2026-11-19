@@ -1,0 +1,9 @@
+Condition,High_News_consistency,High_News_coverage
+High_Delay,0.102926,0.552009
+~High_Delay,0.970575,0.575518
+High_Shock,0.568985,0.554379
+~High_Shock,0.522662,0.617404
+High_Stakes,0.928206,0.659043
+~High_Stakes,0.190785,0.410753
+High_TemplateDeviation,0.416531,0.926667
+~High_TemplateDeviation,0.583469,0.409912

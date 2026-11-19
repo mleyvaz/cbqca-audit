@@ -1,0 +1,60 @@
+N = 225 
+Descriptivos calibrados (publicado: medias 0,69 0,67 0,55 0,61 0,61 0,65 0,59):
+ FUN  AES  EXP   PU PEOU  ATT   PI 
+0.69 0.67 0.55 0.61 0.61 0.65 0.59 
+Casos en 0,5: 0 
+Necesidad (publicado FUN 0,910/0,777; ATT 0,952/0,860):
+    inclN  covN
+FUN  0.91 0.777
+     inclN  covN
+~FUN 0.464 0.886
+    inclN covN
+ATT 0.952 0.86
+     inclN  covN
+~ATT 0.474 0.806
+
+===== R100 Chen 2023 (alta) | N = 225 | outcome PI 
+Términos publicados: ~EXP*PU*ATT + FUN*AES*PU*ATT + FUN*PU*PEOU*ATT + AES*PU*PEOU*ATT + ~FUN*~EXP*AES*PEOU*ATT + FUN*EXP*AES*PEOU*ATT 
+
+                       inclS  covS  covU
+~EXP*PU*ATT            0.956 0.542 0.016
+FUN*AES*PU*ATT         0.925 0.795 0.013
+FUN*PU*PEOU*ATT        0.934 0.794 0.021
+AES*PU*PEOU*ATT        0.937 0.788 0.017
+~FUN*~EXP*AES*PEOU*ATT 0.989 0.386 0.007
+FUN*EXP*AES*PEOU*ATT   0.947 0.739 0.012
+expression             0.915 0.881    NA
+
+Comparación con lo publicado:
+                   term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+            ~EXP*PU*ATT 0.9558687 0.5416541    0.959   0.542   -0.003       0
+ ~FUN*~EXP*AES*PEOU*ATT 0.9889876 0.3855830    0.989   0.386    0.000       0
+        AES*PU*PEOU*ATT 0.9366216 0.7881139    0.937   0.788    0.000       0
+         FUN*AES*PU*ATT 0.9250395 0.7947424    0.925   0.795    0.000       0
+   FUN*EXP*AES*PEOU*ATT 0.9469975 0.7388521    0.947   0.739    0.000       0
+        FUN*PU*PEOU*ATT 0.9338177 0.7939138    0.934   0.794    0.000       0
+
+CB-QCA (tau = 0,5):
+                   term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+            ~EXP*PU*ATT   35   190      0.771 0.464 0.256  0.198        0.000
+         FUN*AES*PU*ATT  101   124      0.832 0.710 0.496  0.412        0.061
+        FUN*PU*PEOU*ATT  104   121      0.846 0.745 0.531  0.449        0.074
+        AES*PU*PEOU*ATT   94   131      0.851 0.740 0.498  0.424        0.069
+ ~FUN*~EXP*AES*PEOU*ATT    4   221      0.750 0.372 0.198  0.148        0.000
+   FUN*EXP*AES*PEOU*ATT   79   146      0.873 0.766 0.475  0.415        0.072
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.099        0.069         0.777         0.000
+         0.206        0.561         0.829         0.477
+         0.225        0.602         0.866         0.534
+         0.212        0.583         0.869         0.509
+         0.074        0.000         1.000         0.000
+         0.207        0.599         0.900         0.517
+
+Sensibilidad del quiebre de PS a tau:
+                   term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+            ~EXP*PU*ATT       0.03497314       0.00000000      0.000000000
+         FUN*AES*PU*ATT       0.11907959       0.06103516      0.002990723
+        FUN*PU*PEOU*ATT       0.13427734       0.07391357      0.013610840
+        AES*PU*PEOU*ATT       0.12591553       0.06866455      0.011413574
+ ~FUN*~EXP*AES*PEOU*ATT       0.01440430       0.00000000      0.000000000
+   FUN*EXP*AES*PEOU*ATT       0.12609863       0.07202148      0.017883301

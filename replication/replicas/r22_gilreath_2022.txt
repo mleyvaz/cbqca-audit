@@ -1,0 +1,39 @@
+
+===== R22 Gilreath 2022 (afrontamiento desadaptativo) | N = 24 | outcome MALCOPE 
+Términos publicados: YESBBULL*NEGMCY*ACAPROB + YESBBULL*~MFMPTSD*~NEGMCY*~ACAPROB + ~YESBBULL*MFMPTSD*~NEGMCY*ACAPROB 
+
+                                   inclS covS covU
+YESBBULL*NEGMCY*ACAPROB                1 0.50 0.50
+YESBBULL*~MFMPTSD*~NEGMCY*~ACAPROB     1 0.25 0.25
+~YESBBULL*MFMPTSD*~NEGMCY*ACAPROB      1 0.25 0.25
+expression                             1 1.00   NA
+
+Comparación con lo publicado:
+                               term incl_rep cov_rep incl_pub cov_pub dif_incl
+  ~YESBBULL*MFMPTSD*~NEGMCY*ACAPROB        1    0.25       NA      NA       NA
+ YESBBULL*~MFMPTSD*~NEGMCY*~ACAPROB        1    0.25       NA      NA       NA
+            YESBBULL*NEGMCY*ACAPROB        1    0.50       NA      NA       NA
+ dif_cov
+      NA
+      NA
+      NA
+
+CB-QCA (tau = 0,5):
+                               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+            YESBBULL*NEGMCY*ACAPROB    2    22          1     1 0.909  0.909
+ YESBBULL*~MFMPTSD*~NEGMCY*~ACAPROB    1    23          1     1 0.870  0.870
+  ~YESBBULL*MFMPTSD*~NEGMCY*ACAPROB    1    23          1     1 0.870  0.870
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.227         0.455            1             1             0
+        0.217         0.435            1             1             0
+        0.217         0.435            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                               term breakdown_PS.0.3 breakdown_PS.0.5
+            YESBBULL*NEGMCY*ACAPROB        0.3182373        0.2272949
+ YESBBULL*~MFMPTSD*~NEGMCY*~ACAPROB        0.3043823        0.2174072
+  ~YESBBULL*MFMPTSD*~NEGMCY*ACAPROB        0.3043823        0.2174072
+ breakdown_PS.0.7
+        0.1364136
+        0.1304932
+        0.1304932

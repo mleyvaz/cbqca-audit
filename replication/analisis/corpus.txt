@@ -1,0 +1,328 @@
+Registros duplicados descartados (misma réplica registrada dos veces): 3 
+Elegibilidad (estudios):
+
+   aproximada     duplicado        exacta      excluida no_replicable 
+           14             1            43             1            21 
+ reconstruida 
+           13 
+
+
+############################################################
+## ANÁLISIS PRINCIPAL: solo réplicas exactas (protocolo, criterio 3) 
+Términos: 282 | estudios: 43 | cs: 101 ( 17 estudios ) | fs: 181 ( 26 estudios )
+
+=== 1. Medidas primarias (corte 0,5) ===
+PS_lo<0,5 = la cota inferior de PS bajo exogeneidad no alcanza 0,5 (no se garantiza PS >= 0,5).
+Cota exacta = 0 = el límite de confianza al 95 % (por término) de esa cota es 0: no informativo.
+cs    n=101 | PS_lo<0,5:  0 (0 %) | cota exacta = 0: 93 (92 %) | mediana quiebre PNS 0.273 | mediana quiebre PS 0.136
+fs    n=181 | PS_lo<0,5: 40 (22 %) | cota exacta = 0: 122 (67 %) | mediana quiebre PNS 0.223 | mediana quiebre PS 0.092
+todos n=282 | PS_lo<0,5: 40 (14 %) | cota exacta = 0: 215 (76 %) | mediana quiebre PNS 0.241 | mediana quiebre PS 0.110
+
+Por estudio (términos, PS_lo<0,5, cota exacta = 0):
+   estudio estrato  n ps_lo_bajo cota_no_inf
+1      R04      cs 13          0          12
+2      R05      cs  4          0           4
+3      R15      cs  7          0           7
+4      R17      cs  3          0           2
+5      R18      cs  7          0           7
+6      R19      cs  5          0           3
+7      R20      cs  4          0           4
+8      R24      cs 11          0          11
+9      R25      cs  9          0           9
+10     R40      cs  4          0           3
+11     R41      cs  2          0           2
+12     R43      cs  4          0           3
+13     R45      cs  5          0           3
+14     R46      cs  3          0           3
+15     R47      cs  8          0           8
+16     R50      cs  7          0           7
+17     R51      cs  5          0           5
+18     R01      fs  6          0           0
+19     R02      fs  8          2           2
+20     R06      fs  7          1           4
+21     R07      fs  8          0           0
+22     R08      fs  8          2           7
+23    R100      fs  6          2           2
+24    R104      fs 13          2           8
+25     R12      fs  8          0           0
+26     R26      fs  5          1           5
+27     R27      fs  4          2           4
+28     R33      fs  4          0           4
+29     R39      fs  6          0           6
+30     R53      fs  7          1           7
+31     R62      fs  3          0           3
+32     R64      fs  4          1           3
+33     R66      fs  7          5           6
+34     R80      fs  9          1           9
+35     R81      fs  2          0           2
+36     R82      fs 10          2          10
+37     R85      fs  6          2           2
+38     R87      fs  5          3           3
+39     R88      fs  8          2           7
+40     R89      fs 20          6          19
+41     R90      fs  4          1           4
+42     R94      fs 10          4           2
+43     R96      fs  3          0           3
+
+=== 2. Consistencia difusa recalculada frente a las medidas causales (AUC aparente, IC 95 % bootstrap por estudio) ===
+cs    PS_lo >= 0,5: AUC NA [NA, NA] | cota exacta > 0: AUC 0.511 [0.500, 0.527]
+fs    PS_lo >= 0,5: AUC 0.715 [0.584, 0.816] | cota exacta > 0: AUC 0.534 [0.409, 0.654]
+todos PS_lo >= 0,5: AUC 0.831 [0.737, 0.904] | cota exacta > 0: AUC 0.365 [0.256, 0.476]
+(En cs la consistencia vale 1 en casi todos los términos: la AUC no es informativa allí.)
+Rango de la consistencia difusa en términos con PS_lo < 0,5: 0.744 0.989 
+
+=== 3. Complejidad, casos y P(Y|~X) (descriptivo; parte de estas relaciones se sigue de las fórmulas) ===
+
+3a. log(n_in/N) ~ k (MCO; CR2, gl de Satterthwaite)
+        coef    est    se   gl        p
+ (Intercept) -0.751 0.266 21.1 1.02e-02
+           k -0.362 0.056 16.1 7.61e-06
+Spearman k ~ n_in/N: -0.633
+
+3b. Cota exacta = 0 ~ log(n_in) + P(Y|~X) + consistencia (logit; CR2)
+        coef     est    se   gl        p
+ (Intercept)  22.491 8.573 15.2 1.90e-02
+    log_n_in  -2.723 0.460 23.7 4.36e-06
+   p_y_fuera   7.192 2.365 13.4 9.20e-03
+  incl_fuzzy -19.023 7.949 13.7 3.16e-02
+Firth (penalizado, robusto a separación):  (Intercept) 20.83 (p 0.000228); log_n_in -2.56 (p 0); p_y_fuera 6.80 (p 0.000344); incl_fuzzy -17.55 (p 0.000956) 
+Separación (detectseparation): no detectada 
+
+3c. PS_lo < 0,5 ~ log(n_in) + P(Y|~X) + consistencia (logit; CR2)
+        coef     est    se   gl      p
+ (Intercept)   9.533 3.787  9.3 0.0322
+    log_n_in   0.260 0.118  8.9 0.0551
+   p_y_fuera   5.633 2.658 13.8 0.0528
+  incl_fuzzy -15.704 3.642  9.3 0.0018
+Firth:  (Intercept) 9.20 (p 0.000711); log_n_in 0.25 (p 0.059); p_y_fuera 5.43 (p 0.0106); incl_fuzzy -15.18 (p 5e-09) 
+
+3d. Quiebre de PNS ~ log(n_in) + P(Y|~X) + k + consistencia (MCO; CR2)
+        coef    est    se   gl        p
+ (Intercept) -0.019 0.114  9.2 8.71e-01
+    log_n_in -0.013 0.004 10.6 1.64e-02
+   p_y_fuera -0.515 0.027 13.8 2.21e-11
+           k -0.003 0.003 14.3 2.74e-01
+  incl_fuzzy  0.545 0.109  9.1 6.97e-04
+
+Dejar un estudio fuera (rango de coeficientes del logit Firth 3b):
+     (Intercept) log_n_in p_y_fuera incl_fuzzy
+[1,]       16.81    -2.96      6.18     -22.11
+[2,]       25.64    -2.48      8.32     -13.26
+
+Tramos de n_in:
+  tramo_n ps_lo_bajo cota_no_inf bd_PNS   n
+1     1-5       0.11        1.00   0.24 160
+2    6-15       0.13        0.67   0.23  60
+3   16-50       0.26        0.35   0.20  34
+4     >50       0.18        0.11   0.21  28
+
+Tramos de P(Y|~X):
+  tramo_base ps_lo_bajo cota_no_inf bd_PNS   n
+1     <=0,25       0.00        0.59   0.42  17
+2   0,25-0,5       0.12        0.68   0.24 186
+3   0,5-0,75       0.23        0.99   0.16  77
+4      >0,75       0.00        1.00   0.12   2
+
+
+############################################################
+## SENSIBILIDAD: exactas + aproximadas + reconstruidas 
+Términos: 457 | estudios: 70 | cs: 134 ( 22 estudios ) | fs: 323 ( 48 estudios )
+
+=== 1. Medidas primarias (corte 0,5) ===
+PS_lo<0,5 = la cota inferior de PS bajo exogeneidad no alcanza 0,5 (no se garantiza PS >= 0,5).
+Cota exacta = 0 = el límite de confianza al 95 % (por término) de esa cota es 0: no informativo.
+cs    n=134 | PS_lo<0,5:  0 (0 %) | cota exacta = 0: 114 (85 %) | mediana quiebre PNS 0.268 | mediana quiebre PS 0.129
+fs    n=323 | PS_lo<0,5: 70 (22 %) | cota exacta = 0: 220 (68 %) | mediana quiebre PNS 0.233 | mediana quiebre PS 0.105
+todos n=457 | PS_lo<0,5: 70 (15 %) | cota exacta = 0: 334 (73 %) | mediana quiebre PNS 0.250 | mediana quiebre PS 0.112
+
+Por estudio (términos, PS_lo<0,5, cota exacta = 0):
+   estudio estrato  n ps_lo_bajo cota_no_inf
+1      R04      cs 13          0          12
+2      R05      cs  4          0           4
+3      R15      cs  7          0           7
+4      R17      cs  3          0           2
+5      R18      cs  7          0           7
+6      R19      cs  5          0           3
+7      R20      cs  4          0           4
+8      R21      cs 12          0           9
+9      R22      cs  3          0           3
+10     R23      cs  6          0           6
+11     R24      cs 11          0          11
+12     R25      cs  9          0           9
+13     R40      cs  4          0           3
+14     R41      cs  2          0           2
+15     R42      cs  7          0           3
+16     R43      cs  4          0           3
+17     R45      cs  5          0           3
+18     R46      cs  3          0           3
+19     R47      cs  8          0           8
+20     R48      cs  5          0           0
+21     R50      cs  7          0           7
+22     R51      cs  5          0           5
+23     R01      fs  6          0           0
+24     R02      fs  8          2           2
+25     R03      fs  6          3           1
+26     R06      fs  7          1           4
+27     R07      fs  8          0           0
+28     R08      fs  8          2           7
+29     R09      fs  5          2           3
+30     R10      fs  7          2           7
+31    R100      fs  6          2           2
+32    R101      fs  4          3           3
+33    R103      fs  7          0           0
+34    R104      fs 13          2           8
+35     R11      fs  6          0           0
+36     R12      fs  8          0           0
+37     R13      fs  7          1           1
+38     R14      fs  3          2           2
+39     R26      fs  5          1           5
+40     R27      fs  4          2           4
+41     R30      fs  6          3           6
+42     R32      fs  8          0           8
+43     R33      fs  4          0           4
+44     R37      fs  5          0           5
+45     R38      fs  8          7           4
+46     R39      fs  6          0           6
+47     R53      fs  7          1           7
+48     R55      fs  5          2           1
+49     R56      fs  3          1           0
+50     R57      fs  6          0           6
+51     R58      fs  6          0           4
+52     R61      fs  6          0           6
+53     R62      fs  3          0           3
+54     R63      fs  9          1           9
+55     R64      fs  4          1           3
+56     R66      fs  7          5           6
+57     R69      fs 10          0          10
+58     R70      fs 14          0          14
+59     R80      fs  9          1           9
+60     R81      fs  2          0           2
+61     R82      fs 10          2          10
+62     R83      fs  7          2           5
+63     R84      fs  4          1           3
+64     R85      fs  6          2           2
+65     R87      fs  5          3           3
+66     R88      fs  8          2           7
+67     R89      fs 20          6          19
+68     R90      fs  4          1           4
+69     R94      fs 10          4           2
+70     R96      fs  3          0           3
+
+=== 2. Consistencia difusa recalculada frente a las medidas causales (AUC aparente, IC 95 % bootstrap por estudio) ===
+cs    PS_lo >= 0,5: AUC NA [NA, NA] | cota exacta > 0: AUC 0.408 [0.277, 0.516]
+fs    PS_lo >= 0,5: AUC 0.763 [0.664, 0.839] | cota exacta > 0: AUC 0.493 [0.405, 0.576]
+todos PS_lo >= 0,5: AUC 0.839 [0.765, 0.893] | cota exacta > 0: AUC 0.388 [0.305, 0.472]
+(En cs la consistencia vale 1 en casi todos los términos: la AUC no es informativa allí.)
+Rango de la consistencia difusa en términos con PS_lo < 0,5: 0.571 0.989 
+
+=== 3. Complejidad, casos y P(Y|~X) (descriptivo; parte de estas relaciones se sigue de las fórmulas) ===
+
+3a. log(n_in/N) ~ k (MCO; CR2, gl de Satterthwaite)
+        coef    est    se   gl        p
+ (Intercept) -0.725 0.216 29.5 2.16e-03
+           k -0.366 0.046 23.4 3.76e-08
+Spearman k ~ n_in/N: -0.590
+
+3b. Cota exacta = 0 ~ log(n_in) + P(Y|~X) + consistencia (logit; CR2)
+        coef     est    se   gl        p
+ (Intercept)  27.047 6.736 19.7 6.97e-04
+    log_n_in  -2.815 0.362 42.3 1.10e-09
+   p_y_fuera   9.730 2.029 20.9 9.81e-05
+  incl_fuzzy -24.843 6.873 17.9 2.00e-03
+Firth (penalizado, robusto a separación):  (Intercept) 26.28 (p 2.03e-10); log_n_in -2.72 (p 0); p_y_fuera 9.34 (p 2.12e-13); incl_fuzzy -24.13 (p 8.99e-10) 
+Separación (detectseparation): no detectada 
+
+3c. PS_lo < 0,5 ~ log(n_in) + P(Y|~X) + consistencia (logit; CR2)
+        coef     est    se   gl        p
+ (Intercept)  12.510 2.825 17.1 3.62e-04
+    log_n_in   0.180 0.093 19.2 6.92e-02
+   p_y_fuera   4.074 1.256 11.4 7.46e-03
+  incl_fuzzy -18.046 2.975 19.9 6.46e-06
+Firth:  (Intercept) 12.19 (p 8.65e-10); log_n_in 0.18 (p 0.0578); p_y_fuera 4.04 (p 0.00104); incl_fuzzy -17.65 (p 0) 
+
+3d. Quiebre de PNS ~ log(n_in) + P(Y|~X) + k + consistencia (MCO; CR2)
+        coef    est    se   gl        p
+ (Intercept) -0.025 0.081 16.6 7.58e-01
+    log_n_in -0.011 0.003 19.6 2.81e-03
+   p_y_fuera -0.511 0.018 15.5 1.01e-14
+           k -0.003 0.003 19.3 3.64e-01
+  incl_fuzzy  0.546 0.075 17.4 1.16e-06
+
+Dejar un estudio fuera (rango de coeficientes del logit Firth 3b):
+     (Intercept) log_n_in p_y_fuera incl_fuzzy
+[1,]       20.23    -3.07      8.48     -26.31
+[2,]       28.55    -2.63     10.53     -17.42
+
+Tramos de n_in:
+  tramo_n ps_lo_bajo cota_no_inf bd_PNS   n
+1     1-5       0.10        1.00   0.24 242
+2    6-15       0.16        0.68   0.22  98
+3   16-50       0.28        0.30   0.20  61
+4     >50       0.25        0.14   0.18  56
+
+Tramos de P(Y|~X):
+  tramo_base ps_lo_bajo cota_no_inf bd_PNS   n
+1     <=0,25       0.00        0.44   0.41  32
+2   0,25-0,5       0.14        0.69   0.24 301
+3   0,5-0,75       0.26        0.89   0.15 111
+4      >0,75       0.00        1.00   0.06  13
+
+
+=== 4. Sensibilidad al corte (solo fsQCA, réplicas exactas): 0,4 / 0,5 / 0,6 ===
+  corte ps_lo_bajo.media ps_lo_bajo.mediana cota_no_inf.media
+1   0.4            0.231              0.000             0.632
+2   0.5            0.221              0.000             0.674
+3   0.6            0.218              0.000             0.697
+  cota_no_inf.mediana PS_lo.media PS_lo.mediana bd_PS.media bd_PS.mediana
+1               1.000       0.737         0.821       0.072         0.083
+2               1.000       0.725         0.819       0.078         0.092
+3               1.000       0.743         0.830       0.092         0.107
+  bd_PNS.media bd_PNS.mediana n_in.media n_in.mediana
+1        0.185          0.208     66.203       12.000
+2        0.201          0.223     38.420        8.000
+3        0.227          0.258     36.188        5.000
+Términos evaluables por corte:
+
+0.4 0.5 0.6 
+182 181 165 
+Términos evaluables en los tres cortes: 165
+Cambian de clase PS_lo<0,5 entre 0,4 y 0,5: 14 | entre 0,5 y 0,6: 14
+Cambian de clase cota exacta=0 entre 0,4 y 0,5: 14 | entre 0,5 y 0,6: 14
+PS_lo<0,5 en algún corte: 50 | en los tres: 25
+
+
+=== 5. Medidas secundarias del protocolo (términos, réplicas exactas, corte 0,5) ===
+
+[cs] n = 101
+  PN_lo: mediana 0.550 [P25 0.389; P75 0.687] 
+  Ancho de identificación PS_up - PS_lo: mediana 0.000 [P25 0.000; P75 0.000] 
+  Ancho bootstrap (1000) de PS_lo: mediana 0.000 [P25 0.000; P75 0.000] | degenerado (= 0) en 99 de 101 (sin contraejemplos)
+  Sensibilidad a tau: PS_lo < 0,3: 0 % | < 0,5: 0 % | < 0,7: 0 %
+  Quiebre de PS con tau 0,3 / 0,5 / 0,7 (medianas): 0.191 / 0.136 / 0.082
+
+[fs] n = 181
+  PN_lo: mediana 0.480 [P25 0.391; P75 0.553] 
+  Ancho de identificación PS_up - PS_lo: mediana 0.176 [P25 0.000; P75 0.422] 
+  Ancho bootstrap (1000) de PS_lo: mediana 0.248 [P25 0.000; P75 0.719] | degenerado (= 0) en 72 de 181 (sin contraejemplos)
+  Sensibilidad a tau: PS_lo < 0,3: 12 % | < 0,5: 22 % | < 0,7: 36 %
+  Quiebre de PS con tau 0,3 / 0,5 / 0,7 (medianas): 0.148 / 0.092 / 0.040
+
+[todos] n = 282
+  PN_lo: mediana 0.500 [P25 0.389; P75 0.589] 
+  Ancho de identificación PS_up - PS_lo: mediana 0.000 [P25 0.000; P75 0.252] 
+  Ancho bootstrap (1000) de PS_lo: mediana 0.000 [P25 0.000; P75 0.503] | degenerado (= 0) en 171 de 282 (sin contraejemplos)
+  Sensibilidad a tau: PS_lo < 0,3: 8 % | < 0,5: 14 % | < 0,7: 23 %
+  Quiebre de PS con tau 0,3 / 0,5 / 0,7 (medianas): 0.166 / 0.110 / 0.061
+
+Incertidumbre dominante por término (exactas; la mayor entre ancho bootstrap, ancho de identificación
+y 1 - quiebre de PNS; descriptivo):
+       dominante
+estrato confusión identificación muestreo
+     cs       100              0        1
+     fs       146              1       34
+
+
+=== 6. Soluciones completas (disyunción de los términos publicados; réplicas exactas, corte 0,5) ===
+cs    soluciones= 28 | PS_lo<0,5:  0 (0 %) | cota exacta = 0:  8 (29 %) | mediana n_in 10 | mediana quiebre PNS 0.500 | mediana PNS_lo 1.000
+fs    soluciones= 40 | PS_lo<0,5:  2 (5 %) | cota exacta = 0: 11 (28 %) | mediana n_in 27 | mediana quiebre PNS 0.254 | mediana PNS_lo 0.508
+todos soluciones= 68 | PS_lo<0,5:  2 (3 %) | cota exacta = 0: 19 (28 %) | mediana n_in 14 | mediana quiebre PNS 0.309 | mediana PNS_lo 0.618

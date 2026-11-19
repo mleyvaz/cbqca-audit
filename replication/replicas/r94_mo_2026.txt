@@ -1,0 +1,116 @@
+Percentiles 5/50/95 (tipo 7):
+             5%       50%      95%
+ATT   -1.507784  0.098086 1.413390
+INT   -1.715293  0.087582 1.391414
+BEH   -1.722260  0.095909 1.673270
+PCA   -1.674220  0.080568 1.593948
+PCT   -1.456064 -0.001564 1.439105
+PBC   -1.685244  0.063831 1.606070
+SVPUI -1.714191  0.077704 1.387602
+Control con QCA por defecto (idm 0,95):
+                      inclS  covS
+ATT*INT*PCT*PBC*SVPUI 0.904 0.486
+INT*PCA*PCT*PBC*SVPUI 0.908 0.490
+expression            0.894 0.522
+                          inclS  covS
+~INT*~PCT*~PBC            0.879 0.534
+~PCA*~PCT*~PBC*~SVPUI     0.919 0.464
+~INT*~PCA*~PCT*~SVPUI     0.910 0.461
+~ATT*~PCT*~PBC*~SVPUI     0.902 0.461
+~ATT*~INT*~PCT*~SVPUI     0.896 0.462
+~ATT*INT*~PCA*~PCT        0.926 0.329
+ATT*~INT*~PCA*~PBC*~SVPUI 0.948 0.304
+~ATT*~INT*~PCA*PBC*~SVPUI 0.943 0.310
+expression                0.842 0.688
+Casos en 0,5: 158 
+
+===== R94 Mo 2026 (alta) | N = 526 | outcome BEH 
+Términos publicados: ATT*INT*PCT*PBC*SVPUI + INT*PCA*PCT*PBC*SVPUI 
+
+                      inclS  covS  covU
+ATT*INT*PCT*PBC*SVPUI 0.903 0.483 0.032
+INT*PCA*PCT*PBC*SVPUI 0.907 0.487 0.036
+expression            0.893 0.519    NA
+
+Comparación con lo publicado:
+                  term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ATT*INT*PCT*PBC*SVPUI 0.9033024 0.4829403    0.903   0.483        0       0
+ INT*PCA*PCT*PBC*SVPUI 0.9071219 0.4865177    0.907   0.487        0       0
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ATT*INT*PCT*PBC*SVPUI  104   422      0.788 0.649 0.495  0.390        0.045
+ INT*PCA*PCT*PBC*SVPUI   94   432      0.830 0.717 0.520  0.432        0.065
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.195        0.507         0.775         0.453
+         0.216        0.583         0.839         0.528
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ATT*INT*PCT*PBC*SVPUI        0.1049194       0.04473877      0.000000000
+ INT*PCA*PCT*PBC*SVPUI        0.1255493       0.06536865      0.005187988
+
+===== R94 Mo 2026 (baja) | N = 526 | outcome nBEH 
+Términos publicados: ~INT*~PCT*~PBC + ~PCA*~PCT*~PBC*~SVPUI + ~INT*~PCA*~PCT*~SVPUI + ~ATT*~PCT*~PBC*~SVPUI + ~ATT*~INT*~PCT*~SVPUI + ~ATT*INT*~PCA*~PCT + ATT*~INT*~PCA*~PBC*~SVPUI + ~ATT*~INT*~PCA*PBC*~SVPUI 
+
+                          inclS  covS  covU
+~INT*~PCT*~PBC            0.877 0.530 0.068
+~PCA*~PCT*~PBC*~SVPUI     0.918 0.460 0.015
+~INT*~PCA*~PCT*~SVPUI     0.908 0.458 0.007
+~ATT*~PCT*~PBC*~SVPUI     0.900 0.457 0.010
+~ATT*~INT*~PCT*~SVPUI     0.894 0.459 0.007
+~ATT*INT*~PCA*~PCT        0.924 0.324 0.022
+ATT*~INT*~PCA*~PBC*~SVPUI 0.948 0.300 0.013
+~ATT*~INT*~PCA*PBC*~SVPUI 0.942 0.306 0.011
+expression                0.839 0.686    NA
+
+Comparación con lo publicado:
+                      term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+ ~ATT*~INT*~PCA*PBC*~SVPUI 0.9422676 0.3055295    0.942   0.306        0
+     ~ATT*~INT*~PCT*~SVPUI 0.8942547 0.4587077    0.894   0.459        0
+     ~ATT*~PCT*~PBC*~SVPUI 0.8996373 0.4569034    0.900   0.457        0
+        ~ATT*INT*~PCA*~PCT 0.9244049 0.3240612    0.924   0.324        0
+     ~INT*~PCA*~PCT*~SVPUI 0.9078231 0.4575800    0.908   0.458        0
+            ~INT*~PCT*~PBC 0.8772693 0.5303913    0.877   0.530        0
+     ~PCA*~PCT*~PBC*~SVPUI 0.9175659 0.4602488    0.918   0.460        0
+ ATT*~INT*~PCA*~PBC*~SVPUI 0.9475433 0.3001165    0.948   0.300        0
+ dif_cov
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+            ~INT*~PCT*~PBC  112   414      0.714 0.511 0.418  0.299
+     ~PCA*~PCT*~PBC*~SVPUI   71   455      0.775 0.603 0.441  0.342
+     ~INT*~PCA*~PCT*~SVPUI   77   449      0.766 0.590 0.439  0.336
+     ~ATT*~PCT*~PBC*~SVPUI   80   446      0.675 0.416 0.342  0.231
+     ~ATT*~INT*~PCT*~SVPUI   82   444      0.659 0.384 0.323  0.213
+        ~ATT*INT*~PCA*~PCT   25   501      0.720 0.475 0.351  0.253
+ ATT*~INT*~PCA*~PBC*~SVPUI   17   509      0.824 0.669 0.432  0.356
+ ~ATT*~INT*~PCA*PBC*~SVPUI   21   505      0.619 0.277 0.235  0.146
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.003         0.149        0.349         0.659         0.293
+        0.029         0.171        0.418         0.759         0.346
+        0.026         0.168        0.415         0.753         0.342
+        0.000         0.116        0.216         0.588         0.137
+        0.000         0.106        0.184         0.565         0.103
+        0.000         0.127        0.140         0.814         0.000
+        0.045         0.178        0.282         1.000         0.110
+        0.000         0.073        0.000         0.685         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+            ~INT*~PCT*~PBC       0.06176758      0.003295898                0
+     ~PCA*~PCT*~PBC*~SVPUI       0.08581543      0.029113770                0
+     ~INT*~PCA*~PCT*~SVPUI       0.08270264      0.025695801                0
+     ~ATT*~PCT*~PBC*~SVPUI       0.03216553      0.000000000                0
+     ~ATT*~INT*~PCT*~SVPUI       0.02319336      0.000000000                0
+        ~ATT*INT*~PCA*~PCT       0.04656982      0.000000000                0
+ ATT*~INT*~PCA*~PBC*~SVPUI       0.09814453      0.044921875                0
+ ~ATT*~INT*~PCA*PBC*~SVPUI       0.00000000      0.000000000                0

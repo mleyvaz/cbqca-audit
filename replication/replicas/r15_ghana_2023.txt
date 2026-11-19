@@ -1,0 +1,89 @@
+Necesidad (publicado: RICSO 0,8/0,8; FE 0,6/0,429; LD 0,8/0,667; FP 0,8/0,4; TR 0,2/0,5):
+      inclN   RoN
+RICSO   0.8 0.857
+FE      0.6 0.500
+ST      0.0 0.818
+LD      0.8 0.714
+RR      0.2 0.700
+FP      0.8 0.143
+TR      0.2 0.900
+
+===== R15 Ghana 2023 (AC) | N = 11 | outcome AC 
+Términos publicados: RICSO*FE*~ST*LD*FP*~TR + RICSO*~FE*~ST*~LD*~RR*FP*~TR + RICSO*FE*~ST*LD*~RR*~FP*TR 
+
+                             inclS covS covU
+RICSO*FE*~ST*LD*FP*~TR           1  0.4  0.4
+RICSO*~FE*~ST*~LD*~RR*FP*~TR     1  0.2  0.2
+RICSO*FE*~ST*LD*~RR*~FP*TR       1  0.2  0.2
+expression                       1  0.8   NA
+
+Comparación con lo publicado:
+                         term incl_rep cov_rep incl_pub cov_pub dif_incl
+ RICSO*~FE*~ST*~LD*~RR*FP*~TR        1     0.2        1     0.2        0
+   RICSO*FE*~ST*LD*~RR*~FP*TR        1     0.2        1     0.2        0
+       RICSO*FE*~ST*LD*FP*~TR        1     0.4        1     0.4        0
+ dif_cov
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                         term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+       RICSO*FE*~ST*LD*FP*~TR    2     9          1     1 0.667  0.667
+ RICSO*~FE*~ST*~LD*~RR*FP*~TR    1    10          1     1 0.600  0.600
+   RICSO*FE*~ST*LD*~RR*~FP*TR    1    10          1     1 0.600  0.600
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.167         0.333            1             1             0
+        0.150         0.300            1             1             0
+        0.150         0.300            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                         term breakdown_PS.0.3 breakdown_PS.0.5
+       RICSO*FE*~ST*LD*FP*~TR        0.2333374        0.1666870
+ RICSO*~FE*~ST*~LD*~RR*FP*~TR        0.2100220        0.1500244
+   RICSO*FE*~ST*LD*~RR*~FP*TR        0.2100220        0.1500244
+ breakdown_PS.0.7
+       0.10003662
+       0.09002686
+       0.09002686
+
+===== R15 Ghana 2023 (~AC) | N = 11 | outcome nAC 
+Términos publicados: ~RICSO*~ST*~LD*~RR*FP*~TR + ~RICSO*FE*~ST*~LD*FP*~TR + RICSO*FE*ST*~LD*RR*FP*~TR + ~RICSO*FE*ST*LD*RR*FP*TR 
+
+                          inclS  covS  covU
+~RICSO*~ST*~LD*~RR*FP*~TR     1 0.333 0.167
+~RICSO*FE*~ST*~LD*FP*~TR      1 0.333 0.167
+RICSO*FE*ST*~LD*RR*FP*~TR     1 0.167 0.167
+~RICSO*FE*ST*LD*RR*FP*TR      1 0.167 0.167
+expression                    1 0.833    NA
+
+Comparación con lo publicado:
+                      term incl_rep   cov_rep incl_pub   cov_pub dif_incl
+ ~RICSO*~ST*~LD*~RR*FP*~TR        1 0.3333333        1 0.3333333        0
+  ~RICSO*FE*~ST*~LD*FP*~TR        1 0.3333333        1 0.3333333        0
+  ~RICSO*FE*ST*LD*RR*FP*TR        1 0.1666667        1 0.1666667        0
+ RICSO*FE*ST*~LD*RR*FP*~TR        1 0.1666667        1 0.1666667        0
+ dif_cov
+       0
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+ ~RICSO*~ST*~LD*~RR*FP*~TR    2     9          1     1 0.556  0.556
+  ~RICSO*FE*~ST*~LD*FP*~TR    2     9          1     1 0.556  0.556
+ RICSO*FE*ST*~LD*RR*FP*~TR    1    10          1     1 0.500  0.500
+  ~RICSO*FE*ST*LD*RR*FP*TR    1    10          1     1 0.500  0.500
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.139         0.278            1             1             0
+        0.139         0.278            1             1             0
+        0.125         0.250            1             1             0
+        0.125         0.250            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~RICSO*~ST*~LD*~RR*FP*~TR        0.1944580         0.138916       0.08337402
+  ~RICSO*FE*~ST*~LD*FP*~TR        0.1944580         0.138916       0.08337402
+ RICSO*FE*ST*~LD*RR*FP*~TR        0.1750488         0.125061       0.07501221
+  ~RICSO*FE*ST*LD*RR*FP*TR        0.1750488         0.125061       0.07501221

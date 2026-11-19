@@ -1,0 +1,24 @@
+tipo 7 fs TRUE  casos 0.5: 5 
+                                    inclS  covS inclS  covS
+POP*ECO*INF*~GRA*NFI*SCI*FLD        0.889 0.245 0.660 0.339
+POP*INF*AGR*GRA*NFI*SCI*FLD         0.607 0.287 0.976 0.296
+~POP*ECO*~INF*~AGR*~GRA*NFI*SCI*FLD 0.865 0.165 0.967 0.177
+~POP*~ECO*~INF*~AGR*GRA*NFI*SCI*FLD 0.895 0.236 0.888 0.192
+tipo 7 fs FALSE  casos 0.5: 0 
+                                    inclS  covS inclS  covS
+POP*ECO*INF*~GRA*NFI*SCI*FLD        0.888 0.250 0.665 0.342
+POP*INF*AGR*GRA*NFI*SCI*FLD         0.614 0.293 0.977 0.300
+~POP*ECO*~INF*~AGR*~GRA*NFI*SCI*FLD 0.863 0.169 0.968 0.182
+~POP*~ECO*~INF*~AGR*GRA*NFI*SCI*FLD 0.897 0.240 0.892 0.197
+tipo 6 fs TRUE  casos 0.5: 5 
+                                    inclS  covS inclS  covS
+POP*ECO*INF*~GRA*NFI*SCI*FLD        0.861 0.293 0.688 0.382
+POP*INF*AGR*GRA*NFI*SCI*FLD         0.634 0.304 0.970 0.363
+~POP*ECO*~INF*~AGR*~GRA*NFI*SCI*FLD 0.864 0.212 0.975 0.230
+~POP*~ECO*~INF*~AGR*GRA*NFI*SCI*FLD 0.886 0.264 0.908 0.224
+tipo 6 fs FALSE  casos 0.5: 0 
+                                    inclS  covS inclS  covS
+POP*ECO*INF*~GRA*NFI*SCI*FLD        0.863 0.297 0.694 0.389
+POP*INF*AGR*GRA*NFI*SCI*FLD         0.641 0.310 0.971 0.368
+~POP*ECO*~INF*~AGR*~GRA*NFI*SCI*FLD 0.864 0.216 0.975 0.236
+~POP*~ECO*~INF*~AGR*GRA*NFI*SCI*FLD 0.884 0.269 0.913 0.231

@@ -1,0 +1,92 @@
+
+===== R31 Wenchang 2026 (alta) | N = 273 | outcome HIA 
+Términos publicados: SE*HIL*IV*~IA*TS*ES*CE*GRS + SE*HIL*IV*~IO*TS*ES*CE*GRS + SE*IV*IO*IA*TS*ES*CE*~GRS + SE*HIL*IV*IO*IA*~TS*ES*CE*GRS + SE*HIL*IV*IO*IA*TS*ES*~CE*GRS + ~SE*~HIL*~IV*IO*IA*TS*ES*CE*~GRS 
+
+                                 inclS  covS  covU
+SE*HIL*IV*~IA*TS*ES*CE*GRS       0.947 0.375 0.016
+SE*HIL*IV*~IO*TS*ES*CE*GRS       0.953 0.368 0.014
+SE*IV*IO*IA*TS*ES*CE*~GRS        0.967 0.312 0.026
+SE*HIL*IV*IO*IA*~TS*ES*CE*GRS    0.971 0.312 0.016
+SE*HIL*IV*IO*IA*TS*ES*~CE*GRS    0.976 0.293 0.010
+~SE*~HIL*~IV*IO*IA*TS*ES*CE*~GRS 0.974 0.273 0.050
+expression                       0.936 0.534    NA
+
+Comparación con lo publicado:
+                             term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+ ~SE*~HIL*~IV*IO*IA*TS*ES*CE*~GRS 0.9737602 0.2728315   0.9738  0.2728        0
+       SE*HIL*IV*~IA*TS*ES*CE*GRS 0.9465259 0.3748820   0.9465  0.3749        0
+       SE*HIL*IV*~IO*TS*ES*CE*GRS 0.9528137 0.3677324   0.9528  0.3677        0
+    SE*HIL*IV*IO*IA*~TS*ES*CE*GRS 0.9705944 0.3116822   0.9706  0.3117        0
+    SE*HIL*IV*IO*IA*TS*ES*~CE*GRS 0.9764151 0.2932011   0.9764  0.2932        0
+        SE*IV*IO*IA*TS*ES*CE*~GRS 0.9673777 0.3120194   0.9674  0.3120        0
+ dif_cov
+       0
+       0
+       0
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                             term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+       SE*HIL*IV*~IA*TS*ES*CE*GRS   13   260      0.615 0.286 0.250  0.154
+       SE*HIL*IV*~IO*TS*ES*CE*GRS   10   263      0.800 0.632 0.430  0.344
+        SE*IV*IO*IA*TS*ES*CE*~GRS    8   265      0.750 0.537 0.386  0.290
+    SE*HIL*IV*IO*IA*~TS*ES*CE*GRS    4   269      0.750 0.533 0.380  0.285
+    SE*HIL*IV*IO*IA*TS*ES*~CE*GRS    4   269      1.000 1.000 0.539  0.539
+ ~SE*~HIL*~IV*IO*IA*TS*ES*CE*~GRS    4   269      0.500 0.059 0.063  0.032
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.000         0.077         0.00         0.775             0
+        0.036         0.172         0.06         1.000             0
+        0.010         0.145         0.00         1.000             0
+        0.009         0.143         0.00         1.000             0
+        0.135         0.270         1.00         1.000             0
+        0.000         0.016         0.00         1.000             0
+
+Sensibilidad del quiebre de PS a tau:
+                             term breakdown_PS.0.3 breakdown_PS.0.5
+       SE*HIL*IV*~IA*TS*ES*CE*GRS       0.00000000      0.000000000
+       SE*HIL*IV*~IO*TS*ES*CE*GRS       0.09033203      0.035949707
+        SE*IV*IO*IA*TS*ES*CE*~GRS       0.06390381      0.009948730
+    SE*HIL*IV*IO*IA*~TS*ES*CE*GRS       0.06237793      0.008850098
+    SE*HIL*IV*IO*IA*TS*ES*~CE*GRS       0.18872070      0.134765625
+ ~SE*~HIL*~IV*IO*IA*TS*ES*CE*~GRS       0.00000000      0.000000000
+ breakdown_PS.0.7
+       0.00000000
+       0.00000000
+       0.00000000
+       0.00000000
+       0.08087158
+       0.00000000
+
+===== R31 Wenchang 2026 (baja) | N = 273 | outcome nHIA 
+Términos publicados: SE*HIL*~IO*~IA*~TS*~ES*~CE*GRS + ~SE*~HIL*~IV*IO*IA*~TS*~ES*~CE*~GRS 
+
+                                    inclS  covS  covU
+SE*HIL*~IO*~IA*~TS*~ES*~CE*GRS      0.925 0.385 0.161
+~SE*~HIL*~IV*IO*IA*~TS*~ES*~CE*~GRS 0.944 0.318 0.094
+expression                          0.914 0.479    NA
+
+Comparación con lo publicado:
+                                term  incl_rep   cov_rep incl_pub cov_pub
+ ~SE*~HIL*~IV*IO*IA*~TS*~ES*~CE*~GRS 0.9444577 0.3176207   0.9445  0.3176
+      SE*HIL*~IO*~IA*~TS*~ES*~CE*GRS 0.9245283 0.3849607   0.9245  0.3850
+ dif_incl dif_cov
+        0       0
+        0       0
+
+CB-QCA (tau = 0,5):
+                                term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+      SE*HIL*~IO*~IA*~TS*~ES*~CE*GRS    9   264      0.778 0.642 0.513  0.399
+ ~SE*~HIL*~IV*IO*IA*~TS*~ES*~CE*~GRS   10   263      0.900 0.841 0.586  0.527
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.044         0.200        0.112             1         0.000
+        0.107         0.264        0.484             1         0.214
+
+Sensibilidad del quiebre de PS a tau:
+                                term breakdown_PS.0.3 breakdown_PS.0.5
+      SE*HIL*~IO*~IA*~TS*~ES*~CE*GRS        0.1063232       0.04425049
+ ~SE*~HIL*~IV*IO*IA*~TS*~ES*~CE*~GRS        0.1696167       0.10687256
+ breakdown_PS.0.7
+       0.00000000
+       0.04412842

@@ -1,0 +1,33 @@
+N = 274 
+fs FALSE casos 0,5: 0 
+                              inclS  covS
+Sense*Feel*Act*Serv           0.918 0.427
+Feel*Act*Relate*Serv          0.935 0.422
+Sense*Think*Act*Serv          0.918 0.397
+Sense*Feel*Think*~Relate*Serv 0.900 0.231
+Think*Act*Relate*Serv         0.922 0.392
+~Sense*Feel*Think*Relate*Serv 0.918 0.235
+expression                    0.899 0.604
+       inclN  covN
+Sense  0.718 0.704
+Feel   0.729 0.716
+Think  0.719 0.725
+Act    0.752 0.745
+Relate 0.726 0.719
+Serv   0.767 0.769
+fs TRUE casos 0,5: 0 
+                              inclS  covS
+Sense*Feel*Act*Serv           0.918 0.424
+Feel*Act*Relate*Serv          0.936 0.417
+Sense*Think*Act*Serv          0.919 0.394
+Sense*Feel*Think*~Relate*Serv 0.901 0.228
+Think*Act*Relate*Serv         0.923 0.388
+~Sense*Feel*Think*Relate*Serv 0.919 0.230
+expression                    0.900 0.600
+       inclN  covN
+Sense  0.717 0.703
+Feel   0.727 0.715
+Think  0.717 0.724
+Act    0.750 0.745
+Relate 0.724 0.718
+Serv   0.764 0.770

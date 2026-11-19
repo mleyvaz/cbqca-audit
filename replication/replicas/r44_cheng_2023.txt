@@ -1,0 +1,50 @@
+N = 60 | TS: 37 
+
+===== R44 Cheng 2023 (model students) | N = 60 | outcome TS 
+Términos publicados: ~AL*GP*~EO*~ET + ~AL*GP*~MD*EO + ~AL*GP*EO*ET + AL*GP*MD*ET + ~AL*~GP*MD*EO*~ET 
+
+                  inclS  covS  covU
+~AL*GP*~EO*~ET    1.000 0.135 0.135
+~AL*GP*~MD*EO     1.000 0.054 0.054
+~AL*GP*EO*ET      1.000 0.108 0.108
+AL*GP*MD*ET       0.933 0.378 0.378
+~AL*~GP*MD*EO*~ET 1.000 0.027 0.027
+expression        0.963 0.703    NA
+
+Comparación con lo publicado:
+              term  incl_rep    cov_rep incl_pub   cov_pub dif_incl dif_cov
+ ~AL*~GP*MD*EO*~ET 1.0000000 0.02702703 1.000000 0.0285714        0  -0.002
+    ~AL*GP*~EO*~ET 1.0000000 0.13513514 1.000000 0.0857143        0   0.049
+     ~AL*GP*~MD*EO 1.0000000 0.05405405 1.000000 0.1142860        0  -0.060
+      ~AL*GP*EO*ET 1.0000000 0.10810811 1.000000 0.1714290        0  -0.063
+       AL*GP*MD*ET 0.9333333 0.37837838 0.933333 0.4000000        0  -0.022
+        expression 0.9629630 0.70270270 0.962963 0.7428570        0  -0.040
+
+CB-QCA (tau = 0,5):
+              term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+    ~AL*GP*~EO*~ET    5    55      1.000 1.000 0.418  0.418        0.105
+     ~AL*GP*~MD*EO    2    58      1.000 1.000 0.397  0.397        0.099
+      ~AL*GP*EO*ET    4    56      1.000 1.000 0.411  0.411        0.103
+       AL*GP*MD*ET   15    45      0.933 0.864 0.452  0.422        0.089
+ ~AL*~GP*MD*EO*~ET    1    59      1.000 1.000 0.390  0.390        0.097
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.209         1.00             1         0.000
+         0.198         1.00             1         0.000
+         0.205         1.00             1         0.000
+         0.211         0.56             1         0.052
+         0.195         1.00             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+              term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    ~AL*GP*~EO*~ET        0.1464233       0.10455322       0.06274414
+     ~AL*GP*~MD*EO        0.1387939       0.09918213       0.05950928
+      ~AL*GP*EO*ET        0.1437988       0.10272217       0.06164551
+       AL*GP*MD*ET        0.1378174       0.08892822       0.04003906
+ ~AL*~GP*MD*EO*~ET        0.1364746       0.09747314       0.05853271
+      inclN      RoN
+AL 0.432432 0.681818
+GP 0.783784 0.612903
+MD 0.783784 0.645161
+EO 0.756757 0.562500
+ET 0.729730 0.606061
+Casos TS por AL: 21 16 

@@ -1,0 +1,110 @@
+Cuartiles recalculados (tipo 7):
+             25%         50%          75%
+DI   8957310.295 27734417.11 68357283.865
+DS        10.000       46.00       80.000
+RDP        5.460       14.50       18.605
+RDC        3.675        6.43        9.545
+SIZE    1932.000     2773.00     5544.000
+AGE       20.000       22.00       23.500
+NPD       13.000       34.00       95.000
+Casos en 0,500:
+  DI   DS  RDP  RDC SIZE  AGE  NPD 
+   1    1    1    1    1    7    1 
+Necesidad (Tabla 2: DI 0,735479/0,687765; AGE 0,551081/0,536977):
+       inclN      RoN
+DI  0.734621 0.758311
+AGE 0.554482 0.696068
+
+===== R69 Zhang 2023 (alta) | N = 35 | outcome NPD 
+Términos publicados: DI*DS*RDP*SIZE + DI*RDP*RDC*SIZE + DI*DS*RDC*AGE + ~DI*DS*RDP*~RDC*~SIZE*AGE + ~DI*~DS*RDP*~RDC*SIZE*AGE 
+
+                          inclS  covS  covU
+DI*DS*RDP*SIZE            0.907 0.347 0.146
+DI*RDP*RDC*SIZE           0.985 0.267 0.062
+DI*DS*RDC*AGE             0.979 0.265 0.114
+~DI*DS*RDP*~RDC*~SIZE*AGE 0.914 0.071 0.029
+~DI*~DS*RDP*~RDC*SIZE*AGE 0.911 0.063 0.022
+expression                0.935 0.595    NA
+
+Comparación con lo publicado:
+                      term  incl_rep    cov_rep incl_pub   cov_pub dif_incl
+ ~DI*~DS*RDP*~RDC*SIZE*AGE 0.9106830 0.06278298 0.908257 0.0597754    0.002
+ ~DI*DS*RDP*~RDC*~SIZE*AGE 0.9136187 0.07087232 0.912070 0.0688926    0.002
+             DI*DS*RDC*AGE 0.9790692 0.26543918 0.981958 0.2628910   -0.003
+            DI*DS*RDP*SIZE 0.9072555 0.34723815 0.908257 0.3466970   -0.001
+           DI*RDP*RDC*SIZE 0.9846667 0.26749170 0.986553 0.2657890   -0.002
+ dif_cov
+   0.003
+   0.002
+   0.003
+   0.001
+   0.002
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+            DI*DS*RDP*SIZE    7    28          1     1 0.607  0.607
+           DI*RDP*RDC*SIZE    5    30          1     1 0.567  0.567
+             DI*DS*RDC*AGE    5    30          1     1 0.567  0.567
+ ~DI*DS*RDP*~RDC*~SIZE*AGE    1    34          1     1 0.500  0.500
+ ~DI*~DS*RDP*~RDC*SIZE*AGE    1    34          1     1 0.500  0.500
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.152         0.304            1             1             0
+        0.142         0.283            1             1             0
+        0.142         0.283            1             1             0
+        0.125         0.250            1             1             0
+        0.125         0.250            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+            DI*DS*RDP*SIZE        0.2125244        0.1517944       0.09112549
+           DI*RDP*RDC*SIZE        0.1983643        0.1417236       0.08502197
+             DI*DS*RDC*AGE        0.1983643        0.1417236       0.08502197
+ ~DI*DS*RDP*~RDC*~SIZE*AGE        0.1750488        0.1250000       0.07501221
+ ~DI*~DS*RDP*~RDC*SIZE*AGE        0.1750488        0.1250000       0.07501221
+
+===== R69 Zhang 2023 (baja) | N = 35 | outcome nNPD 
+Términos publicados: ~DI*~DS*~RDP*~SIZE*~AGE + ~DI*~DS*~RDP*~RDC*~AGE + ~DI*~DS*~RDC*~SIZE*AGE + ~DI*DS*RDP*RDC*~SIZE*~AGE + ~DI*DS*~RDP*RDC*SIZE*AGE 
+
+                          inclS  covS  covU
+~DI*~DS*~RDP*~SIZE*~AGE   0.923 0.240 0.112
+~DI*~DS*~RDP*~RDC*~AGE    0.974 0.157 0.047
+~DI*~DS*~RDC*~SIZE*AGE    0.961 0.236 0.185
+~DI*DS*RDP*RDC*~SIZE*~AGE 0.970 0.101 0.054
+~DI*DS*~RDP*RDC*SIZE*AGE  0.861 0.060 0.039
+expression                0.939 0.576    NA
+
+Comparación con lo publicado:
+                      term  incl_rep    cov_rep incl_pub   cov_pub dif_incl
+    ~DI*~DS*~RDC*~SIZE*AGE 0.9614789 0.23558449 0.964365 0.2348410   -0.003
+    ~DI*~DS*~RDP*~RDC*~AGE 0.9740304 0.15665853 0.976182 0.1556030   -0.002
+   ~DI*~DS*~RDP*~SIZE*~AGE 0.9230448 0.24008679 0.922771 0.2391260    0.000
+  ~DI*DS*~RDP*RDC*SIZE*AGE 0.8608087 0.06004882 0.869919 0.0580323   -0.009
+ ~DI*DS*RDP*RDC*~SIZE*~AGE 0.9697444 0.10084079 0.973262 0.0987092   -0.004
+ dif_cov
+   0.001
+   0.001
+   0.001
+   0.002
+   0.002
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+   ~DI*~DS*~RDP*~SIZE*~AGE    3    32          1     1 0.563  0.562
+    ~DI*~DS*~RDP*~RDC*~AGE    2    33          1     1 0.545  0.545
+    ~DI*~DS*~RDC*~SIZE*AGE    4    31          1     1 0.581  0.581
+ ~DI*DS*RDP*RDC*~SIZE*~AGE    1    34          1     1 0.529  0.529
+  ~DI*DS*~RDP*RDC*SIZE*AGE    1    34          1     1 0.529  0.529
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.141         0.281            1             1             0
+        0.136         0.273            1             1             0
+        0.145         0.290            1             1             0
+        0.132         0.265            1             1             0
+        0.132         0.265            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   ~DI*~DS*~RDP*~SIZE*~AGE        0.1968994        0.1406250       0.08441162
+    ~DI*~DS*~RDP*~RDC*~AGE        0.1909180        0.1364136       0.08184814
+    ~DI*~DS*~RDC*~SIZE*AGE        0.2032471        0.1452026       0.08709717
+ ~DI*DS*RDP*RDC*~SIZE*~AGE        0.1853027        0.1323853       0.07946777
+  ~DI*DS*~RDP*RDC*SIZE*AGE        0.1853027        0.1323853       0.07946777

@@ -1,0 +1,68 @@
+Calibración: logistica 
+
+===== R34 Song 2024 (alta) | N = 35 | outcome Y 
+Términos publicados: TIA*PHG*~IPC*PDP*IEO + TFS*GAL*~LG*~IPC*~PDP*IEO + ~TIA*TFS*~PHG*GAL*~LG*~IPC*IEO + TIA*TFS*PHG*GAL*LG*~IPC*IEO + TIA*TFS*PHG*GAL*LG*~PDP*IEO + TIA*~TFS*PHG*~GAL*LG*~PDP*IEO + TIA*~TFS*PHG*LG*IPC*~PDP*IEO 
+
+                               inclS  covS  covU
+TIA*PHG*~IPC*PDP*IEO           0.790 0.246 0.182
+TFS*GAL*~LG*~IPC*~PDP*IEO      0.751 0.116 0.098
+~TIA*TFS*~PHG*GAL*~LG*~IPC*IEO 0.741 0.038 0.021
+TIA*TFS*PHG*GAL*LG*~IPC*IEO    0.629 0.136 0.000
+TIA*TFS*PHG*GAL*LG*~PDP*IEO    0.585 0.115 0.043
+TIA*~TFS*PHG*~GAL*LG*~PDP*IEO  1.000 0.038 0.038
+TIA*~TFS*PHG*LG*IPC*~PDP*IEO   0.830 0.043 0.043
+expression                     0.735 0.578    NA
+
+Comparación con lo publicado:
+                           term  incl_rep    cov_rep incl_pub cov_pub dif_incl
+ ~TIA*TFS*~PHG*GAL*~LG*~IPC*IEO 0.7407862 0.03848117   0.9895  0.0859   -0.249
+      TFS*GAL*~LG*~IPC*~PDP*IEO 0.7505180 0.11557116   0.9685  0.1265   -0.218
+  TIA*~TFS*PHG*~GAL*LG*~PDP*IEO 1.0000000 0.03752393   0.9765  0.0856    0.023
+   TIA*~TFS*PHG*LG*IPC*~PDP*IEO 0.8302354 0.04275686   0.8987  0.0401   -0.068
+           TIA*PHG*~IPC*PDP*IEO 0.7895816 0.24569241   0.9358  0.2598   -0.146
+    TIA*TFS*PHG*GAL*LG*~IPC*IEO 0.6290845 0.13637524   0.9687  0.0896   -0.340
+    TIA*TFS*PHG*GAL*LG*~PDP*IEO 0.5849790 0.11531589   0.9802  0.1108   -0.395
+ dif_cov
+  -0.047
+  -0.011
+  -0.048
+   0.003
+  -0.014
+   0.047
+   0.005
+
+CB-QCA (tau = 0,5):
+                           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+           TIA*PHG*~IPC*PDP*IEO    6    29      0.667 0.431 0.379  0.253
+      TFS*GAL*~LG*~IPC*~PDP*IEO    3    32      0.667 0.407 0.344  0.229
+ ~TIA*TFS*~PHG*GAL*~LG*~IPC*IEO    1    34      0.000 0.000    NA  0.000
+    TIA*TFS*PHG*GAL*LG*~IPC*IEO    4    31      0.500 0.088 0.097  0.048
+    TIA*TFS*PHG*GAL*LG*~PDP*IEO    4    31      0.500 0.088 0.097  0.048
+  TIA*~TFS*PHG*~GAL*LG*~PDP*IEO    1    34      1.000 1.000 0.559  0.559
+   TIA*~TFS*PHG*LG*IPC*~PDP*IEO    1    34      1.000 1.000 0.559  0.559
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.00         0.126            0             1             0
+         0.00         0.115            0             1             0
+         0.00         0.000            0             0             0
+         0.00         0.024            0             1             0
+         0.00         0.024            0             1             0
+         0.14         0.279            1             1             0
+         0.14         0.279            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                           term breakdown_PS.0.3 breakdown_PS.0.5
+           TIA*PHG*~IPC*PDP*IEO       0.03851318        0.0000000
+      TFS*GAL*~LG*~IPC*~PDP*IEO       0.03021240        0.0000000
+ ~TIA*TFS*~PHG*GAL*~LG*~IPC*IEO       0.00000000        0.0000000
+    TIA*TFS*PHG*GAL*LG*~IPC*IEO       0.00000000        0.0000000
+    TIA*TFS*PHG*GAL*LG*~PDP*IEO       0.00000000        0.0000000
+  TIA*~TFS*PHG*~GAL*LG*~PDP*IEO       0.19561768        0.1397095
+   TIA*~TFS*PHG*LG*IPC*~PDP*IEO       0.19561768        0.1397095
+ breakdown_PS.0.7
+        0.0000000
+        0.0000000
+        0.0000000
+        0.0000000
+        0.0000000
+        0.0838623
+        0.0838623

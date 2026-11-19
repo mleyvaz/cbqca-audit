@@ -1,0 +1,52 @@
+Casos: continuar 32 (publicado 32) | abandonar 27 (publicado 27)
+Comprobación con la Tabla 3: cribado reciente en continuar 29/32 y en abandonar 11/27 -> 29 11 
+
+===== R16 Cribado 2025 (continuar) | N = 59 | outcome CONT 
+Términos publicados: RS*CS*DR + RS*CS*~DR + RS*~CS*DR 
+
+           inclS  covS  covU
+RS*CS*DR   0.933 0.438 0.438
+RS*CS*~DR  0.889 0.250 0.250
+RS*~CS*DR  0.700 0.219 0.219
+expression 0.853 0.906    NA
+
+CB-QCA (tau = 0,5):
+      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+  RS*CS*DR   15    44      0.933 0.887 0.562  0.524        0.114         0.262
+ RS*CS*~DR    9    50      0.889 0.786 0.460  0.409        0.074         0.204
+ RS*~CS*DR   10    49      0.700 0.387 0.271  0.190        0.000         0.095
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.603             1         0.261
+        0.242             1         0.000
+        0.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+  RS*CS*DR       0.17352295       0.11444092       0.05535889
+ RS*CS*~DR       0.12646484       0.07446289       0.02246094
+ RS*~CS*DR       0.02148438       0.00000000       0.00000000
+
+===== R16 Cribado 2025 (abandonar) | N = 59 | outcome nCONT 
+Términos publicados: ~SI*~CS*~DR + ~SI*CS*~DR*~RS + ~SI*~CS*DR*~RS 
+
+               inclS  covS  covU
+~SI*~CS*~DR    1.000 0.519 0.519
+~SI*CS*~DR*~RS 0.857 0.222 0.222
+~SI*~CS*DR*~RS 0.500 0.037 0.037
+expression     0.913 0.778    NA
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+    ~SI*~CS*~DR   14    45      1.000 1.000 0.711  0.711        0.178
+ ~SI*CS*~DR*~RS    7    52      0.857 0.760 0.529  0.453        0.078
+ ~SI*~CS*DR*~RS    2    57      0.500 0.081 0.088  0.044        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.356        1.000             1         0.584
+         0.227        0.177             1         0.000
+         0.022        0.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    ~SI*~CS*~DR        0.2489014       0.17779541       0.10668945
+ ~SI*CS*~DR*~RS        0.1372681       0.07763672       0.01800537
+ ~SI*~CS*DR*~RS        0.0000000       0.00000000       0.00000000

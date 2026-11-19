@@ -1,0 +1,29 @@
+Control de calibración de News (lineal 30/60/90 por tramos):
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0800  0.6533  0.5339  0.8700  1.0000 
+
+===== R81 Ling 2026 (alta) | N = 25 | outcome News 
+Términos publicados: ~Delay*~Shock*Stakes*TD + ~Delay*Shock*Stakes*TD 
+
+                        inclS  covS  covU
+~Delay*~Shock*Stakes*TD 0.912 0.342 0.342
+~Delay*Shock*Stakes*TD  1.000 0.045 0.045
+expression              0.921 0.387    NA
+
+Comparación con lo publicado:
+                    term incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~Delay*~Shock*Stakes*TD    0.912 0.34161569    0.912   0.342        0       0
+  ~Delay*Shock*Stakes*TD    1.000 0.04494943    1.000   0.045        0       0
+
+CB-QCA (tau = 0,5):
+                    term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ~Delay*~Shock*Stakes*TD    5    20          1     1 0.500  0.500        0.125
+  ~Delay*Shock*Stakes*TD    1    24          1     1 0.417  0.417        0.104
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.250            1             1             0
+         0.208            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                    term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~Delay*~Shock*Stakes*TD        0.1750488         0.125000       0.07501221
+  ~Delay*Shock*Stakes*TD        0.1458740         0.104187       0.06256104

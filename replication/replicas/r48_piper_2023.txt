@@ -1,0 +1,59 @@
+N = 38 | con PrEP: 11 
+
+===== R48 Piper 2023 (PrEP) | N = 38 | outcome PREP 
+Términos publicados: LEAD*RES + LEAD*~SE + KNOW*~SE 
+
+           inclS  covS  covU
+LEAD*RES       1 0.818 0.182
+LEAD*~SE       1 0.727 0.091
+KNOW*~SE       1 0.636 0.091
+expression     1 1.000    NA
+
+Comparación con lo publicado:
+     term incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ KNOW*~SE        1 0.6363636        1    0.64        0  -0.004
+ LEAD*~SE        1 0.7272727        1    0.73        0  -0.003
+ LEAD*RES        1 0.8181818        1    0.82        0  -0.002
+
+CB-QCA (tau = 0,5):
+     term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+ LEAD*RES    9    29          1     1 0.931  0.931        0.233         0.466
+ LEAD*~SE    8    30          1     1 0.900  0.900        0.225         0.450
+ KNOW*~SE    7    31          1     1 0.871  0.871        0.218         0.435
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+            1             1         0.565
+            1             1         0.497
+            1             1         0.416
+
+Sensibilidad del quiebre de PS a tau:
+     term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ LEAD*RES        0.3258667        0.2327881        0.1397095
+ LEAD*~SE        0.3150024        0.2250366        0.1350098
+ KNOW*~SE        0.3048706        0.2177734        0.1306763
+
+===== R48 Piper 2023 (sin PrEP) | N = 38 | outcome NOPREP 
+Términos publicados: ~KNOW*~LEAD + ~RES*PART 
+
+            inclS  covS  covU
+~KNOW*~LEAD     1 0.889 0.296
+~RES*PART       1 0.667 0.074
+expression      1 0.963    NA
+
+Comparación con lo publicado:
+        term incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~KNOW*~LEAD        1 0.8888889        1    0.89        0  -0.001
+   ~RES*PART        1 0.6666667        1    0.70        0  -0.033
+  expression        1 0.9629630        1    0.96        0   0.003
+
+CB-QCA (tau = 0,5):
+        term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ~KNOW*~LEAD   24    14          1     1 0.786  0.786        0.196
+   ~RES*PART   18    20          1     1 0.550  0.550        0.138
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.393            1             1         0.710
+         0.275            1             1         0.412
+
+Sensibilidad del quiebre de PS a tau:
+        term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~KNOW*~LEAD        0.2750244        0.1964722       0.11785889
+   ~RES*PART        0.1925049        0.1375122       0.08251953

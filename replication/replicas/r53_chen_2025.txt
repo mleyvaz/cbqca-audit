@@ -1,0 +1,77 @@
+
+===== R53 Chen 2025 (divulgación de enfermería) | N = 269 | outcome CE 
+Términos publicados: ~CC*IE*~OS*PM*PT*~TS*~TT*PP + ~TO*~CC*IE*~OS*PM*PT*~TT*PP + TO*CC*~IE*OS*~PM*PT*~TT*PP + TO*CC*~IE*OS*~PM*PT*~TS*PP + TO*~CC*IE*OS*~PM*~PT*TS*~TT*~PP + ~TO*CC*~IE*~OS*~PM*PT*~TS*TT*PP + ~TO*CC*IE*~OS*~PM*PT*TS*~TT*PP + ~TO*CC*IE*OS*~PM*PT*~TS*TT*PP 
+
+                                inclS  covS  covU
+~CC*IE*~OS*PM*PT*~TS*~TT*PP     0.998 0.038 0.027
+~TO*~CC*IE*~OS*PM*PT*~TT*PP     0.989 0.029 0.018
+TO*CC*~IE*OS*~PM*PT*~TT*PP      1.000 0.038 0.016
+TO*CC*~IE*OS*~PM*PT*~TS*PP      0.996 0.050 0.028
+TO*~CC*IE*OS*~PM*~PT*TS*~TT*~PP 0.880 0.044 0.044
+~TO*CC*~IE*~OS*~PM*PT*~TS*TT*PP 1.000 0.031 0.016
+~TO*CC*IE*~OS*~PM*PT*TS*~TT*PP  0.817 0.011 0.011
+~TO*CC*IE*OS*~PM*PT*~TS*TT*PP   0.977 0.020 0.004
+expression                      0.957 0.211    NA
+
+Comparación con lo publicado:
+                            term  incl_rep    cov_rep incl_pub cov_pub dif_incl
+     ~CC*IE*~OS*PM*PT*~TS*~TT*PP 0.9981700 0.03830428    1.000   0.038   -0.002
+     ~TO*~CC*IE*~OS*PM*PT*~TT*PP 0.9889619 0.02936219    0.989   0.029    0.000
+ ~TO*CC*~IE*~OS*~PM*PT*~TS*TT*PP 1.0000000 0.03114905    1.000   0.032    0.000
+  ~TO*CC*IE*~OS*~PM*PT*TS*~TT*PP 0.8172043 0.01067432    0.815   0.011    0.002
+   ~TO*CC*IE*OS*~PM*PT*~TS*TT*PP 0.9767981 0.01971005    0.976   0.020    0.001
+ TO*~CC*IE*OS*~PM*~PT*TS*~TT*~PP 0.8804656 0.04368046    0.881   0.043   -0.001
+      TO*CC*~IE*OS*~PM*PT*~TS*PP 0.9956366 0.04985253    0.995   0.050    0.001
+      TO*CC*~IE*OS*~PM*PT*~TT*PP 1.0000000 0.03787512    1.000   0.038    0.000
+ dif_cov
+   0.000
+   0.000
+  -0.001
+   0.000
+   0.000
+   0.001
+   0.000
+   0.000
+
+CB-QCA (tau = 0,5):
+                            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+     ~CC*IE*~OS*PM*PT*~TS*~TT*PP    2   267          1     1 0.506  0.506
+     ~TO*~CC*IE*~OS*PM*PT*~TT*PP    2   267          1     1 0.506  0.506
+      TO*CC*~IE*OS*~PM*PT*~TT*PP    2   267          1     1 0.506  0.506
+      TO*CC*~IE*OS*~PM*PT*~TS*PP    1   268          1     1 0.504  0.504
+ TO*~CC*IE*OS*~PM*~PT*TS*~TT*~PP    4   265          1     1 0.509  0.509
+ ~TO*CC*~IE*~OS*~PM*PT*~TS*TT*PP    3   266          1     1 0.508  0.508
+  ~TO*CC*IE*~OS*~PM*PT*TS*~TT*PP    1   268          0     0    NA  0.000
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.126         0.253            1             1             0
+        0.126         0.253            1             1             0
+        0.126         0.253            1             1             0
+        0.126         0.252            1             1             0
+        0.127         0.255            1             1             0
+        0.127         0.254            1             1             0
+        0.000         0.000            0             0             0
+
+Sensibilidad del quiebre de PS a tau:
+                            term breakdown_PS.0.3 breakdown_PS.0.5
+     ~CC*IE*~OS*PM*PT*~TS*~TT*PP        0.1770020        0.1264648
+     ~TO*~CC*IE*~OS*PM*PT*~TT*PP        0.1770020        0.1264648
+      TO*CC*~IE*OS*~PM*PT*~TT*PP        0.1770020        0.1264648
+      TO*CC*~IE*OS*~PM*PT*~TS*PP        0.1763306        0.1259766
+ TO*~CC*IE*OS*~PM*~PT*TS*~TT*~PP        0.1783447        0.1273804
+ ~TO*CC*~IE*~OS*~PM*PT*~TS*TT*PP        0.1776733        0.1268921
+  ~TO*CC*IE*~OS*~PM*PT*TS*~TT*PP        0.0000000        0.0000000
+ breakdown_PS.0.7
+       0.07586670
+       0.07586670
+       0.07586670
+       0.07556152
+       0.07641602
+       0.07617188
+       0.00000000
+Avisos:
+1: In FUN(X[[i]], ...) :
+  term '~TO*CC*IE*OS*~PM*PT*~TS*TT*PP': all cases on one side of the threshold; skipped
+2: In FUN(X[[i]], ...) :
+  term '~TO*CC*IE*OS*~PM*PT*~TS*TT*PP': all cases on one side of the threshold; skipped
+3: In FUN(X[[i]], ...) :
+  term '~TO*CC*IE*OS*~PM*PT*~TS*TT*PP': all cases on one side of the threshold; skipped

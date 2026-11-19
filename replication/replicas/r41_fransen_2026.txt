@@ -1,0 +1,43 @@
+    AUTOCRACY HIGH_EMITTER CRED
+arg         0            0    0
+chn         1            1    1
+col         0            0    0
+cri         0            0    0
+eth         0            0    0
+euu         0            1    1
+gbr         0            0    1
+idn         0            0    0
+ind         0            1    1
+jpn         0            0    0
+mex         0            0    0
+phl         0            0    0
+sgp         1            0    1
+tur         1            0    1
+zaf         0            0    0
+usa         0            1    1
+
+===== R41 Fransen 2026 (credibilidad) | N = 16 | outcome CRED 
+Términos publicados: AUTOCRACY + HIGH_EMITTER 
+
+             inclS  covS  covU
+AUTOCRACY        1 0.429 0.286
+HIGH_EMITTER     1 0.571 0.429
+expression       1 0.857    NA
+
+Comparación con lo publicado:
+         term incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+    AUTOCRACY        1 0.4285714        1   0.429        0       0
+ HIGH_EMITTER        1 0.5714286        1   0.571        0       0
+
+CB-QCA (tau = 0,5):
+         term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+    AUTOCRACY    3    13          1     1 0.692  0.692        0.173
+ HIGH_EMITTER    4    12          1     1 0.750  0.750        0.188
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.346            1             1             0
+         0.375            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+         term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    AUTOCRACY        0.2423096        0.1730957        0.1038818
+ HIGH_EMITTER        0.2625122        0.1875000        0.1125488

@@ -1,0 +1,71 @@
+Casos en 0,5: 3 
+Necesidad PI (publicado .775 .734 .924 .915 .936 .889):
+ IUCR   GAT    HC   ERC   ISE   TSA 
+0.775 0.736 0.924 0.914 0.934 0.889 
+
+===== R58 Wang 2026 (alta) | N = 31 | outcome PI 
+Términos publicados: HC*ERC*ISE*TSA + ~IUCR*GAT*HC*ERC*ISE 
+
+                     inclS  covS  covU
+HC*ERC*ISE*TSA       0.912 0.809 0.340
+~IUCR*GAT*HC*ERC*ISE 0.980 0.502 0.033
+expression           0.910 0.842    NA
+
+Comparación con lo publicado:
+                 term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~IUCR*GAT*HC*ERC*ISE 0.9804355 0.5023892    0.982   0.500   -0.002   0.002
+       HC*ERC*ISE*TSA 0.9122199 0.8092613    0.909   0.808    0.003   0.001
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+       HC*ERC*ISE*TSA   11    20      0.909  0.87 0.670  0.609        0.130
+ ~IUCR*GAT*HC*ERC*ISE    3    28      1.000  1.00 0.536  0.536        0.134
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.305        0.568             1         0.097
+         0.268        1.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+       HC*ERC*ISE*TSA         0.199585        0.1295776       0.05957031
+ ~IUCR*GAT*HC*ERC*ISE         0.187500        0.1339722       0.08038330
+
+===== R58 Wang 2026 (baja) | N = 31 | outcome nPI 
+Términos publicados: ~HC*~ERC*~ISE*~TSA + ~IUCR*GAT*~HC*~ERC*~TSA + IUCR*~GAT*~ERC*~ISE*~TSA + IUCR*~GAT*HC*ERC*ISE*~TSA 
+
+                          inclS  covS  covU
+~HC*~ERC*~ISE*~TSA        0.990 0.714 0.216
+~IUCR*GAT*~HC*~ERC*~TSA   0.995 0.427 0.019
+IUCR*~GAT*~ERC*~ISE*~TSA  0.989 0.346 0.022
+IUCR*~GAT*HC*ERC*ISE*~TSA 0.978 0.243 0.008
+expression                0.987 0.790    NA
+
+Comparación con lo publicado:
+                      term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+        ~HC*~ERC*~ISE*~TSA 0.9904011 0.7138590    0.991   0.712   -0.001
+   ~IUCR*GAT*~HC*~ERC*~TSA 0.9953164 0.4272904    0.995   0.421    0.000
+  IUCR*~GAT*~ERC*~ISE*~TSA 0.9892888 0.3463205    0.990   0.343   -0.001
+ IUCR*~GAT*HC*ERC*ISE*~TSA 0.9777192 0.2425511    0.979   0.237   -0.001
+ dif_cov
+   0.002
+   0.006
+   0.003
+   0.006
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+        ~HC*~ERC*~ISE*~TSA   10    21          1     1 0.762  0.762
+   ~IUCR*GAT*~HC*~ERC*~TSA    4    27          1     1 0.593  0.593
+  IUCR*~GAT*~ERC*~ISE*~TSA    2    29          1     1 0.552  0.552
+ IUCR*~GAT*HC*ERC*ISE*~TSA    1    30          1     1 0.533  0.533
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.190         0.381            1             1         0.416
+        0.148         0.296            1             1         0.000
+        0.138         0.276            1             1         0.000
+        0.133         0.267            1             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        ~HC*~ERC*~ISE*~TSA        0.2667236        0.1904907       0.11431885
+   ~IUCR*GAT*~HC*~ERC*~TSA        0.2074585        0.1481934       0.08892822
+  IUCR*~GAT*~ERC*~ISE*~TSA        0.1931152        0.1379395       0.08276367
+ IUCR*~GAT*HC*ERC*ISE*~TSA        0.1867065        0.1333618       0.08001709

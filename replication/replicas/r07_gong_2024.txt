@@ -1,0 +1,85 @@
+N = 132 
+     InnPer  ITT  HCR  IFT   MS   BS
+min     5.6 27.6  7.0 17.6 23.7  8.7
+max    62.0 95.1 67.4 64.8 84.7 68.1
+mean   25.3 64.9 32.7 41.5 47.6 29.8
+sd     13.2 14.5 15.4 12.4 11.7 14.1
+Publicado: Min 5.6 27.6 7.0 17.6 23.7 8.7 | Max 62 95.1 67.4 64.8 84.7 68.1 | Mean 25.2 64.9 32.7 41.5 47.6 29.8
+     incl   cov
+ITT 0.867 0.823
+HCR 0.882 0.870
+IFT 0.879 0.840
+MS  0.840 0.794
+BS  0.864 0.886
+
+===== Gong 2024 | innovación alta | N = 132 | outcome Y 
+Términos publicados: ITT*HCR*IFT*BS + HCR*IFT*MS*BS 
+
+               inclS  covS  covU
+ITT*HCR*IFT*BS 0.974 0.738 0.047
+HCR*IFT*MS*BS  0.979 0.714 0.023
+expression     0.974 0.761    NA
+
+Comparación con lo publicado:
+           term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+  HCR*IFT*MS*BS 0.9793416 0.7138578     0.98    0.71   -0.001   0.004
+ ITT*HCR*IFT*BS 0.9743927 0.7378920     0.97    0.74    0.004  -0.002
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ITT*HCR*IFT*BS   45    87          1     1 0.759  0.759        0.190
+  HCR*IFT*MS*BS   42    90          1     1 0.733  0.733        0.183
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.379            1             1         0.880
+         0.367            1             1         0.866
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ITT*HCR*IFT*BS        0.2655640        0.1896973        0.1138306
+  HCR*IFT*MS*BS        0.2567139        0.1833496        0.1100464
+
+===== Gong 2024 | innovación baja | N = 132 | outcome NY 
+Términos publicados: ~HCR*~MS*~BS + ~HCR*~IFT*~MS + ~ITT*~IFT*~BS + ~HCR*~IFT*~BS + ~ITT*~HCR*~IFT + ~ITT*~HCR*~BS 
+
+               inclS  covS  covU
+~HCR*~MS*~BS   0.957 0.715 0.020
+~HCR*~IFT*~MS  0.953 0.682 0.004
+~ITT*~IFT*~BS  0.957 0.717 0.035
+~HCR*~IFT*~BS  0.958 0.745 0.021
+~ITT*~HCR*~IFT 0.944 0.716 0.018
+~ITT*~HCR*~BS  0.959 0.726 0.011
+expression     0.919 0.881    NA
+
+Comparación con lo publicado:
+           term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+  ~HCR*~IFT*~BS 0.9578805 0.7449918     0.96    0.74   -0.002   0.005
+  ~HCR*~IFT*~MS 0.9528654 0.6823278     0.96    0.68   -0.007   0.002
+   ~HCR*~MS*~BS 0.9574701 0.7152654     0.96    0.71   -0.003   0.005
+  ~ITT*~HCR*~BS 0.9592066 0.7263627     0.96    0.72   -0.001   0.006
+ ~ITT*~HCR*~IFT 0.9439884 0.7159891     0.94    0.71    0.004   0.006
+  ~ITT*~IFT*~BS 0.9568194 0.7171152     0.96    0.71   -0.003   0.007
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+   ~HCR*~MS*~BS   42    90      0.929 0.898 0.677  0.629        0.139
+  ~HCR*~IFT*~MS   42    90      0.881 0.824 0.634  0.559        0.110
+  ~ITT*~IFT*~BS   46    86      0.891 0.847 0.674  0.601        0.123
+  ~HCR*~IFT*~BS   47    85      0.915 0.883 0.704  0.644        0.140
+ ~ITT*~HCR*~IFT   48    84      0.896 0.857 0.694  0.622        0.130
+  ~ITT*~HCR*~BS   46    86      0.935 0.911 0.714  0.667        0.151
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.314        0.774         1.000         0.672
+         0.279        0.654         0.962         0.551
+         0.300        0.698         0.967         0.608
+         0.322        0.762         0.977         0.672
+         0.311        0.721         0.970         0.633
+         0.334        0.799         1.000         0.714
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   ~HCR*~MS*~BS        0.2092896        0.1393433       0.06933594
+  ~HCR*~IFT*~MS        0.1777344        0.1099243       0.04217529
+  ~ITT*~IFT*~BS        0.1939087        0.1229858       0.05206299
+  ~HCR*~IFT*~BS        0.2127686        0.1398315       0.06689453
+ ~ITT*~HCR*~IFT        0.2020874        0.1295166       0.05688477
+  ~ITT*~HCR*~BS        0.2238159        0.1505737       0.07733154

@@ -1,0 +1,40 @@
+N = 479 | casos en 0,5 exacto:
+ MI  TI  FD IFD  EX  WO 
+  0   1   0   0   0   0 
+    inclN   RoN
+EX  0.226 0.965
+MI  0.326 0.912
+TI  0.252 0.939
+FD  0.528 0.778
+IFD 0.465 0.839
+
+===== R14 Wang 2024 (propiedad total) | N = 479 | outcome WO 
+Términos publicados: EX*~MI + EX*IFD + EX*TI*~FD 
+
+           inclS  covS  covU
+EX*~MI     0.847 0.153 0.049
+EX*IFD     0.881 0.128 0.016
+EX*TI*~FD  0.832 0.046 0.003
+expression 0.852 0.181    NA
+
+Comparación con lo publicado:
+      term  incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+    EX*~MI 0.8474427 0.15300838    0.846   0.152    0.001   0.001
+    EX*IFD 0.8808854 0.12762011    0.881   0.127    0.000   0.001
+ EX*TI*~FD 0.8324382 0.04589106    0.831   0.045    0.001   0.001
+
+CB-QCA (tau = 0,5):
+      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+    EX*~MI   65   414      0.831 0.363 0.116  0.096        0.000         0.048
+    EX*IFD   70   409      0.886 0.586 0.183  0.162        0.012         0.081
+ EX*TI*~FD   13   466      0.769 0.089 0.029  0.022        0.000         0.011
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.000         0.708         0.000
+        0.276         0.837         0.088
+        0.000         1.000         0.000
+
+Sensibilidad del quiebre de PS a tau:
+      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    EX*~MI      0.008422852       0.00000000                0
+    EX*IFD      0.039611816       0.01196289                0
+ EX*TI*~FD      0.000000000       0.00000000                0

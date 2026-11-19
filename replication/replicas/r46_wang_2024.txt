@@ -1,0 +1,40 @@
+N = 26 | confinamiento: 14 
+
+===== R46 Wang 2024 (confinamiento) | N = 26 | outcome LOCK 
+Términos publicados: ~ES*~SF*~PS + SF*~PS*~FC + ES*PS*FC 
+
+            inclS  covS  covU
+~ES*~SF*~PS     1 0.143 0.143
+SF*~PS*~FC      1 0.286 0.286
+ES*PS*FC        1 0.429 0.429
+expression      1 0.857    NA
+
+Comparación con lo publicado:
+        term incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~ES*~SF*~PS        1 0.1428571        1 0.142857        0       0
+    ES*PS*FC        1 0.4285714        1 0.428571        0       0
+  SF*~PS*~FC        1 0.2857143        1 0.285714        0       0
+
+CB-QCA (tau = 0,5):
+        term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ~ES*~SF*~PS    2    24          1     1 0.500  0.500        0.125
+  SF*~PS*~FC    4    22          1     1 0.545  0.545        0.136
+    ES*PS*FC    6    20          1     1 0.600  0.600        0.150
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.250            1             1             0
+         0.273            1             1             0
+         0.300            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+        term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~ES*~SF*~PS        0.1750488        0.1250610       0.07501221
+  SF*~PS*~FC        0.1909180        0.1364136       0.08184814
+    ES*PS*FC        0.2100220        0.1500244       0.09002686
+   inclN  RoN covN
+EB  0.36 0.71 0.45
+SP  0.43 0.90 0.75
+ES  0.57 0.61 0.53
+SF  0.71 0.75 0.71
+PS  0.57 0.72 0.62
+FC  0.57 0.56 0.50
+PI  0.14 0.79 0.29

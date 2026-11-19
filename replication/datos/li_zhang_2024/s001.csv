@@ -1,0 +1,53 @@
+Area,Y,V1,V2,V3,V4,V5,V6
+"Shenhe District, Shenyang, Liaoning Province",1.0,0.67,1.0,0.67,0.67,1.0,1.0
+"Baita District, Liaoyang, Liaoning Province",0.67,0.0,1.0,1.0,0.67,1.0,1.0
+"Wuxi, Jiangsu Province",0.33,0.67,1.0,0.67,1.0,1.0,1.0
+"Hangzhou, Zhejiang Province",0.67,0.67,1.0,0.33,1.0,1.0,1.0
+"Haicang District, Xiamen, Fujian Province",0.67,0.67,1.0,0.33,1.0,0.67,1.0
+"Chaoyang District, Beijing",0.67,1.0,1.0,0.33,1.0,1.0,1.0
+"Qingshan District, Baotou City, Inner Mongolia Autonomous Region",1.0,0.33,0.33,0.33,1.0,1.0,1.0
+"Erlianhot, Inner Mongolia Autonomous Region",0.67,0.33,1.0,1.0,0.67,1.0,1.0
+"Shahekou District, Dalian, Liaoning Province",0.33,1.0,0.67,0.0,0.67,1.0,1.0
+"Nangang District, Harbin , Heilongjiang Province",0.67,0.67,0.67,0.67,0.67,1.0,1.0
+"Xuhui District, Shanghai",0.33,1.0,1.0,0.33,1.0,1.0,1.0
+"Suzhou Industrial Park, Jiangsu Province",0.33,0.67,1.0,0.67,0.67,1.0,1.0
+"Huangdao District, Qingdao, Shandong Province",0.33,0.67,0.33,0.0,0.67,0.67,0.67
+"Kaifu District, Changsha, Hunan Province",0.67,0.67,1.0,1.0,0.67,0.67,1.0
+"Yuexiu District, Guangzhou , Guangdong Province",0.33,1.0,1.0,0.67,1.0,0.67,0.67
+"Chenghua District, Chengdu, Sichuan Province",0.67,0.67,0.67,0.67,1.0,1.0,1.0
+"Panlong District, Kunming, Yunnan Province",1.0,0.33,0.67,1.0,0.67,0.67,0.67
+"Xicheng District, Beijing",0.67,1.0,1.0,0.33,1.0,1.0,1.0
+"Haidian district, Beijing",0.67,1.0,0.67,0.33,1.0,1.0,1.0
+"Hexi District, Tianjin",1.0,1.0,0.67,0.67,1.0,0.67,1.0
+"Guangyang District, Langfang , Hebei Province",0.33,0.0,0.33,0.33,0.67,0.67,1.0
+"Hongshan District, Chifeng, Inner Mongolia Autonomous Region",0.67,0.33,0.33,0.67,1.0,0.67,1.0
+"Kuancheng District, Changchun, Jilin Province",0.67,0.67,0.33,0.0,1.0,0.33,1.0
+"Longsha District, Qiqihar, Heilongjiang Province",0.33,0.33,1.0,0.33,0.67,0.67,1.0
+"Jianye District, Nanjing, Jiangsu Province",0.33,0.67,0.33,1.0,1.0,0.67,1.0
+"Gulou District, Nanjing, Jiangsu Province",0.33,0.67,0.33,1.0,1.0,0.67,1.0
+"Yunlong District, Xuzhou, Jiangsu Province",0.67,0.33,1.0,1.0,1.0,0.67,0.67
+"Gusu District, Suzhou, Jiangsu Province",0.67,0.67,0.33,1.0,1.0,0.67,1.0
+"Shangcheng District, Hangzhou, Zhejiang Province",0.33,0.67,1.0,1.0,1.0,0.67,1.0
+"Lixia District, Jinan, Shandong Province",0.67,0.33,0.67,0.33,1.0,1.0,0.67
+"Shibei District, Qingdao, Shandong Province",0.67,0.67,1.0,0.67,0.67,1.0,1.0
+"Taishan District, Tai'an, Shandong Province",0.33,0.33,0.67,1.0,0.67,0.67,1.0
+"Jianxi District, Luoyang, Henan Province",0.67,0.0,0.67,0.67,1.0,0.67,1.0
+"Zhijiang City, Yichang, Hubei Province",0.67,0.33,0.33,1.0,1.0,1.0,0.67
+"Qingyang District, Chengdu, Sichuan Province",0.33,0.67,1.0,1.0,1.0,1.0,1.0
+"Xixiu District, Anshun, Guizhou Province",0.67,0.33,1.0,0.67,0.67,1.0,1.0
+"Qujing Qilin District, Yunnan Province",0.67,0.33,0.67,0.33,0.33,0.67,1.0
+"Beilin District, Xi'an, Shaanxi Province",0.33,0.67,1.0,0.67,0.67,0.67,1.0
+"Jintai District, Baoji, Shaanxi Province",0.33,0.33,0.33,0.67,1.0,0.67,0.67
+"Shijingshan District, Beijing",0.33,1.0,0.67,0.67,0.67,0.67,0.67
+"Changning District, Shanghai",0.33,1.0,0.67,0.67,1.0,0.67,1.0
+"Gulou District, Xuzhou, Jiangsu Province",0.33,0.67,0.67,1.0,1.0,0.67,1.0
+"Yuecheng District, Shaoxing, Zhejiang Province ",0.67,0.67,0.33,1.0,0.67,0.67,1.0
+"Quzhou City, Zhejiang Province",0.33,0.0,0.67,0.33,1.0,0.67,1.0
+"Baohu District, Hefei, Anhui Province",0.33,0.67,0.33,0.67,0.67,1.0,1.0
+"Yidu City, Hubei Province",0.67,0.33,0.33,1.0,1.0,1.0,0.67
+"Xianning City, Hubei Province",0.33,0.0,0.33,0.67,1.0,0.67,1.0
+"Chancheng District, Foshan, Guangdong Province",1.0,1.0,0.33,0.67,1.0,0.67,1.0
+"Jiangbei District, Chongqing",0.33,1.0,0.33,1.0,1.0,0.33,0.67
+"Jinniu District, Chengdu, Sichuan Province",0.33,1.0,0.33,0.33,1.0,0.67,1.0
+"Xindu District, Chengdu, Sichuan Province",0.33,1.0,0.33,0.33,1.0,0.67,1.0
+"Suzhou District, Jiuquan, Gansu Province",0.33,0.0,0.33,0.67,1.0,0.67,1.0

@@ -1,0 +1,51 @@
+
+===== R54 Wang 2025 (actividad física) | N = 995 | outcome PE 
+Términos publicados: ICC*SCC*SI*IU*EA + ICC*SCC*SI*SS*IU*~RA + ~HL*SCC*SI*SS*IU*~RA*EA + HL*ICC*SCC*SI*SS*IU + HL*ICC*SI*SS*IU*EA + ICC*SCC*SI*IU*RA*EA + ~HL*SCC*SI*IU*RA*EA 
+
+                        inclS  covS  covU
+ICC*SCC*SI*IU*EA        0.863 0.376 0.012
+ICC*SCC*SI*SS*IU*~RA    0.843 0.269 0.008
+~HL*SCC*SI*SS*IU*~RA*EA 0.873 0.223 0.010
+HL*ICC*SCC*SI*SS*IU     0.859 0.310 0.007
+HL*ICC*SI*SS*IU*EA      0.867 0.293 0.013
+ICC*SCC*SI*IU*RA*EA     0.870 0.308 0.000
+~HL*SCC*SI*IU*RA*EA     0.842 0.278 0.016
+expression              0.801 0.466    NA
+
+Comparación con lo publicado:
+                    term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+     ~HL*SCC*SI*IU*RA*EA 0.8420099 0.2784694   0.8455  0.2176   -0.003   0.061
+ ~HL*SCC*SI*SS*IU*~RA*EA 0.8734100 0.2232361   0.8755  0.2203   -0.002   0.003
+     HL*ICC*SCC*SI*SS*IU 0.8594644 0.3095598   0.8604  0.3072   -0.001   0.002
+      HL*ICC*SI*SS*IU*EA 0.8667514 0.2929211   0.8675  0.2907   -0.001   0.002
+        ICC*SCC*SI*IU*EA 0.8627253 0.3761605   0.8635  0.3748   -0.001   0.001
+     ICC*SCC*SI*IU*RA*EA 0.8703979 0.3079166   0.8434  0.2391    0.027   0.069
+    ICC*SCC*SI*SS*IU*~RA 0.8425657 0.2687658   0.8433  0.2658   -0.001   0.003
+
+CB-QCA (tau = 0,5):
+                    term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        ICC*SCC*SI*IU*EA   18   977      0.889 0.792 0.475  0.422        0.078
+    ICC*SCC*SI*SS*IU*~RA   25   970      0.640 0.321 0.265  0.170        0.000
+ ~HL*SCC*SI*SS*IU*~RA*EA    4   991      1.000 1.000 0.528  0.528        0.132
+     HL*ICC*SCC*SI*SS*IU   21   974      0.762 0.552 0.386  0.294        0.014
+      HL*ICC*SI*SS*IU*EA    6   989      1.000 1.000 0.529  0.529        0.132
+     ICC*SCC*SI*IU*RA*EA   10   985      0.900 0.811 0.478  0.430        0.083
+     ~HL*SCC*SI*IU*RA*EA    5   990      0.400 0.000 0.000  0.000        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.211        0.524         1.000         0.308
+         0.085        0.000         0.661         0.000
+         0.264        1.000         1.000         0.000
+         0.147        0.168         0.877         0.057
+         0.264        1.000         1.000         0.076
+         0.215        0.411         1.000         0.107
+         0.000        0.000         1.000         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                    term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        ICC*SCC*SI*IU*EA      0.131103516       0.07781982       0.02447510
+    ICC*SCC*SI*SS*IU*~RA      0.005493164       0.00000000       0.00000000
+ ~HL*SCC*SI*SS*IU*~RA*EA      0.184753418       0.13195801       0.07916260
+     HL*ICC*SCC*SI*SS*IU      0.067138672       0.01391602       0.00000000
+      HL*ICC*SI*SS*IU*EA      0.185119629       0.13226318       0.07934570
+     ICC*SCC*SI*IU*RA*EA      0.135498047       0.08251953       0.02954102
+     ~HL*SCC*SI*IU*RA*EA      0.000000000       0.00000000       0.00000000

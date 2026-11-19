@@ -1,0 +1,49 @@
+Cuartiles recalculados (tipo 7):
+       25%    50%    75%
+RD  0.0444 0.0564 0.0847
+DT  2.4196 3.1728 3.8965
+HC  0.3240 0.4336 0.5315
+ROA 0.0253 0.0405 0.0569
+GS  0.0041 0.0081 0.0107
+CP  0.1103 0.1372 0.1800
+PAT 1.5622 2.0413 2.7408
+Casos en 0,500:
+ RD  DT  HC ROA  GS  CP PAT 
+  0   0   0   0   0   0   0 
+Necesidad (Tabla 5 publica DT 0,427/0,410; GS 0,601/0,597):
+    inclN   RoN
+DT  0.429 0.620
+~DT 0.670 0.759
+GS  0.603 0.719
+~GS 0.520 0.662
+
+===== R62 Li 2024 (alta) | N = 26 | outcome PAT 
+Términos publicados: ~DT*HC*~ROA*GS*~CP + ~DT*~HC*ROA*GS*CP + ~RD*~DT*~HC*ROA*~GS*~CP 
+
+                        inclS  covS  covU
+~DT*HC*~ROA*GS*~CP      0.912 0.189 0.144
+~DT*~HC*ROA*GS*CP       0.958 0.166 0.092
+~RD*~DT*~HC*ROA*~GS*~CP 0.956 0.137 0.064
+expression              0.940 0.383    NA
+
+Comparación con lo publicado:
+                    term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+       ~DT*~HC*ROA*GS*CP 0.9578040 0.1658678 0.958525 0.163265   -0.001   0.003
+      ~DT*HC*~ROA*GS*~CP 0.9122007 0.1885755 0.915385 0.186813   -0.003   0.002
+ ~RD*~DT*~HC*ROA*~GS*~CP 0.9556650 0.1371887 0.955801 0.135793    0.000   0.001
+
+CB-QCA (tau = 0,5):
+                    term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+      ~DT*HC*~ROA*GS*~CP    2    24          1     1 0.542  0.542        0.135
+       ~DT*~HC*ROA*GS*CP    2    24          1     1 0.542  0.542        0.135
+ ~RD*~DT*~HC*ROA*~GS*~CP    1    25          1     1 0.520  0.520        0.130
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.271            1             1             0
+         0.271            1             1             0
+         0.260            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                    term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+      ~DT*HC*~ROA*GS*~CP        0.1896362        0.1354370       0.08129883
+       ~DT*~HC*ROA*GS*CP        0.1896362        0.1354370       0.08129883
+ ~RD*~DT*~HC*ROA*~GS*~CP        0.1820068        0.1300049       0.07800293

@@ -1,0 +1,89 @@
+N = 68 | 100 % de derivación: 24 
+
+===== R42 Kemp 2021 (100 % derivacion) | N = 68 | outcome REF 
+Términos publicados: TR*CO*NRO + ~TR*CO*AIM*~NRO 
+
+                inclS  covS  covU
+TR*CO*NRO       0.875 0.292 0.292
+~TR*CO*AIM*~NRO 1.000 0.167 0.167
+expression      0.917 0.458    NA
+
+Comparación con lo publicado:
+       term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ expression 0.9166667 0.4583333     0.92    0.46   -0.003  -0.002
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+       TR*CO*NRO    8    60      0.875 0.826 0.676  0.592        0.117
+ ~TR*CO*AIM*~NRO    4    64      1.000 1.000 0.687  0.687        0.172
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.296          0.4             1         0.101
+         0.344          1.0             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+       TR*CO*NRO        0.1883545        0.1166992       0.04504395
+ ~TR*CO*AIM*~NRO        0.2406616        0.1718750       0.10314941
+
+===== R42 Kemp 2021 (menos de 100 %) | N = 68 | outcome NREF 
+Términos publicados: ~TR*~CO + ~CO*~ORIC + ~CO*NRO + ~TR*~ORIC*NRO + TR*CO*~AIM*~NRO 
+
+                inclS  covS  covU
+~TR*~CO         0.947 0.409 0.023
+~CO*~ORIC       1.000 0.386 0.091
+~CO*NRO         0.905 0.432 0.136
+~TR*~ORIC*NRO   1.000 0.136 0.023
+TR*CO*~AIM*~NRO 1.000 0.068 0.068
+expression      0.944 0.773    NA
+
+Comparación con lo publicado:
+       term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ expression 0.9444444 0.7727273     0.94    0.77    0.004   0.003
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+         ~TR*~CO   19    49      0.947 0.888 0.440  0.417        0.091
+       ~CO*~ORIC   17    51      1.000 1.000 0.471  0.471        0.118
+         ~CO*NRO   21    47      0.905 0.797 0.412  0.373        0.069
+   ~TR*~ORIC*NRO    6    62      1.000 1.000 0.387  0.387        0.097
+ TR*CO*~AIM*~NRO    3    65      1.000 1.000 0.369  0.369        0.092
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.208        0.609             1         0.200
+         0.235        1.000             1         0.408
+         0.186        0.450             1         0.054
+         0.194        1.000             1         0.000
+         0.185        1.000             1         0.000
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+         ~TR*~CO        0.1380005       0.09106445       0.04412842
+       ~CO*~ORIC        0.1647339       0.11767578       0.07061768
+         ~CO*NRO        0.1162109       0.06945801       0.02264404
+   ~TR*~ORIC*NRO        0.1354980       0.09680176       0.05810547
+ TR*CO*~AIM*~NRO        0.1292725       0.09234619       0.05541992
+
+M1: TR*CO*NRO + ~TR*CO*AIM*~NRO -> REF
+
+Avisos:
+1: In admisc::writePrimeimp(impmat = inputt, mv = mv, collapse = collapse,  :
+  Function writePrimeimp() is deprecated, use writePIs().
+
+2: In admisc::writePrimeimp(impmat = expressions, mv = mv, collapse = collapse,  :
+  Function writePrimeimp() is deprecated, use writePIs().
+
+3: In admisc::writePrimeimp(impmat = inputt, mv = mv, collapse = collapse) :
+  Function writePrimeimp() is deprecated, use writePIs().
+
+
+M1: ~TR*~CO + ~CO*~ORIC + ~CO*NRO + ~TR*~ORIC*NRO + TR*CO*~AIM*~NRO -> NREF
+
+Avisos:
+1: In admisc::writePrimeimp(impmat = inputt, mv = mv, collapse = collapse,  :
+  Function writePrimeimp() is deprecated, use writePIs().
+
+2: In admisc::writePrimeimp(impmat = expressions, mv = mv, collapse = collapse,  :
+  Function writePrimeimp() is deprecated, use writePIs().
+
+3: In admisc::writePrimeimp(impmat = inputt, mv = mv, collapse = collapse) :
+  Function writePrimeimp() is deprecated, use writePIs().
+

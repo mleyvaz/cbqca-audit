@@ -1,0 +1,48 @@
+Aviso:
+package 'cna' was built under R version 4.5.3 
+   A R F L C W
+1  0 1 0 1 1 1
+2  0 1 0 1 1 0
+3  0 1 1 1 1 1
+4  0 1 1 1 1 1
+5  1 1 0 1 1 1
+6  1 1 0 1 1 1
+7  1 1 1 1 1 1
+8  1 1 1 1 1 1
+9  0 0 0 0 1 1
+10 0 1 0 0 1 1
+11 0 0 1 1 1 0
+12 1 0 0 0 0 0
+13 1 1 1 0 0 1
+14 1 1 0 0 1 1
+15 1 1 1 0 1 1
+Tabla 8 coincide con d.irrigate: TRUE 
+
+===== Lam & Ostrom 2010 | W | Eq. 1 | N = 15 | outcome W 
+Términos publicados: A*C*R + ~A*~L*C*~F + A*~L*R*F + L*C*R*F 
+
+           inclS  covS  covU
+A*C*R          1 0.500 0.250
+~A*~L*C*~F     1 0.167 0.167
+A*~L*R*F       1 0.167 0.083
+L*C*R*F        1 0.333 0.167
+expression     1 0.917    NA
+
+CB-QCA (tau = 0,5):
+       term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+      A*C*R    6     9          1     1 0.333  0.333        0.083         0.167
+ ~A*~L*C*~F    2    13          1     1 0.231  0.231        0.058         0.115
+   A*~L*R*F    2    13          1     1 0.231  0.231        0.058         0.115
+    L*C*R*F    4    11          1     1 0.273  0.273        0.068         0.136
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+            1             1             0
+            1             1             0
+            1             1             0
+            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+       term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+      A*C*R       0.11669922       0.08337402       0.05004883
+ ~A*~L*C*~F       0.08081055       0.05773926       0.03466797
+   A*~L*R*F       0.08081055       0.05773926       0.03466797
+    L*C*R*F       0.09545898       0.06823730       0.04095459

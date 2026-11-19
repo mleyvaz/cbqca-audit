@@ -1,0 +1,39 @@
+N = 47 ; casos en 0,501:
+RDC TAC   P CSR  GS  MC MIP 
+  1   1   2   1   1   0   2 
+
+===== R90 Ma 2023 (alta) | N = 47 | outcome MIP 
+Términos publicados: ~RDC*TAC*~P*GS*~MC + RDC*TAC*P*~CSR*GS + RDC*TAC*~P*CSR*GS + RDC*~TAC*P*CSR*GS*~MC 
+
+                      inclS  covS  covU
+~RDC*TAC*~P*GS*~MC    0.943 0.373 0.108
+RDC*TAC*P*~CSR*GS     0.949 0.326 0.064
+RDC*TAC*~P*CSR*GS     0.982 0.338 0.040
+RDC*~TAC*P*CSR*GS*~MC 0.967 0.260 0.035
+expression            0.936 0.567    NA
+
+Comparación con lo publicado:
+                  term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+    ~RDC*TAC*~P*GS*~MC 0.9434889 0.3731416    0.943   0.373        0       0
+ RDC*~TAC*P*CSR*GS*~MC 0.9674503 0.2599359    0.967   0.260        0       0
+     RDC*TAC*~P*CSR*GS 0.9816669 0.3382081    0.982   0.338        0       0
+     RDC*TAC*P*~CSR*GS 0.9491429 0.3255272    0.949   0.326        0       0
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+    ~RDC*TAC*~P*GS*~MC    3    44      0.667 0.302 0.216  0.144        0.000
+     RDC*TAC*P*~CSR*GS    2    45      1.000 1.000 0.489  0.489        0.122
+     RDC*TAC*~P*CSR*GS    3    44      1.000 1.000 0.500  0.500        0.125
+ RDC*~TAC*P*CSR*GS*~MC    1    46      1.000 1.000 0.478  0.478        0.120
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.072            0             1             0
+         0.244            1             1             0
+         0.250            1             1             0
+         0.239            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    ~RDC*TAC*~P*GS*~MC     0.0004272461        0.0000000       0.00000000
+     RDC*TAC*P*~CSR*GS     0.1711425781        0.1222534       0.07336426
+     RDC*TAC*~P*CSR*GS     0.1750488281        0.1250000       0.07501221
+ RDC*~TAC*P*CSR*GS*~MC     0.1674194336        0.1195679       0.07177734

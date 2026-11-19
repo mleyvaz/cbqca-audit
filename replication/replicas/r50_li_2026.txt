@@ -1,0 +1,68 @@
+Casos con resultado 1: 15 
+
+===== R50 Li 2026 (alta) | N = 30 | outcome DCI 
+Términos publicados: DUR*HAS*~VIS*~PRO*THE*~EMO*~NAR*CAM + DUR*HAS*VIS*~PRO*THE*EMO*~NAR*~CAM + ~DUR*HAS*~VIS*PRO*THE*EMO*NAR*~CAM + ~DUR*HAS*~VIS*PRO*THE*EMO*~NAR*CAM + ~DUR*HAS*~VIS*PRO*~THE*EMO*NAR*CAM + DUR*HAS*~VIS*PRO*THE*~EMO*NAR*CAM + DUR*HAS*VIS*PRO*~THE*EMO*NAR*CAM 
+
+                                    inclS  covS  covU
+DUR*HAS*~VIS*~PRO*THE*~EMO*~NAR*CAM     1 0.067 0.067
+DUR*HAS*VIS*~PRO*THE*EMO*~NAR*~CAM      1 0.067 0.067
+~DUR*HAS*~VIS*PRO*THE*EMO*NAR*~CAM      1 0.067 0.067
+~DUR*HAS*~VIS*PRO*THE*EMO*~NAR*CAM      1 0.067 0.067
+~DUR*HAS*~VIS*PRO*~THE*EMO*NAR*CAM      1 0.067 0.067
+DUR*HAS*~VIS*PRO*THE*~EMO*NAR*CAM       1 0.067 0.067
+DUR*HAS*VIS*PRO*~THE*EMO*NAR*CAM        1 0.200 0.200
+expression                              1 0.600    NA
+
+Comparación con lo publicado:
+                                term incl_rep    cov_rep incl_pub cov_pub
+  ~DUR*HAS*~VIS*PRO*~THE*EMO*NAR*CAM        1 0.06666667        1   0.067
+  ~DUR*HAS*~VIS*PRO*THE*EMO*~NAR*CAM        1 0.06666667        1   0.067
+  ~DUR*HAS*~VIS*PRO*THE*EMO*NAR*~CAM        1 0.06666667        1   0.067
+ DUR*HAS*~VIS*~PRO*THE*~EMO*~NAR*CAM        1 0.06666667        1   0.067
+   DUR*HAS*~VIS*PRO*THE*~EMO*NAR*CAM        1 0.06666667        1   0.067
+  DUR*HAS*VIS*~PRO*THE*EMO*~NAR*~CAM        1 0.06666667        1   0.067
+    DUR*HAS*VIS*PRO*~THE*EMO*NAR*CAM        1 0.20000000        1   0.200
+ dif_incl dif_cov
+        0       0
+        0       0
+        0       0
+        0       0
+        0       0
+        0       0
+        0       0
+
+CB-QCA (tau = 0,5):
+                                term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+ DUR*HAS*~VIS*~PRO*THE*~EMO*~NAR*CAM    1    29          1     1 0.517  0.517
+  DUR*HAS*VIS*~PRO*THE*EMO*~NAR*~CAM    1    29          1     1 0.517  0.517
+  ~DUR*HAS*~VIS*PRO*THE*EMO*NAR*~CAM    1    29          1     1 0.517  0.517
+  ~DUR*HAS*~VIS*PRO*THE*EMO*~NAR*CAM    1    29          1     1 0.517  0.517
+  ~DUR*HAS*~VIS*PRO*~THE*EMO*NAR*CAM    1    29          1     1 0.517  0.517
+   DUR*HAS*~VIS*PRO*THE*~EMO*NAR*CAM    1    29          1     1 0.517  0.517
+    DUR*HAS*VIS*PRO*~THE*EMO*NAR*CAM    3    27          1     1 0.556  0.556
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.129         0.259            1             1             0
+        0.129         0.259            1             1             0
+        0.129         0.259            1             1             0
+        0.129         0.259            1             1             0
+        0.129         0.259            1             1             0
+        0.129         0.259            1             1             0
+        0.139         0.278            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                                term breakdown_PS.0.3 breakdown_PS.0.5
+ DUR*HAS*~VIS*~PRO*THE*~EMO*~NAR*CAM        0.1810913        0.1293335
+  DUR*HAS*VIS*~PRO*THE*EMO*~NAR*~CAM        0.1810913        0.1293335
+  ~DUR*HAS*~VIS*PRO*THE*EMO*NAR*~CAM        0.1810913        0.1293335
+  ~DUR*HAS*~VIS*PRO*THE*EMO*~NAR*CAM        0.1810913        0.1293335
+  ~DUR*HAS*~VIS*PRO*~THE*EMO*NAR*CAM        0.1810913        0.1293335
+   DUR*HAS*~VIS*PRO*THE*~EMO*NAR*CAM        0.1810913        0.1293335
+    DUR*HAS*VIS*PRO*~THE*EMO*NAR*CAM        0.1944580        0.1389160
+ breakdown_PS.0.7
+       0.07763672
+       0.07763672
+       0.07763672
+       0.07763672
+       0.07763672
+       0.07763672
+       0.08337402

@@ -1,0 +1,46 @@
+Casos en 0,5:
+ HC  IC TMT  SA  DE  GS  DT 
+ 18   2   0   9  12 118  34 
+Diferencia máx. |recalibrado - publicado|:
+  HC   IC   SA   DE   GS   DT 
+0.01 0.01 0.01 0.01 0.01 0.01 
+Necesidad (Tabla 4: IC 0,632/0,650; GS 0,687/0,616):
+   inclN   RoN
+IC 0.632 0.752
+GS 0.687 0.674
+
+===== R64 Liu 2024 (alta) | N = 459 | outcome DT 
+Términos publicados: ~HC*~IC*~TMT*~SA*GS + IC*~TMT*~SA*DE*GS + ~HC*IC*TMT*~SA*DE*~GS + ~HC*IC*TMT*~SA*~DE*GS 
+
+                      inclS  covS  covU
+~HC*~IC*~TMT*~SA*GS   0.804 0.156 0.084
+IC*~TMT*~SA*DE*GS     0.792 0.174 0.101
+~HC*IC*TMT*~SA*DE*~GS 0.861 0.038 0.022
+~HC*IC*TMT*~SA*~DE*GS 0.843 0.044 0.029
+expression            0.790 0.324    NA
+
+Comparación con lo publicado:
+                  term  incl_rep    cov_rep incl_pub cov_pub dif_incl dif_cov
+   ~HC*~IC*~TMT*~SA*GS 0.8040404 0.15635094    0.804   0.156        0       0
+ ~HC*IC*TMT*~SA*~DE*GS 0.8427152 0.04443474    0.843   0.044        0       0
+ ~HC*IC*TMT*~SA*DE*~GS 0.8612488 0.03793103    0.861   0.038        0       0
+     IC*~TMT*~SA*DE*GS 0.7915342 0.17385421    0.792   0.174        0       0
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+   ~HC*~IC*~TMT*~SA*GS   14   445      0.714 0.450 0.327  0.233        0.000
+     IC*~TMT*~SA*DE*GS   26   433      0.769 0.564 0.388  0.298        0.017
+ ~HC*IC*TMT*~SA*DE*~GS    4   455      1.000 1.000 0.516  0.516        0.129
+ ~HC*IC*TMT*~SA*~DE*GS    5   454      1.000 1.000 0.518  0.518        0.129
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.117        0.000         0.878         0.000
+         0.149        0.251         0.842         0.092
+         0.258        1.000         1.000         0.000
+         0.259        1.000         1.000         0.000
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   ~HC*~IC*~TMT*~SA*GS       0.03887939        0.0000000       0.00000000
+     IC*~TMT*~SA*DE*GS       0.06976318        0.0168457       0.00000000
+ ~HC*IC*TMT*~SA*DE*~GS       0.18078613        0.1291504       0.07751465
+ ~HC*IC*TMT*~SA*~DE*GS       0.18121338        0.1294556       0.07769775

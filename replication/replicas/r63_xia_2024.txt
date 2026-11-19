@@ -1,0 +1,105 @@
+Medias (Tabla 1: 0,446 0,305 0,423 2,051 3107,694 0,192 8981,346):
+     PTT      PNT      NTL      TAX      SSD      ISO      EXP 
+   0.446    0.305    0.423    2.051 3107.694    0.192 8981.346 
+Percentiles 15/50/85 recalculados:
+         15%      50%       85%
+PTT    0.000    0.182     0.718
+PNT    0.043    0.147     0.754
+TAX    0.880    1.670     3.370
+SSD    0.000  646.294  5082.100
+EXP 2251.000 4285.000 17300.000
+Casos en 0,500:
+PTT PNT NTL TAX SSD ISO EXP 
+  0   3   0   0   0   0   0 
+Necesidad (Tabla 3: TAX 0,657/0,628; ~ISO 0,803/0,456):
+     inclN   RoN
+TAX  0.659 0.744
+~ISO 0.802 0.304
+
+===== R63 Xia 2024 (alta) | N = 52 | outcome PTT 
+Términos publicados: PNT*NTL*TAX*~SSD*ISO*EXP + PNT*~NTL*TAX*SSD*EXP + PNT*~NTL*TAX*~SSD*~ISO*~EXP + ~PNT*NTL*TAX*~SSD*~ISO*EXP + ~PNT*NTL*~TAX*SSD*~ISO*EXP + ~PNT*~NTL*TAX*SSD*~ISO 
+
+                            inclS  covS  covU
+PNT*NTL*TAX*~SSD*ISO*EXP    0.971 0.032 0.032
+PNT*~NTL*TAX*SSD*EXP        0.870 0.169 0.078
+PNT*~NTL*TAX*~SSD*~ISO*~EXP 0.882 0.134 0.079
+~PNT*NTL*TAX*~SSD*~ISO*EXP  0.885 0.099 0.065
+~PNT*NTL*~TAX*SSD*~ISO*EXP  0.985 0.058 0.023
+~PNT*~NTL*TAX*SSD*~ISO      0.847 0.153 0.061
+expression                  0.852 0.466    NA
+
+Comparación con lo publicado:
+                        term  incl_rep    cov_rep incl_pub   cov_pub dif_incl
+      ~PNT*~NTL*TAX*SSD*~ISO 0.8474616 0.15274513 0.844706 0.1505240    0.003
+  ~PNT*NTL*~TAX*SSD*~ISO*EXP 0.9850427 0.05805071 0.992857 0.0582809   -0.008
+  ~PNT*NTL*TAX*~SSD*~ISO*EXP 0.8848168 0.09931162 0.889313 0.0976939   -0.004
+ PNT*~NTL*TAX*~SSD*~ISO*~EXP 0.8822388 0.13364674 0.882353 0.1320750    0.000
+        PNT*~NTL*TAX*SSD*EXP 0.8695934 0.16877938 0.870897 0.1668760   -0.001
+    PNT*NTL*TAX*~SSD*ISO*EXP 0.9707751 0.03206850 0.974359 0.0318658   -0.004
+ dif_cov
+   0.002
+   0.000
+   0.002
+   0.002
+   0.002
+   0.000
+
+CB-QCA (tau = 0,5):
+                        term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+    PNT*NTL*TAX*~SSD*ISO*EXP    1    51        1.0 1.000 0.510  0.510
+        PNT*~NTL*TAX*SSD*EXP    5    47        0.8 0.624 0.415  0.332
+ PNT*~NTL*TAX*~SSD*~ISO*~EXP    2    50        1.0 1.000 0.520  0.520
+  ~PNT*NTL*TAX*~SSD*~ISO*EXP    2    50        1.0 1.000 0.520  0.520
+  ~PNT*NTL*~TAX*SSD*~ISO*EXP    1    51        1.0 1.000 0.510  0.510
+      ~PNT*~NTL*TAX*SSD*~ISO    2    50        0.5 0.000 0.000  0.000
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.128         0.255            1             1             0
+        0.033         0.166            0             1             0
+        0.130         0.260            1             1             0
+        0.130         0.260            1             1             0
+        0.128         0.255            1             1             0
+        0.000         0.000            0             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                        term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+    PNT*NTL*TAX*~SSD*ISO*EXP       0.17846680       0.12750244       0.07647705
+        PNT*~NTL*TAX*SSD*EXP       0.08618164       0.03302002       0.00000000
+ PNT*~NTL*TAX*~SSD*~ISO*~EXP       0.18200684       0.13000488       0.07800293
+  ~PNT*NTL*TAX*~SSD*~ISO*EXP       0.18200684       0.13000488       0.07800293
+  ~PNT*NTL*~TAX*SSD*~ISO*EXP       0.17846680       0.12750244       0.07647705
+      ~PNT*~NTL*TAX*SSD*~ISO       0.00000000       0.00000000       0.00000000
+
+===== R63 Xia 2024 (baja) | N = 52 | outcome nPTT 
+Términos publicados: PNT*NTL*~SSD*~ISO + ~PNT*~TAX*~SSD*~ISO*~EXP + PNT*NTL*~TAX*SSD*ISO*~EXP 
+
+                          inclS  covS  covU
+PNT*NTL*~SSD*~ISO         0.978 0.153 0.123
+~PNT*~TAX*~SSD*~ISO*~EXP  0.898 0.215 0.185
+PNT*NTL*~TAX*SSD*ISO*~EXP 1.000 0.035 0.035
+expression                0.933 0.373    NA
+
+Comparación con lo publicado:
+                      term  incl_rep    cov_rep incl_pub  cov_pub dif_incl
+  ~PNT*~TAX*~SSD*~ISO*~EXP 0.8984132 0.21500568 0.898810 0.214565        0
+         PNT*NTL*~SSD*~ISO 0.9775408 0.15293157 0.977273 0.152753        0
+ PNT*NTL*~TAX*SSD*ISO*~EXP 1.0000000 0.03527825 1.000000 0.035524        0
+ dif_cov
+       0
+       0
+       0
+
+CB-QCA (tau = 0,5):
+                      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+         PNT*NTL*~SSD*~ISO    4    48          1     1 0.542  0.542
+  ~PNT*~TAX*~SSD*~ISO*~EXP    4    48          1     1 0.542  0.542
+ PNT*NTL*~TAX*SSD*ISO*~EXP    1    51          1     1 0.510  0.510
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.135         0.271            1             1             0
+        0.135         0.271            1             1             0
+        0.128         0.255            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+         PNT*NTL*~SSD*~ISO        0.1896362        0.1354370       0.08129883
+  ~PNT*~TAX*~SSD*~ISO*~EXP        0.1896362        0.1354370       0.08129883
+ PNT*NTL*~TAX*SSD*ISO*~EXP        0.1784668        0.1275024       0.07647705

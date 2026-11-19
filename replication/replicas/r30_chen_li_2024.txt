@@ -1,0 +1,71 @@
+
+===== R30 Chen Li 2024 (alta) | N = 30 | outcome CEP 
+Términos publicados: ~EC*IS*TI*GS*ED + IS*TI*GS*ED*DF + ~EC*IS*~TI*~GS*ED*~DF + ~EC*~IS*~TI*GS*~ED*DF + ~EC*~IS*TI*ED*DF 
+
+                      inclS  covS  covU
+~EC*IS*TI*GS*ED       0.987 0.467 0.062
+IS*TI*GS*ED*DF        0.946 0.409 0.014
+~EC*IS*~TI*~GS*ED*~DF 0.974 0.237 0.034
+~EC*~IS*~TI*GS*~ED*DF 0.997 0.234 0.011
+~EC*~IS*TI*ED*DF      0.994 0.361 0.056
+expression            0.955 0.611    NA
+
+Comparación con lo publicado:
+                  term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~EC*~IS*~TI*GS*~ED*DF 0.9966398 0.2340533 0.995261 0.241936    0.001  -0.008
+      ~EC*~IS*TI*ED*DF 0.9935839 0.3605454 0.976526 0.359447    0.017   0.001
+ ~EC*IS*~TI*~GS*ED*~DF 0.9735548 0.2370064 0.979499 0.247696   -0.006  -0.011
+       ~EC*IS*TI*GS*ED 0.9871543 0.4669729 0.986585 0.466014    0.001   0.001
+        IS*TI*GS*ED*DF 0.9461766 0.4090014 0.963014 0.404954   -0.017   0.004
+
+CB-QCA (tau = 0,5):
+                  term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+       ~EC*IS*TI*GS*ED    8    22      0.875 0.804 0.584  0.511        0.097
+        IS*TI*GS*ED*DF    6    24      0.667 0.385 0.313  0.208        0.000
+ ~EC*IS*~TI*~GS*ED*~DF    1    29      1.000 1.000 0.517  0.517        0.129
+      ~EC*~IS*TI*ED*DF    3    27      1.000 1.000 0.556  0.556        0.139
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.256        0.282             1             0
+         0.104        0.000             1             0
+         0.259        1.000             1             0
+         0.278        1.000             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                  term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+       ~EC*IS*TI*GS*ED       0.16027832       0.09661865       0.03295898
+        IS*TI*GS*ED*DF       0.02294922       0.00000000       0.00000000
+ ~EC*IS*~TI*~GS*ED*~DF       0.18109131       0.12933350       0.07763672
+      ~EC*~IS*TI*ED*DF       0.19445801       0.13891602       0.08337402
+Avisos:
+1: In FUN(X[[i]], ...) :
+  term '~EC*~IS*~TI*GS*~ED*DF': all cases on one side of the threshold; skipped
+2: In FUN(X[[i]], ...) :
+  term '~EC*~IS*~TI*GS*~ED*DF': all cases on one side of the threshold; skipped
+3: In FUN(X[[i]], ...) :
+  term '~EC*~IS*~TI*GS*~ED*DF': all cases on one side of the threshold; skipped
+
+===== R30 Chen Li 2024 (baja) | N = 30 | outcome nCEP 
+Términos publicados: EC*~TI*~GS*~ED*~DF + EC*~IS*~TI*~GS*~ED 
+
+                   inclS  covS  covU
+EC*~TI*~GS*~ED*~DF 0.813 0.558 0.027
+EC*~IS*~TI*~GS*~ED 0.825 0.620 0.088
+expression         0.824 0.646    NA
+
+Comparación con lo publicado:
+               term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ EC*~IS*~TI*~GS*~ED 0.8251646 0.6195682 0.822034 0.613924    0.003   0.006
+ EC*~TI*~GS*~ED*~DF 0.8126860 0.5581708 0.810185 0.553797    0.003   0.004
+
+CB-QCA (tau = 0,5):
+               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ EC*~TI*~GS*~ED*~DF    7    23      0.714 0.495 0.391   0.28            0
+ EC*~IS*~TI*~GS*~ED    7    23      0.714 0.495 0.391   0.28            0
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+          0.14            0             1             0
+          0.14            0             1             0
+
+Sensibilidad del quiebre de PS a tau:
+               term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ EC*~TI*~GS*~ED*~DF       0.05499268                0                0
+ EC*~IS*~TI*~GS*~ED       0.05499268                0                0

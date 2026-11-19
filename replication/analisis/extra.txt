@@ -1,0 +1,36 @@
+Términos (exactas, corte 0,5): 282 | estudios: 43 | cs: 101 | fs: 181 
+Control: PS_lo de forma cerrada frente al LP de tabla_terminos: filas 282 | máx. dif. 1.71e-12 
+
+=== (a) Fisher unilateral frente a la cota exacta ===
+cs    n=101 | Fisher p < 0,05:  30 (30 %) | cota exacta > 0:   8 (8 %) | Fisher p<0,05 con cota = 0:  22
+fs    n=181 | Fisher p < 0,05:  83 (46 %) | cota exacta > 0:  59 (33 %) | Fisher p<0,05 con cota = 0:  24
+todos n=282 | Fisher p < 0,05: 113 (40 %) | cota exacta > 0:  67 (24 %) | Fisher p<0,05 con cota = 0:  46
+Por tramos de n_in (todos): proporción con Fisher p < 0,05 | con cota exacta > 0
+  tramo fisher05 cota_pos   n
+1   1-5     0.09     0.00 160
+2  6-15     0.70     0.33  60
+3 16-50     0.82     0.65  34
+4   >50     1.00     0.89  28
+Nota: Fisher contrasta P(Y|X) > P(Y|~X) (PNS_lo > 0); la cota exacta exige PS_lo > 0 con 95 % conjunto. Ambas por término.
+
+=== (b) Camino frente a casos fuera de TODA la solución (~S) ===
+cs    n=101 | mediana P(Y|~X) 0.450 -> P(Y|~S) 0.000 | PS_lo<0,5:  0 ->  0 | cota exacta = 0:  93 (92 %) ->  71 (70 %)
+fs    n=181 | mediana P(Y|~X) 0.467 -> P(Y|~S) 0.333 | PS_lo<0,5: 40 -> 29 | cota exacta = 0: 122 (67 %) -> 112 (62 %)
+todos n=282 | mediana P(Y|~X) 0.464 -> P(Y|~S) 0.286 | PS_lo<0,5: 40 -> 29 | cota exacta = 0: 215 (76 %) -> 183 (65 %)
+Términos sin casos fuera de la solución (excluidos de (b)): 0 
+Por tramos de n_in: cota exacta = 0 frente a ~X | frente a ~S
+  tramo vs_X vs_S   n
+1   1-5 1.00 0.91 160
+2  6-15 0.67 0.47  60
+3 16-50 0.35 0.24  34
+4   >50 0.11 0.04  28
+
+=== (c) Ponderado por estudio (cada estudio pesa 1; IC 95 % bootstrap por estudio, 2000) ===
+cs    estudios=17 | cota exacta = 0: 0.90 [0.82, 0.97] | PS_lo<0,5: 0.00 [0.00, 0.00] | cota frente a ~S = 0: 0.69 [0.54, 0.82]
+fs    estudios=26 | cota exacta = 0: 0.70 [0.56, 0.83] | PS_lo<0,5: 0.21 [0.14, 0.28] | cota frente a ~S = 0: 0.64 [0.49, 0.79]
+todos estudios=43 | cota exacta = 0: 0.78 [0.68, 0.86] | PS_lo<0,5: 0.13 [0.07, 0.18] | cota frente a ~S = 0: 0.66 [0.56, 0.76]
+
+=== (d) Identidad del modelo δ ===
+Filas de tabla_terminos (todos los niveles y cortes): 1202 | máx |quiebre PNS − PNS_lo/2| = 6.1e-05 (tolerancia de bisección 1e-4)
+En este modelo el quiebre de PNS no aporta información más allá de PNS_lo (= P(Y|X) − P(Y|~X)).
+Quiebre de PS: valores de contorno en términos exactos al corte 0,5: = 0 en 40 (PS_lo <= tau), = 1 en 0.

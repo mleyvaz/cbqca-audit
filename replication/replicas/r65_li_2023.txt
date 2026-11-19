@@ -1,0 +1,31 @@
+Panel: 270 filas x 24 columnas
+ [1] "Year"                                                                                                      
+ [2] "Province"                                                                                                  
+ [3] "Cable line length"                                                                                         
+ [4] "Number of mobile phone users"                                                                              
+ [5] "Number of Internet broadband access users"                                                                 
+ [6] "Total amount of postal business"                                                                           
+ [7] "Total amount of telecom business"                                                                          
+ [8] "Urban unit employees in information transmission and software and information technology services industry"
+ [9] "Coverage breadth of digital finance"                                                                       
+[10] "Usage depth of digital finance"                                                                            
+[11] "Degree of digitalization"                                                                                  
+[12] "Technology market turnover accounted for the proportion of GDP"                                            
+[13] "R&D funding input intensity"                                                                               
+[14] "Number of patents authorized"                                                                              
+[15] "Number of employees at the end of the year"                                                                
+[16] "Capital stock"                                                                                             
+[17] "Total amount of energy consumption"                                                                        
+[18] "GDP"                                                                                                       
+[19] "Per capita GDP"                                                                                            
+[20] "Aded value of the secondary industry"                                                                      
+[21] "Total import and export volume"                                                                            
+[22] "The transaction volume of the technology market"                                                           
+[23] "The urban population"                                                                                      
+[24] "Completed investment in industrial pollution control"                                                      
+Rango PIB per cápita (Tabla 5 ED: 16413-164220):
+[1]  16413 164220
+Rango comercio exterior (Tabla 5 OP: 37,58-71763,36):
+[1]    37.58407 71763.35865
+Rango mercado tecnológico (Tabla 5 TI: 0,57-5695,28):
+[1]    0.57 5695.28

@@ -1,0 +1,68 @@
+N = 344 ; start-ups (firmage <= 8): 166 
+Percentiles 5/50/95 (tipo 7):
+      5%  50%  95%
+CAU 3.02 4.00 4.86
+EX  2.00 3.33 4.33
+FL  3.25 4.00 4.75
+AL  2.38 4.00 4.95
+PR  2.83 4.00 4.67
+FP  3.67 5.33 6.33
+Necesidad (muestra total; publicado CAU 0,79, EX 0,71, FL 0,78, AL 0,66, PR 0,73):
+  CAU    EX    FL    AL    PR 
+0.795 0.713 0.783 0.660 0.733 
+
+===== R101 Yu 2024 (start-ups) | N = 166 | outcome FP 
+Términos publicados: CAU*EX*FL 
+
+          inclS  covS covU
+CAU*EX*FL  0.86 0.568   NA
+
+Comparación con lo publicado:
+      term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ CAU*EX*FL 0.8603835 0.5676323     0.86   0.564        0   0.004
+
+CB-QCA (tau = 0,5):
+      term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS breakdown_PNS
+ CAU*EX*FL   56   110      0.768 0.601 0.455   0.35        0.029         0.175
+ PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.374         0.788         0.247
+
+Sensibilidad del quiebre de PS a tau:
+      term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ CAU*EX*FL       0.08758545       0.02941895                0
+
+===== R101 Yu 2024 (establecidas) | N = 178 | outcome FP 
+Términos publicados: CAU*EX*FL + CAU*FL*~AL*~PR + CAU*~EX*AL*PR + CAU*EX*AL*~PR 
+
+               inclS  covS  covU
+CAU*EX*FL      0.841 0.592 0.134
+CAU*FL*~AL*~PR 0.894 0.401 0.020
+CAU*~EX*AL*PR  0.883 0.383 0.044
+CAU*EX*AL*~PR  0.896 0.369 0.013
+expression     0.829 0.688    NA
+
+Comparación con lo publicado:
+           term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+  CAU*~EX*AL*PR 0.8834294 0.3826432    0.894   0.364   -0.011   0.019
+  CAU*EX*AL*~PR 0.8961062 0.3688750    0.882   0.381    0.014  -0.012
+      CAU*EX*FL 0.8413967 0.5923468    0.840   0.590    0.001   0.002
+ CAU*FL*~AL*~PR 0.8942823 0.4014582    0.893   0.397    0.001   0.004
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+      CAU*EX*FL   96    82      0.740 0.492 0.340  0.252        0.000
+ CAU*FL*~AL*~PR    8   170      0.875 0.678 0.301  0.263        0.035
+  CAU*~EX*AL*PR   17   161      0.529 0.000 0.000  0.000        0.000
+  CAU*EX*AL*~PR   11   167      0.636 0.036 0.021  0.014        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.126        0.277         0.675         0.098
+         0.132        0.000         1.000         0.000
+         0.000        0.000         0.387         0.000
+         0.007        0.000         0.763         0.000
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+      CAU*EX*FL       0.04907227       0.00000000                0
+ CAU*FL*~AL*~PR       0.07342529       0.03460693                0
+  CAU*~EX*AL*PR       0.00000000       0.00000000                0
+  CAU*EX*AL*~PR       0.00000000       0.00000000                0

@@ -1,0 +1,73 @@
+
+===== R61 Backhans 2016 (RTW) | N = 21 | outcome RTW 
+Términos publicados: EMP*ALMP*PLS*OLD + EMP*EPT*~ALMP*~PLS + ~EMP*~EPT*~ALMP*~PLS*OLD 
+
+                         inclS  covS  covU
+EMP*ALMP*PLS*OLD         0.804 0.569 0.493
+EMP*EPT*~ALMP*~PLS       0.740 0.351 0.277
+~EMP*~EPT*~ALMP*~PLS*OLD 0.805 0.125 0.063
+expression               0.784 0.908    NA
+
+Comparación con lo publicado:
+                     term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~EMP*~EPT*~ALMP*~PLS*OLD 0.8050847 0.1245085     0.81    0.12   -0.005   0.005
+         EMP*ALMP*PLS*OLD 0.8037037 0.5688073     0.80    0.57    0.004  -0.001
+       EMP*EPT*~ALMP*~PLS 0.7403315 0.3512451     0.74    0.35    0.000   0.001
+
+CB-QCA (tau = 0,5):
+                     term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+         EMP*ALMP*PLS*OLD    5    16          1     1 0.750  0.750        0.188
+       EMP*EPT*~ALMP*~PLS    3    18          1     1 0.667  0.667        0.167
+ ~EMP*~EPT*~ALMP*~PLS*OLD    1    20          1     1 0.600  0.600        0.150
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.375            1             1             0
+         0.333            1             1             0
+         0.300            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                     term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+         EMP*ALMP*PLS*OLD        0.2625122        0.1875000       0.11254883
+       EMP*EPT*~ALMP*~PLS        0.2333374        0.1666870       0.10003662
+ ~EMP*~EPT*~ALMP*~PLS*OLD        0.2100220        0.1500244       0.09002686
+
+===== R61 Backhans 2016 (RR) | N = 21 | outcome RR 
+Términos publicados: UNE*ALMP*PLS*SOC + UNE*EPL*~ALMP*~PLS*~SOC + UNE*~EPL*~ALMP*PLS*~SOC 
+
+                        inclS  covS  covU
+UNE*ALMP*PLS*SOC        0.976 0.451 0.356
+UNE*EPL*~ALMP*~PLS*~SOC 0.943 0.240 0.101
+UNE*~EPL*~ALMP*PLS*~SOC 0.923 0.229 0.056
+expression              0.966 0.686    NA
+
+Comparación con lo publicado:
+                    term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ UNE*~EPL*~ALMP*PLS*~SOC 0.9227941 0.2294333     0.92    0.22    0.003   0.009
+        UNE*ALMP*PLS*SOC 0.9762376 0.4506399     0.98    0.45   -0.004   0.001
+ UNE*EPL*~ALMP*~PLS*~SOC 0.9426523 0.2404022     0.94    0.24    0.003   0.000
+
+CB-QCA (tau = 0,5):
+                    term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+        UNE*ALMP*PLS*SOC    6    15          1     1 0.667  0.667        0.167
+ UNE*EPL*~ALMP*~PLS*~SOC    2    19          1     1 0.526  0.526        0.132
+ UNE*~EPL*~ALMP*PLS*~SOC    3    18          1     1 0.556  0.556        0.139
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.333            1             1             0
+         0.263            1             1             0
+         0.278            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                    term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+        UNE*ALMP*PLS*SOC        0.2333374        0.1666870       0.10003662
+ UNE*EPL*~ALMP*~PLS*~SOC        0.1842651        0.1315918       0.07897949
+ UNE*~EPL*~ALMP*PLS*~SOC        0.1944580        0.1389160       0.08337402
+
+Soluciones intermedias del texto (solo nivel de solución publicado: RTW 0,78/0,91):
+              inclS  covS
+EMP*OLD*ALMP  0.802 0.569
+EMP*EPT*~PLS  0.742 0.354
+OLD*~EPT*~PLS 0.822 0.139
+expression    0.784 0.908
+           inclS  covS
+UNE*PLS    0.888 0.678
+UNE*EPL    0.905 0.567
+expression 0.896 0.778

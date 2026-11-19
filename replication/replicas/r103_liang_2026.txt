@@ -1,0 +1,105 @@
+N = 390 
+Medias de ítems vs. medias publicadas (máx. dif.): 0.003333333 
+Anclas (P5/P50/P95):
+      5%  50%   95%
+UNQ 4.00 5.25 6.500
+COM 3.67 5.00 6.330
+CER 4.00 5.25 6.500
+NF  3.67 5.00 6.330
+OA  3.67 5.00 6.330
+CA  3.67 5.00 6.330
+EA  4.00 5.33 6.517
+II  4.25 5.25 6.500
+Control con calibrate() por defecto de QCA (idm 0,95; dif. máx. 0,007 en cobertura):
+                  inclS  covS
+UNQ*COM*CER*NF*OA 0.968 0.426
+                  inclS  covS
+UNQ*COM*CER*NF*CA 0.966 0.411
+                  inclS  covS
+UNQ*COM*CER*NF*EA 0.969 0.399
+                  inclS  covS
+UNQ*COM*CER*OA*EA 0.974 0.406
+                inclS  covS
+UNQ*NF*OA*CA*EA  0.97 0.405
+                    inclS  covS
+COM*CER*NF*OA*CA*EA 0.965 0.374
+                               inclS  covS
+~UNQ*~COM*~CER*~NF*~OA*~CA*~EA 0.952 0.365
+Casos en 0,5: 588 
+Necesidad (publicado UNQ 0,731/0,814; OA 0,777/0,759; EA 0,700/0,806):
+    inclN  covN
+UNQ 0.731 0.814
+   inclN  covN
+OA 0.777 0.759
+   inclN  covN
+EA   0.7 0.806
+
+===== R103 Liang 2026 (alta) | N = 390 | outcome II 
+Términos publicados: UNQ*COM*CER*NF*OA + UNQ*COM*CER*NF*CA + UNQ*COM*CER*NF*EA + UNQ*COM*CER*OA*EA + UNQ*NF*OA*CA*EA + COM*CER*NF*OA*CA*EA 
+
+                    inclS  covS  covU
+UNQ*COM*CER*NF*OA   0.968 0.419 0.009
+UNQ*COM*CER*NF*CA   0.966 0.404 0.009
+UNQ*COM*CER*NF*EA   0.970 0.393 0.007
+UNQ*COM*CER*OA*EA   0.974 0.399 0.031
+UNQ*NF*OA*CA*EA     0.971 0.398 0.062
+COM*CER*NF*OA*CA*EA 0.966 0.367 0.031
+expression          0.945 0.577    NA
+
+Comparación con lo publicado:
+                term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ COM*CER*NF*OA*CA*EA 0.9658217 0.3667098    0.966   0.367        0       0
+   UNQ*COM*CER*NF*CA 0.9663539 0.4043480    0.966   0.404        0       0
+   UNQ*COM*CER*NF*EA 0.9697149 0.3925202    0.970   0.393        0       0
+   UNQ*COM*CER*NF*OA 0.9682557 0.4191926    0.968   0.419        0       0
+   UNQ*COM*CER*OA*EA 0.9740472 0.3989848    0.974   0.399        0       0
+     UNQ*NF*OA*CA*EA 0.9707773 0.3976919    0.971   0.398        0       0
+
+CB-QCA (tau = 0,5):
+                term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+   UNQ*COM*CER*NF*OA   29   361      1.000 1.000 0.560  0.560        0.140
+   UNQ*COM*CER*NF*CA   29   361      1.000 1.000 0.560  0.560        0.140
+   UNQ*COM*CER*NF*EA   30   360      0.967 0.940 0.543  0.525        0.123
+   UNQ*COM*CER*OA*EA   27   363      1.000 1.000 0.556  0.556        0.139
+     UNQ*NF*OA*CA*EA   29   361      0.966 0.938 0.541  0.522        0.122
+ COM*CER*NF*OA*CA*EA   21   369      1.000 1.000 0.547  0.547        0.137
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.280        1.000             1         0.764
+         0.280        1.000             1         0.764
+         0.263        0.787             1         0.659
+         0.278        1.000             1         0.746
+         0.261        0.800             1         0.647
+         0.274        1.000             1         0.675
+
+Sensibilidad del quiebre de PS a tau:
+                term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+   UNQ*COM*CER*NF*OA        0.1958618        0.1398926       0.08398438
+   UNQ*COM*CER*NF*CA        0.1958618        0.1398926       0.08398438
+   UNQ*COM*CER*NF*EA        0.1787720        0.1229248       0.06713867
+   UNQ*COM*CER*OA*EA        0.1948242        0.1391602       0.08349609
+     UNQ*NF*OA*CA*EA        0.1776733        0.1220093       0.06628418
+ COM*CER*NF*OA*CA*EA        0.1916504        0.1369019       0.08215332
+
+===== R103 Liang 2026 (baja) | N = 390 | outcome nII 
+Términos publicados: ~UNQ*~COM*~CER*~NF*~OA*~CA*~EA 
+
+                               inclS  covS covU
+~UNQ*~COM*~CER*~NF*~OA*~CA*~EA 0.951 0.358   NA
+
+Comparación con lo publicado:
+                           term  incl_rep   cov_rep incl_pub cov_pub dif_incl
+ ~UNQ*~COM*~CER*~NF*~OA*~CA*~EA 0.9513196 0.3581167    0.951   0.358        0
+ dif_cov
+       0
+
+CB-QCA (tau = 0,5):
+                           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo
+ ~UNQ*~COM*~CER*~NF*~OA*~CA*~EA   22   368      0.955 0.932 0.656  0.626
+ breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+        0.145         0.313        0.775             1         0.632
+
+Sensibilidad del quiebre de PS a tau:
+                           term breakdown_PS.0.3 breakdown_PS.0.5
+ ~UNQ*~COM*~CER*~NF*~OA*~CA*~EA        0.2122192        0.1450806
+ breakdown_PS.0.7
+       0.07800293

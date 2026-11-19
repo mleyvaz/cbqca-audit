@@ -1,0 +1,39 @@
+,Region,Country,Code,Democracy (High),State capacity (Low),Trust in government (Low),Median Age (High),Health Exp. (Low),COVID19 CFR (High)
+1,Western Pacific Region,Australia,AUS,0.8,0.08,0.47,0.05,0.06,0.01
+2,European Region,Austria,AUT,0.8,0.05,0.1,0.97,0.04,0.12
+3,European Region,Belgium,BEL,0.6,0.62,0.9,0.59,0.1,0.66
+4,Region of the Americas,Canada,CAN,1,0.05,0.12,0.48,0.04,0.96
+5,European Region,Switzerland,CHE,0.8,0,0,0.87,0,0.06
+6,Region of the Americas,Chile,CHL,0.8,0.91,1,0.01,0.96,1
+7,Region of the Americas,Colombia,COL,0.6,0.99,0.97,0,1,1
+8,Region of the Americas,Costa Rica,CRI,0.8,0.98,0.98,0,0.99,0.9
+9,European Region,Czechia,CZE,0.6,0.7,0.98,0.9,0.6,0.95
+10,European Region,Germany,DEU,0.8,0.32,0.08,1,0.01,0.18
+11,European Region,Denmark,DNK,1,0,0.04,0.72,0.05,0.01
+12,European Region,Spain,ESP,0.8,0.79,0.91,0.99,0.64,0.82
+13,European Region,Estonia,EST,0.6,0.29,0.43,0.81,0.93,0.12
+14,European Region,Finland,FIN,1,0,0.01,0.83,0.28,0.1
+15,European Region,France,FRA,0.6,0.47,0.78,0.65,0.08,0.15
+16,European Region,United Kingdom,GBR,0.8,0.34,0.92,0.36,0.15,0.85
+17,European Region,Greece,GRC,0.6,0.96,0.86,0.99,0.95,0.78
+18,European Region,Hungary,HUN,0.4,0.93,0.78,0.91,0.96,1
+19,European Region,Ireland,IRL,1,0.13,0.12,0.09,0.09,0.14
+20,European Region,Iceland,ISL,1,0.07,0.11,0.03,0.26,0
+21,European Region,Israel,ISR,0.6,0.55,0.81,0,0.87,0.02
+22,European Region,Italy,ITA,0.6,0.97,0.93,1,0.62,0.88
+23,Western Pacific Region,Japan,JPN,0.8,0.12,0.94,1,0.24,0.05
+24,Western Pacific Region,Korea,KOR,0.8,0.21,0.69,0.91,0.7,0.01
+25,European Region,Lithuania,LTU,0.6,0.68,0.89,0.92,0.9,0.73
+26,European Region,Luxembourg,LUX,0.8,0.02,0.01,0.19,0.06,0.09
+27,European Region,Latvia,LVA,0.6,0.82,0.98,0.95,0.97,0.56
+28,Region of the Americas,Mexico,MEX,0.4,1,0.52,0,1,1
+29,European Region,Netherlands,NLD,0.8,0.01,0.04,0.88,0.02,0.03
+30,European Region,Norway,NOR,1,0.01,0.01,0.19,0.01,0.02
+31,Western Pacific Region,New Zealand,NZL,1,0.15,0.08,0.05,0.31,0
+32,European Region,Poland,POL,0.4,0.98,0.99,0.59,0.97,1
+33,European Region,Portugal,PRT,0.6,0.72,0.14,1,0.79,0.14
+34,European Region,Slovakia,SVK,0.4,0.95,0.99,0.44,0.98,0.73
+35,European Region,Slovenia,SVN,0.6,0.57,0.87,0.97,0.73,0.43
+36,European Region,Sweden,SWE,1,0.03,0.06,0.4,0.05,0.68
+37,European Region,Turkey,TUR,0,1,0.44,0,1,0.48
+38,Region of the Americas,United States,USA,0.6,0.34,0.72,0.07,0,0.98

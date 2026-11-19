@@ -1,0 +1,36 @@
+
+===== R27 Li Zhang 2024 (alta) | N = 52 | outcome Y 
+Términos publicados: V1*~V2*V4*~V5*V6 + ~V1*V2*~V3*~V4*V5*V6 + V1*V2*~V3*V4*V5*V6 + ~V1*V2*V3*V4*V5*V6 
+
+                     inclS  covS  covU
+V1*~V2*V4*~V5*V6     0.951 0.236 0.024
+~V1*V2*~V3*~V4*V5*V6 1.000 0.142 0.012
+V1*V2*~V3*V4*V5*V6   0.946 0.426 0.131
+~V1*V2*V3*V4*V5*V6   0.977 0.509 0.214
+expression           0.941 0.771    NA
+
+Comparación con lo publicado:
+                 term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~V1*V2*~V3*~V4*V5*V6 1.0000000 0.1418364 1.000000 0.141836        0       0
+   ~V1*V2*V3*V4*V5*V6 0.9766964 0.5091104 0.976696 0.509110        0       0
+     V1*~V2*V4*~V5*V6 0.9510791 0.2361558 0.951079 0.236156        0       0
+   V1*V2*~V3*V4*V5*V6 0.9460745 0.4262237 0.946074 0.426224        0       0
+
+CB-QCA (tau = 0,5):
+                 term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     V1*~V2*V4*~V5*V6    2    50      0.500 0.000 0.000  0.000        0.000
+ ~V1*V2*~V3*~V4*V5*V6    1    51      1.000 1.000 0.490  0.490        0.123
+   V1*V2*~V3*V4*V5*V6    7    45      0.714 0.441 0.316  0.225        0.000
+   ~V1*V2*V3*V4*V5*V6    7    45      0.857 0.732 0.456  0.390        0.062
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.000        0.000             1             0
+         0.245        1.000             1             0
+         0.113        0.000             1             0
+         0.195        0.038             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                 term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     V1*~V2*V4*~V5*V6       0.00000000       0.00000000      0.000000000
+ ~V1*V2*~V3*~V4*V5*V6       0.17156982       0.12255859      0.073547363
+   V1*V2*~V3*V4*V5*V6       0.03607178       0.00000000      0.000000000
+   ~V1*V2*V3*V4*V5*V6       0.11529541       0.06195068      0.008605957

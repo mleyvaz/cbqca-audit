@@ -1,0 +1,68 @@
+Diferencia máx. |recalibrado (fsQCA, ±3) - publicado|:
+   Design  Reaction     Skill Behaviour    Result 
+        0         0         0         0         0 
+Casos en 0,5:
+   RA    LS    BH    RE ETAPA 
+    4    16    12    18     9 
+
+===== R85 Islam 2024 (alta) | N = 71 | outcome ETAPA 
+Términos publicados: LS*BH + ~RA*LS*~RE + ~RA*~LS*~BH*RE 
+
+               inclS  covS  covU
+LS*BH          0.876 0.872 0.363
+~RA*LS*~RE     0.909 0.483 0.006
+~RA*~LS*~BH*RE 0.888 0.334 0.029
+expression     0.853 0.916    NA
+
+Comparación con lo publicado:
+           term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~RA*~LS*~BH*RE 0.8880389 0.3341183 0.888039 0.334118        0       0
+     ~RA*LS*~RE 0.9089119 0.4829932 0.908912 0.482993        0       0
+          LS*BH 0.8755252 0.8723182 0.875525 0.872318        0       0
+
+CB-QCA (tau = 0,5):
+           term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+          LS*BH   26    45      0.846 0.808 0.764  0.646        0.123
+     ~RA*LS*~RE    4    67      0.500 0.118 0.134  0.067        0.000
+ ~RA*~LS*~BH*RE    2    69      0.000 0.000    NA  0.000        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.323         0.61         0.955         0.467
+         0.034         0.00         1.000         0.000
+         0.000         0.00         0.000         0.000
+
+Sensibilidad del quiebre de PS a tau:
+           term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+          LS*BH         0.203125        0.1231079       0.04309082
+     ~RA*LS*~RE         0.000000        0.0000000       0.00000000
+ ~RA*~LS*~BH*RE         0.000000        0.0000000       0.00000000
+
+===== R85 Islam 2024 (baja) | N = 71 | outcome nETAPA 
+Términos publicados: ~LS*~BH*~RE + ~RA*~BH*~RE + ~RA*~LS*~BH 
+
+            inclS  covS  covU
+~LS*~BH*~RE 0.950 0.645 0.090
+~RA*~BH*~RE 0.958 0.616 0.061
+~RA*~LS*~BH 0.936 0.602 0.046
+expression  0.911 0.752    NA
+
+Comparación con lo publicado:
+        term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+ ~LS*~BH*~RE 0.9501124 0.6449054 0.950113 0.644906        0       0
+ ~RA*~BH*~RE 0.9582543 0.6162294 0.958254 0.616230        0       0
+ ~RA*~LS*~BH 0.9359279 0.6015863 0.935928 0.601587        0       0
+
+CB-QCA (tau = 0,5):
+        term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ ~LS*~BH*~RE   16    55      0.875 0.819 0.647  0.566        0.110
+ ~RA*~BH*~RE   19    52      0.895 0.856 0.699  0.626        0.130
+ ~RA*~LS*~BH   18    53      0.833 0.761 0.638  0.531        0.091
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.283        0.541             1         0.305
+         0.313        0.616             1         0.438
+         0.266        0.455             1         0.256
+
+Sensibilidad del quiebre de PS a tau:
+        term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ ~LS*~BH*~RE        0.1793213       0.11022949       0.04113770
+ ~RA*~BH*~RE        0.2031860       0.13006592       0.05700684
+ ~RA*~LS*~BH        0.1610107       0.09124756       0.02142334

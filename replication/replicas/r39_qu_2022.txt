@@ -1,0 +1,70 @@
+Mín / media / máx recalculados:
+         HC     PC     MI     TE   MA    CS
+[1,]  60.00  62.00  51.00  54.00 1.00 26.00
+[2,]  81.63  87.63  76.51  87.71 3.54 38.91
+[3,] 105.00 111.00 105.00 109.00 5.00 50.00
+Casos en 0,5:
+HC PC MI TE MA CS 
+ 0  0  0  0  0  0 
+
+===== R39 Qu 2022 (alta) | N = 35 | outcome CS 
+Términos publicados: HC*PC*MI*MA + HC*PC*TE*MA + HC*MI*TE*MA + PC*MI*TE*MA 
+
+            inclS  covS  covU
+HC*PC*MI*MA 0.955 0.598 0.025
+HC*PC*TE*MA 0.930 0.624 0.051
+HC*MI*TE*MA 0.957 0.601 0.029
+PC*MI*TE*MA 0.951 0.631 0.058
+expression  0.926 0.736    NA
+
+Comparación con lo publicado:
+        term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ HC*MI*TE*MA 0.9571703 0.6014910    0.955   0.598    0.002   0.003
+ HC*PC*MI*MA 0.9547682 0.5982021    0.953   0.595    0.002   0.003
+ HC*PC*TE*MA 0.9303751 0.6240750    0.929   0.620    0.001   0.004
+ PC*MI*TE*MA 0.9511449 0.6307077    0.950   0.628    0.001   0.003
+
+CB-QCA (tau = 0,5):
+        term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+ HC*PC*MI*MA    8    27      0.875 0.740 0.407  0.356        0.058
+ HC*PC*TE*MA    8    27      0.875 0.740 0.407  0.356        0.058
+ HC*MI*TE*MA    9    26      0.889 0.778 0.437  0.389        0.069
+ PC*MI*TE*MA    9    26      0.889 0.778 0.437  0.389        0.069
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.178        0.000             1             0
+         0.178        0.000             1             0
+         0.194        0.121             1             0
+         0.194        0.231             1             0
+
+Sensibilidad del quiebre de PS a tau:
+        term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+ HC*PC*MI*MA        0.1060791       0.05792236      0.009765625
+ HC*PC*TE*MA        0.1060791       0.05792236      0.009765625
+ HC*MI*TE*MA        0.1194458       0.06945801      0.019470215
+ PC*MI*TE*MA        0.1194458       0.06945801      0.019470215
+
+===== R39 Qu 2022 (no alta) | N = 35 | outcome nCS 
+Términos publicados: ~HC*~PC*~MI + ~PC*~MI*~TE*~MA 
+
+                inclS  covS  covU
+~HC*~PC*~MI     0.891 0.660 0.124
+~PC*~MI*~TE*~MA 0.929 0.569 0.033
+expression      0.895 0.693    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+     ~HC*~PC*~MI 0.8906879 0.6598436    0.890   0.656    0.001   0.004
+ ~PC*~MI*~TE*~MA 0.9292536 0.5690756    0.926   0.565    0.003   0.004
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     ~HC*~PC*~MI    7    28      0.714 0.579 0.550  0.393        0.027
+ ~PC*~MI*~TE*~MA    6    29      0.833 0.758 0.628  0.523        0.089
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.196        0.000             1             0
+         0.262        0.139             1             0
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     ~HC*~PC*~MI       0.09466553       0.02679443        0.0000000
+ ~PC*~MI*~TE*~MA       0.15808105       0.08911133        0.0201416

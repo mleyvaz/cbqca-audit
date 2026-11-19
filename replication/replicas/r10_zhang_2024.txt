@@ -1,0 +1,77 @@
+N = 141 | casos en 0,5 exacto:
+TFP  IC  DT CSR MSO  MC  BE 
+  2   2   2   1   1   0   2 
+    inclN   RoN
+IC  0.592 0.857
+DT  0.571 0.825
+CSR 0.757 0.699
+MSO 0.616 0.729
+MC  0.692 0.765
+BE  0.633 0.729
+
+===== R10 Zhang 2024 (alta calidad) | N = 141 | outcome TFP 
+Términos publicados: IC*DT*~CSR*MSO*~BE + IC*DT*CSR*~MSO*~MC*~BE + IC*~DT*MSO*MC*~BE + IC*DT*CSR*MSO*~MC*BE 
+
+                       inclS  covS  covU
+IC*DT*~CSR*MSO*~BE     0.941 0.208 0.010
+IC*DT*CSR*~MSO*~MC*~BE 0.948 0.205 0.044
+IC*~DT*MSO*MC*~BE      0.950 0.228 0.051
+IC*DT*CSR*MSO*~MC*BE   0.905 0.221 0.062
+expression             0.906 0.375    NA
+
+Comparación con lo publicado:
+                   term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+      IC*~DT*MSO*MC*~BE 0.9496476 0.2278003    0.949   0.224    0.001   0.004
+     IC*DT*~CSR*MSO*~BE 0.9407234 0.2083651    0.939   0.205    0.002   0.003
+ IC*DT*CSR*~MSO*~MC*~BE 0.9481752 0.2053797    0.948   0.203    0.000   0.002
+   IC*DT*CSR*MSO*~MC*BE 0.9051008 0.2208091    0.904   0.218    0.001   0.003
+
+CB-QCA (tau = 0,5):
+                   term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     IC*DT*~CSR*MSO*~BE    6   135      0.833 0.679 0.422  0.352        0.046
+ IC*DT*CSR*~MSO*~MC*~BE    1   140      1.000 1.000 0.507  0.507        0.127
+      IC*~DT*MSO*MC*~BE    3   138      1.000 1.000 0.514  0.514        0.129
+   IC*DT*CSR*MSO*~MC*BE    3   138      1.000 1.000 0.514  0.514        0.129
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.176            0             1             0
+         0.254            1             1             0
+         0.257            1             1             0
+         0.257            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                   term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     IC*DT*~CSR*MSO*~BE       0.09820557       0.04632568       0.00000000
+ IC*DT*CSR*~MSO*~MC*~BE       0.17755127       0.12683105       0.07611084
+      IC*~DT*MSO*MC*~BE       0.18011475       0.12866211       0.07720947
+   IC*DT*CSR*MSO*~MC*BE       0.18011475       0.12866211       0.07720947
+
+===== R10 Zhang 2024 (no alta) | N = 141 | outcome nTFP 
+Términos publicados: ~IC*~DT*~MC + ~IC*~CSR*MSO*BE + ~IC*~DT*MSO*BE 
+
+                inclS  covS  covU
+~IC*~DT*~MC     0.839 0.530 0.241
+~IC*~CSR*MSO*BE 0.855 0.302 0.033
+~IC*~DT*MSO*BE  0.876 0.321 0.010
+expression      0.823 0.595    NA
+
+Comparación con lo publicado:
+            term  incl_rep   cov_rep incl_pub cov_pub dif_incl dif_cov
+ ~IC*~CSR*MSO*BE 0.8553786 0.3015157    0.852   0.296    0.003   0.006
+     ~IC*~DT*~MC 0.8390819 0.5298357    0.838   0.528    0.001   0.002
+  ~IC*~DT*MSO*BE 0.8760812 0.3212778    0.875   0.317    0.001   0.004
+
+CB-QCA (tau = 0,5):
+            term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+     ~IC*~DT*~MC   20   121      0.750 0.549 0.405  0.304        0.013
+ ~IC*~CSR*MSO*BE    7   134      0.429 0.000 0.000  0.000        0.000
+  ~IC*~DT*MSO*BE    7   134      0.714 0.453 0.331  0.237        0.000
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.152        0.186         0.880             0
+         0.000        0.000         0.656             0
+         0.118        0.000         1.000             0
+
+Sensibilidad del quiebre de PS a tau:
+            term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+     ~IC*~DT*~MC       0.06884766       0.01348877                0
+ ~IC*~CSR*MSO*BE       0.00000000       0.00000000                0
+  ~IC*~DT*MSO*BE       0.04003906       0.00000000                0

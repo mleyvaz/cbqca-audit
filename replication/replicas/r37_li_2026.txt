@@ -1,0 +1,49 @@
+Percentiles 25/50/75 recalculados:
+    TIC    DT    OR   HCL    ES    GS   TFP
+25%  11 2.341 0.858 0.402 9.399 7.291 8.083
+50%  18 3.135 0.870 0.622 9.675 7.457 8.694
+75%  39 3.526 0.882 0.737 9.977 7.649 8.974
+Casos en 0,5:
+TIC  DT  OR HCL  ES  GS TFP 
+  3   1   1   1   1   2   1 
+
+===== R37 Li 2026 (alta) | N = 35 | outcome TFP 
+Términos publicados: TIC*OR*ES*GS + TIC*~DT*~HCL*ES*GS + TIC*~OR*HCL*ES*~GS + TIC*DT*~OR*HCL*~GS + DT*OR*HCL*ES*GS 
+
+                   inclS  covS  covU
+TIC*OR*ES*GS       0.980 0.335 0.096
+TIC*~DT*~HCL*ES*GS 0.974 0.214 0.042
+TIC*~OR*HCL*ES*~GS 0.922 0.169 0.006
+TIC*DT*~OR*HCL*~GS 0.870 0.214 0.051
+DT*OR*HCL*ES*GS    0.992 0.176 0.054
+expression         0.942 0.603    NA
+
+Comparación con lo publicado:
+               term  incl_rep   cov_rep incl_pub  cov_pub dif_incl dif_cov
+    DT*OR*HCL*ES*GS 0.9921997 0.1757683 0.990446 0.171728    0.002   0.004
+ TIC*~DT*~HCL*ES*GS 0.9740750 0.2139067 0.974747 0.213142   -0.001   0.001
+ TIC*~OR*HCL*ES*~GS 0.9220114 0.1692461 0.920732 0.166759    0.001   0.002
+ TIC*DT*~OR*HCL*~GS 0.8698784 0.2135751 0.869074 0.212590    0.001   0.001
+       TIC*OR*ES*GS 0.9797702 0.3346230 0.978793 0.331309    0.001   0.003
+
+CB-QCA (tau = 0,5):
+               term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+       TIC*OR*ES*GS    6    29          1     1 0.586  0.586        0.147
+ TIC*~DT*~HCL*ES*GS    4    31          1     1 0.548  0.548        0.137
+ TIC*~OR*HCL*ES*~GS    2    33          1     1 0.515  0.515        0.129
+ TIC*DT*~OR*HCL*~GS    2    33          1     1 0.515  0.515        0.129
+    DT*OR*HCL*ES*GS    2    33          1     1 0.515  0.515        0.129
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.293            1             1             0
+         0.274            1             1             0
+         0.258            1             1             0
+         0.258            1             1             0
+         0.258            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+               term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+       TIC*OR*ES*GS        0.2052002        0.1466064       0.08795166
+ TIC*~DT*~HCL*ES*GS        0.1919556        0.1371460       0.08227539
+ TIC*~OR*HCL*ES*~GS        0.1803589        0.1288452       0.07733154
+ TIC*DT*~OR*HCL*~GS        0.1803589        0.1288452       0.07733154
+    DT*OR*HCL*ES*GS        0.1803589        0.1288452       0.07733154

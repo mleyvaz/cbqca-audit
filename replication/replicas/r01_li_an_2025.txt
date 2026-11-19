@@ -1,0 +1,43 @@
+UE: max 11.077 min 0 mean 3.291 sd 2.043  (artículo: 11.077, 0, 3.291, 2.043)
+Faltantes por columna:
+VT SQ SR TS BT BI BA NW BM AD  Y 
+ 0  0  0  0  0  0  0  0  0  0  0 
+
+Réplica de consistencia y cobertura por camino:
+ term incl_pub   cov_pub incl_rep cov_rep
+   P1 0.945394 0.1281050   0.9460  0.1285
+   P2 0.917914 0.2527460   0.9193  0.2537
+   P3 0.932508 0.0665085   0.9328  0.0667
+   P4 0.894176 0.0731585   0.8968  0.0731
+   P5 0.936127 0.0714878   0.9367  0.0717
+   P6 0.943618 0.0775340   0.9439  0.0779
+Causal-bounds QCA (CB-QCA)
+Outcome: Y  | cases: 1997  | crossover: 0.5  | tau for PS breakdown: 0.5 
+
+ term n_in n_out incl_fuzzy incl_crisp PS_lo PS_up PN_lo PN_up PNS_lo PNS_up
+   P1   34  1963      0.946      0.941 0.884     1 0.477 0.539  0.449  0.507
+   P2   25  1972      0.919      0.960 0.921     1 0.485 0.527  0.466  0.506
+   P3   13  1984      0.933      0.846 0.694     1 0.411 0.593  0.348  0.502
+   P4   10  1987      0.897      0.900 0.801     1 0.446 0.558  0.402  0.502
+   P5   16  1981      0.937      0.938 0.876     1 0.470 0.537  0.441  0.503
+   P6   15  1982      0.944      0.933 0.867     1 0.468 0.539  0.436  0.503
+ PS_lo_noassump breakdown_PS breakdown_PNS PS_lo_ci_low PS_lo_ci_high
+              0        0.097         0.224        0.692             1
+              0        0.106         0.233        0.753             1
+              0        0.049         0.174        0.261             1
+              0        0.076         0.201        0.325             1
+              0        0.095         0.220        0.563             1
+              0        0.092         0.218        0.549             1
+
+PS/PN/PNS bounds assume exogeneity (no confounding between the configuration
+and the outcome). breakdown_PS: smallest confounding level at which the lower
+bound of PS falls to tau; breakdown_PNS: at which PNS can be zero.
+
+Complemento (cota exacta al 95 % y sensibilidad a tau):
+ term PS_lo_exact95 bdPS_tau0.3 bdPS_tau0.5 bdPS_tau0.7
+   P1         0.594       0.148       0.097       0.047
+   P2         0.579       0.157       0.106       0.056
+   P3         0.053       0.099       0.049       0.000
+   P4         0.072       0.126       0.076       0.025
+   P5         0.372       0.145       0.095       0.044
+   P6         0.335       0.143       0.092       0.042

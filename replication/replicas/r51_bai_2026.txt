@@ -1,0 +1,41 @@
+
+===== R51 Bai 2026 (polarización) | N = 24 | outcome ESS 
+Términos publicados: NNF*OL*~CI*EA + ~PT*NNF*CI*~FM*~EA + NNF*OL*~FM*EA*~SP + NNF*OL*FM*~EA*SP + ~PT*OL*~CI*FM*EA*SP 
+
+                    inclS  covS  covU
+NNF*OL*~CI*EA           1 0.500 0.438
+~PT*NNF*CI*~FM*~EA      1 0.312 0.312
+NNF*OL*~FM*EA*~SP       1 0.062 0.062
+NNF*OL*FM*~EA*SP        1 0.062 0.062
+~PT*OL*~CI*FM*EA*SP     1 0.125 0.062
+expression              1 1.000    NA
+
+Comparación con lo publicado:
+                term incl_rep cov_rep incl_pub cov_pub dif_incl dif_cov
+  ~PT*NNF*CI*~FM*~EA        1  0.3125        1  0.3125        0       0
+ ~PT*OL*~CI*FM*EA*SP        1  0.1250        1  0.1250        0       0
+       NNF*OL*~CI*EA        1  0.5000        1  0.5000        0       0
+   NNF*OL*~FM*EA*~SP        1  0.0625        1  0.0625        0       0
+    NNF*OL*FM*~EA*SP        1  0.0625        1  0.0625        0       0
+
+CB-QCA (tau = 0,5):
+                term n_in n_out incl_crisp PS_lo PN_lo PNS_lo breakdown_PS
+       NNF*OL*~CI*EA    8    16          1     1 0.500  0.500        0.125
+  ~PT*NNF*CI*~FM*~EA    5    19          1     1 0.421  0.421        0.105
+   NNF*OL*~FM*EA*~SP    1    23          1     1 0.348  0.348        0.087
+    NNF*OL*FM*~EA*SP    1    23          1     1 0.348  0.348        0.087
+ ~PT*OL*~CI*FM*EA*SP    2    22          1     1 0.364  0.364        0.091
+ breakdown_PNS PS_lo_ci_low PS_lo_ci_high PS_lo_exact95
+         0.250            1             1             0
+         0.211            1             1             0
+         0.174            1             1             0
+         0.174            1             1             0
+         0.182            1             1             0
+
+Sensibilidad del quiebre de PS a tau:
+                term breakdown_PS.0.3 breakdown_PS.0.5 breakdown_PS.0.7
+       NNF*OL*~CI*EA        0.1750488       0.12500000       0.07501221
+  ~PT*NNF*CI*~FM*~EA        0.1473999       0.10528564       0.06317139
+   NNF*OL*~FM*EA*~SP        0.1217651       0.08697510       0.05218506
+    NNF*OL*FM*~EA*SP        0.1217651       0.08697510       0.05218506
+ ~PT*OL*~CI*FM*EA*SP        0.1273193       0.09094238       0.05456543

@@ -1,0 +1,22 @@
+Airline,SIZE,GROUP,SERV,ONTIME,PROD,LONG,SUCC
+Condor,0,1,1,0,0,1,1
+Eurowings,1,1,1,1,0,0,0
+Iberia Express,0,1,1,1,0,0,0
+Laudamotion,0,1,0,0,1,0,0
+SunExpress,0,1,1,1,0,0,0
+Transavia,1,1,0,0,1,0,1
+Level,0,1,1,1,0,1,0
+Vueling,1,1,0,0,1,0,1
+easyJet,1,0,1,0,0,0,1
+Jet2,0,0,0,1,1,0,1
+Norwegian,1,0,1,0,0,1,1
+Ryanair,1,0,0,1,1,0,1
+SmartWings,0,0,0,0,0,0,0
+Volotea,0,0,0,1,1,0,1
+Wizz Air,1,0,0,1,1,0,1
+Albawings,0,0,0,1,1,0,1
+Blue Air,0,0,1,0,0,0,1
+Blue Panorama,0,0,0,0,1,1,0
+Helvetic Airways,0,0,1,0,0,0,1
+Pegasus Airlines,1,0,1,0,0,0,1
+Pobeda,0,1,0,1,1,0,1
