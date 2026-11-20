@@ -3,7 +3,7 @@
 Replication materials for:
 
 > Leyva-Vázquez, Maikel. 2026. "How Causal Are Published QCA Solutions? Bounding the Probabilities of
-> Causation behind Configurational Findings." Preprint, SocArXiv.
+> Causation behind Configurational Findings." SocArXiv preprint. https://doi.org/10.31235/osf.io/9gqpx_v1
 
 The study replicates published Qualitative Comparative Analysis (QCA) solutions from open data and bounds
 Pearl's probabilities of necessity (PN), sufficiency (PS) and necessity-and-sufficiency (PNS) for every
